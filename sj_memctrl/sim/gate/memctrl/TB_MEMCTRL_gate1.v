@@ -39,7 +39,7 @@ module TB_MEMCTRL;
       WEB   <=  1;
     endtask
 
-    task write;
+    task write;	
       ADDR  <=  ADDR;
       CE    <=  1;
       CSB   <=  0;
@@ -47,7 +47,7 @@ module TB_MEMCTRL;
       OEB   <=  1;
       WEB   <=  0;
       #(`tck*1)
-      ADDR  <=  ADDR;
+      ADDR  <=  ADDR + 1;
       CE    <=  0;
       CSB   <=  1;
       IDATA <= '0;
@@ -56,7 +56,7 @@ module TB_MEMCTRL;
 	    #(`tck*1);
     endtask
 
-    task read;
+    task read;	
       ADDR  <=  ADDR; 
       CE    <=  1; 
       CSB   <=  0; 
@@ -77,8 +77,11 @@ module TB_MEMCTRL;
     // STIMULI
     ////////////////////////////////////////////////////////////////
     initial begin
+      $sdf_annotate("./../../../syn/memctrl/outputs/MEMCTRL_gate.sdf",DUT);
+    end
+    initial begin
       CLK = 0;
-      forever #(`tck*0.5) CLK = ~ CLK;
+      forever #(`tck*0.5) CLK = ~ CLK; 
     end
     initial begin
       RSTN = 0;
@@ -90,6 +93,11 @@ module TB_MEMCTRL;
       #(`tck*5);
       repeat(10) begin
       write();
+      end
+      #(`tck*5);
+      init();
+      #(`tck*5);
+      repeat(10) begin
       read();
       end
       #(`tck*10);
