@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1730728735.030473987, "rt":1.87, "ut":1.75, "st":0.11}}
-{"vcselab":{"timestamp_begin":1730728736.949639177, "rt":0.28, "ut":0.23, "st":0.04}}
-{"link":{"timestamp_begin":1730728737.286962922, "rt":0.15, "ut":0.09, "st":0.06}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1730728734.532577201}
-{"VCS_COMP_START_TIME": 1730728734.532577201}
-{"VCS_COMP_END_TIME": 1730728737.527324686}
-{"VCS_USER_OPTIONS": "-full64 -debug_acc+all +v2k -sverilog +maxdelays +sdfverbose +lint=all,noVCDE -notice -line -timescale=1ns/1ps -l ./logs/compile.log -o simv -f list.f +vcs+dumpvars+result.fsdb -t TB_MEMCTRL -P /home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/novas.tab /home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/pli.a"}
-{"vcs1": {"peak_mem": 374816}}
-{"vcselab": {"peak_mem": 238520}}

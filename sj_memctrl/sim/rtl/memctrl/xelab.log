@@ -1,6 +1,0 @@
-Vivado Simulator v2024.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/eda/xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/xelab TB_MEMCTRL -debug wave -s TB_MEMCTRL 
-Multi-threading is on. Using 78 slave threads.
-ERROR: [XSIM 43-3225] Cannot find design unit work.TB_MEMCTRL in library work located at xsim.dir/work.

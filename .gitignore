@@ -1,0 +1,50 @@
+# Synopsys Design Compiler output files
+*.log
+*.rpt
+*.scripts
+*.vcd
+*.saif
+*.conf
+*.chk
+*.drc
+*.lvs
+*.hdl
+*.map
+*.vcs
+*.syn
+*.ddc
+*.log.old
+*.ps
+*.pdf
+*.fsdb
+*.db
+*.sdb
+*.DB
+*.o
+*.so
+*.rc
+*.pvl
+*.mr
+*.info
+
+
+# Temp files and intermediate files
+*.temp
+*.tmp
+*.bak
+*.old
+
+# Backup and miscellaneous
+*~
+*.swp
+*.lock
+
+# Ignore any output directories (e.g., specific to your environment)
+output/
+results/
+work/
+logs/
+reports/
+generated/
+csrc/
+
