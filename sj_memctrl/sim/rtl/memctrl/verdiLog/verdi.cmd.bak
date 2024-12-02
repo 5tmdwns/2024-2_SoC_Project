@@ -1,0 +1,369 @@
+debImport "-f" "list.f"
+wvCreateWindow
+wvConvertFile -win $_nWave2 -o \
+           "/mnt/home/soc17/soc/proj/sim/rtl/memctrl/result.fsdb.fsdb" \
+           "/mnt/home/soc17/soc/proj/sim/rtl/memctrl/result.fsdb"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/mnt/home/soc17/soc/proj/sim/rtl/memctrl/result.fsdb.fsdb}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+nMemSetPreference
+srcSetDisplayAttr -font {-fromGUI}
+srcSetDisplayAttr -annotFont {DejaVu Sans Mono 8}
+verdiWindowResize -win $_Verdi_1 "8" "31" "1440" "853"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDrag -win $_nTrace1
+wvSetCursor -win $_nWave2 3321243.123772
+verdiSetActWin -win $_nWave2
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/SRAM1RW32x50"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL"
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvGetSignalClose -win $_nWave2
+verdiDockWidgetMaximize -dock windowDock_nWave_2
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 7)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetCursor -win $_nWave2 13694269.155421 -snap {("G2" 0)}
+wvZoomAll -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvSetCursor -win $_nWave2 10910952.170062 -snap {("G1" 5)}
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 3946514.614703 23679087.688220
+wvSetCursor -win $_nWave2 10815337.659780 -snap {("G1" 5)}
+wvSetCursor -win $_nWave2 11042550.635826 -snap {("G1" 5)}
+wvZoomIn -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 11607395.925598 31804264.836138
+wvZoomIn -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvPrevView -win $_nWave2
+wvPrevView -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvZoom -win $_nWave2 107388554.141871 115260896.923093
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/SRAM1RW32x50"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL"
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CE} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 10 )} 
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetCursor -win $_nWave2 109052918.819076 -snap {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CE} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 10 )} 
+wvSetPosition -win $_nWave2 {("G1" 10)}
+wvGetSignalClose -win $_nWave2
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/SRAM1RW32x50"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT/USRAM"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT/USRAM"
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CE} \
+{/TB_MEMCTRL/DUT/USRAM/GATE_ODATA\[31:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_ADDR\[8:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CSB\[3:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_IDATA\[7:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_OEB\[3:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_WEB} \
+{/TB_MEMCTRL/DUT/USRAM/ODATA\[7:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/OR_ODATA\[23:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 11 12 13 14 15 16 17 18 )} 
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CE} \
+{/TB_MEMCTRL/DUT/USRAM/GATE_ODATA\[31:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_ADDR\[8:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CSB\[3:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_IDATA\[7:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_OEB\[3:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_WEB} \
+{/TB_MEMCTRL/DUT/USRAM/ODATA\[7:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/OR_ODATA\[23:0\]} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 11 12 13 14 15 16 17 18 )} 
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvGetSignalClose -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 14)}
+wvSetPosition -win $_nWave2 {("G1" 18)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvSelectSignal -win $_nWave2 {( "G1" 10 )} 
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvSetPosition -win $_nWave2 {("G2" 7)}
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 8)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 9)}
+wvSetCursor -win $_nWave2 104395057.899806 -snap {("G3" 0)}
+wvSetCursor -win $_nWave2 107351544.471319 -snap {("G3" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvSetCursor -win $_nWave2 105022614.011683 -snap {("G3" 0)}
+wvSelectGroup -win $_nWave2 {G3}
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/SRAM1RW32x50"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT/USRAM"
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT/USRAM"
+wvSetPosition -win $_nWave2 {("G2" 9)}
+wvSetPosition -win $_nWave2 {("G2" 9)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+{/TB_MEMCTRL/DUT/USRAM/GATE_ODATA\[31:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_ADDR\[8:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CSB\[3:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_IDATA\[7:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_OEB\[3:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_WEB} \
+{/TB_MEMCTRL/DUT/USRAM/ODATA\[7:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/OR_ODATA\[23:0\]} \
+{/TB_MEMCTRL/DUT/USRAM/MEM_CE} \
+}
+wvAddSignal -win $_nWave2 -group {"G3" \
+}
+wvSetPosition -win $_nWave2 {("G2" 9)}
+wvGetSignalClose -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 9 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 9 )} 
+wvSetCursor -win $_nWave2 45478925.798300 -snap {("G3" 0)}
+wvSelectSignal -win $_nWave2 {( "G2" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 9 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvPrevView -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvPrevView -win $_nWave2
+wvZoom -win $_nWave2 119263120.017715 126388452.170062
+wvZoom -win $_nWave2 120474868.266815 121124920.712955
+wvPrevView -win $_nWave2
+wvNextView -win $_nWave2
+wvPrevView -win $_nWave2
+wvPrevView -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvZoom -win $_nWave2 115148301.338344 120090063.960133
+wvSetCursor -win $_nWave2 120399629.449831 -snap {("G2" 9)}
+wvSetCursor -win $_nWave2 120110739.872295 -snap {("G2" 3)}
+wvSetCursor -win $_nWave2 119975049.313150 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 119979426.427961 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 119983803.542772 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 119975049.313150 -snap {("G2" 2)}
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSetCursor -win $_nWave2 119519829.372790 -snap {("G3" 0)}
+wvSelectSignal -win $_nWave2 {( "G2" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvSetCursor -win $_nWave2 132069667.712682 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 131990879.646081 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 131955862.727592 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 132012765.220137 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 131977748.301648 -snap {("G2" 4)}
+wvSelectSignal -win $_nWave2 {( "G2" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 8 )} 
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 126056319.751993 142074526.129318
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 124895580.159433 153217626.217892
+wvSetCursor -win $_nWave2 145165033.848713 -snap {("G2" 7)}
+wvSelectSignal -win $_nWave2 {( "G2" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+wvSetCursor -win $_nWave2 137137527.437104 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 143509360.651319 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 131192155.501006 -snap {("G2" 6)}
+wvSetCursor -win $_nWave2 132571883.165501 -snap {("G2" 6)}
+wvSetCursor -win $_nWave2 143609704.481464 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 144136509.589726 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 144337197.250016 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 144412455.122625 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 143082899.373202 -snap {("G2" 5)}
+wvSetCursor -win $_nWave2 144287025.334944 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 143183243.203347 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 144663314.697988 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 143183243.203347 -snap {("G2" 4)}
+wvSetCursor -win $_nWave2 144738572.570597 -snap {("G2" 3)}
+wvSetCursor -win $_nWave2 156534068.342432 -snap {("G2" 3)}
+wvSelectSignal -win $_nWave2 {( "G2" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSetCursor -win $_nWave2 167496758.152253 -snap {("G2" 1)}
+srcActiveTrace "TB_MEMCTRL.DUT.USRAM.GATE_ODATA\[31:0\]" -TraceByDConWave \
+           -TraceTime 155500000 -TraceValue 00000000000000000000000000000000 \
+           -win $_nTrace1
+nsMsgExpandItem -tab trace -index {0}
+nsMsgSwitchTab -tab trace
+srcHBSelect "TB_MEMCTRL.DUT.USRAM.genblk1\[0\]" -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDrag -win $_nTrace1
+wvZoom -win $_nWave2 167496758.152253 169052087.519503
+verdiSetActWin -win $_nWave2
+wvSetCursor -win $_nWave2 167746964.751726 -snap {("G2" 1)}
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 4 )} 
+wvZoom -win $_nWave2 167377763.449315 167490728.026918
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 152289034.543844 181307524.357839
+wvZoom -win $_nWave2 166425588.483301 168096272.130697
+wvPrevView -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G2" 5 )} 
+wvSaveSignal -win $_nWave2 \
+           "/mnt/home/soc17/soc/proj/sim/rtl/memctrl/verdiLog/novas_autosave.ses.wave.0"
+debExit

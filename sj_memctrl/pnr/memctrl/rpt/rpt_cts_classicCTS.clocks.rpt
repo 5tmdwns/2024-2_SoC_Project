@@ -1,0 +1,41 @@
+****************************************
+Report : clock_skew
+Design : MEMCTRL
+Mode   : func
+Version: U-2022.12-SP1
+Date   : Wed Nov 27 03:42:47 2024
+****************************************
+
+              Min Rise  Min Fall  Max Rise  Max Fall     Hold          Setup        Related
+Object          Delay     Delay     Delay     Delay   Uncertainty   Uncertainty      Clock          Scenario      Origin
+-----------------------------------------------------------------------------------------------------------------------------
+CLOCK               -         -         -         -         0.100         0.300         --          func.ff_125c    user
+CLOCK               -         -         -         -         0.100         0.300         --          func.ff_n40c    user
+CLOCK               -         -         -         -         0.100         0.300         --          func.ss_125c    user
+CLOCK               -         -         -         -         0.100         0.300         --          func.ss_n40c    user
+CLOCKB              -         -         -         -         0.100         0.300         --          func.ff_125c    user
+CLOCKB              -         -         -         -         0.100         0.300         --          func.ff_n40c    user
+CLOCKB              -         -         -         -         0.100         0.300         --          func.ss_125c    user
+CLOCKB              -         -         -         -         0.100         0.300         --          func.ss_n40c    user
+CLOCKCE             -         -         -         -         0.100         0.300         --          func.ff_125c    user
+CLOCKCE             -         -         -         -         0.100         0.300         --          func.ff_n40c    user
+CLOCKCE             -         -         -         -         0.100         0.300         --          func.ss_125c    user
+CLOCKCE             -         -         -         -         0.100         0.300         --          func.ss_n40c    user
+
+               Min Rise    Min Fall    Max Rise    Max Fall 
+Object        Transition  Transition  Transition  Transition  Scenario
+----------------------------------------------------------------------
+CLOCK              0.500       0.500       0.500       0.500  func.ff_125c
+CLOCK              0.500       0.500       0.500       0.500  func.ff_n40c
+CLOCK              0.500       0.500       0.500       0.500  func.ss_125c
+CLOCK              0.500       0.500       0.500       0.500  func.ss_n40c
+CLOCKB             0.500       0.500       0.500       0.500  func.ff_125c
+CLOCKB             0.500       0.500       0.500       0.500  func.ff_n40c
+CLOCKB             0.500       0.500       0.500       0.500  func.ss_125c
+CLOCKB             0.500       0.500       0.500       0.500  func.ss_n40c
+CLOCKCE            0.500       0.500       0.500       0.500  func.ff_125c
+CLOCKCE            0.500       0.500       0.500       0.500  func.ff_n40c
+CLOCKCE            0.500       0.500       0.500       0.500  func.ss_125c
+CLOCKCE            0.500       0.500       0.500       0.500  func.ss_n40c
+
+1

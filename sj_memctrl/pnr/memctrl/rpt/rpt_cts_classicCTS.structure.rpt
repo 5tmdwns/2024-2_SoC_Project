@@ -1,0 +1,79 @@
+****************************************
+Report : report clock qor
+        -type structure
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Wed Nov 27 03:42:47 2024
+****************************************
+
+C3 is corner ff_125c
+C1 is corner ff_n40c
+C2 is corner ss_125c
+C4 is corner ss_n40c
+
+Printing structure of CLOCK at root pin CLK:
+(0) CLK [in Port] [Location (78.43, -49.55)] [Net: CLK] [Fanout: 1] 
+ (1) UFSM/ctosc_dly_trglat_inst_952:A->Y [Ref: sae32hvt/INVX4_HVT] [Location (210.52, 105.34)] [Net: UFSM/ctosc_dly_trglat_1] [Fanout: 1] 
+  (2) UFSM/ctosc_dly_trglat_inst_954:A->Y [Ref: sae32hvt/INVX2_HVT] [Location (294.12, 105.34)] [Net: UFSM/ctosc_dly_trglat_3] [Fanout: 1] 
+   (3) UFSM/ctosc_dly_trglat_inst_956:A->Y [Ref: sae32hvt/INVX2_HVT] [Location (377.72, 105.34)] [Net: UFSM/ctosc_dly_trglat_5] [Fanout: 1] 
+    (4) UFSM/ctosc_dly_trglat_inst_958:A->Y [Ref: sae32hvt/INVX4_HVT] [Location (461.47, 105.34)] [Net: UFSM/ctosc_dly_trglat_7] [Fanout: 1] 
+     (5) UFSM/ctosc_dly_trglat_inst_957:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (419.67, 115.37)] [Net: UFSM/ctosc_dly_trglat_6] [Fanout: 1] 
+      (6) UFSM/ctosc_dly_trglat_inst_955:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (335.92, 115.37)] [Net: UFSM/ctosc_dly_trglat_4] [Fanout: 1] 
+       (7) UFSM/ctosc_dly_trglat_inst_953:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (252.02, 115.37)] [Net: UFSM/ctosc_dly_trglat_2] [Fanout: 1] 
+        (8) UFSM/ctosc_dly_trglat_inst_951:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (168.87, 112.02)] [Net: UFSM/ctosc_dly_trglat_0] [Fanout: 9] 
+         (9) UFSM/MEM_ADDR_reg[7]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (124.98, 107.18)] [SINK PIN] 
+         (9) UFSM/ZCTSINV_643_886:A->Y [Ref: sae32hvt/INVX4_HVT] [Location (129.96, 108.68)] [Net: UFSM/ZCTSNET_4] [Fanout: 2] 
+          (10) UFSM/ZCTSINV_630_885:A->Y [Ref: sae32hvt/INVX2_HVT] [Location (133.00, 105.34)] [Net: UFSM/ZCTSNET_3] [Fanout: 2] 
+           (11) UFSM/MEM_ADDR_reg[6]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (138.14, 103.84)] [SINK PIN] 
+           (11) UFSM/MEM_ADDR_reg[2]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (142.15, 103.84)] [SINK PIN] 
+          (10) UFSM/ZCTSINV_613_884:A->Y [Ref: sae32hvt/INVX2_HVT] [Location (132.09, 105.34)] [Net: UFSM/ZCTSNET_2] [Fanout: 2] 
+           (11) UFSM/MEM_IDATA_reg[3]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (132.36, 100.49)] [SINK PIN] 
+           (11) UFSM/MEM_IDATA_reg[1]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (132.42, 103.49)] [SINK PIN] 
+         (9) UFSM/ZCTSINV_797_883:A->Y [Ref: sae32hvt/INVX4_HVT] [Location (130.72, 105.34)] [Net: UFSM/ZCTSNET_1] [Fanout: 1] 
+          (10) UFSM/ZCTSINV_795_882:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (128.44, 105.34)] [Net: UFSM/ZCTSNET_0] [Fanout: 16] 
+           (11) UFSM/MEM_OEB_reg[3]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (152.94, 103.49)] [SINK PIN] 
+           (11) UFSM/MEM_IDATA_reg[6]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (142.46, 103.49)] [SINK PIN] 
+           (11) UFSM/MEM_ADDR_reg[3]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (142.61, 106.84)] [SINK PIN] 
+           (11) UFSM/MEM_CSB_reg[3]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (154.16, 106.84)] [SINK PIN] 
+           (11) UFSM/MEM_OEB_reg[0]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (149.90, 107.18)] [SINK PIN] 
+           (11) UFSM/MEM_CSB_reg[0]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (152.94, 110.18)] [SINK PIN] 
+           (11) UFSM/MEM_OEB_reg[2]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (149.84, 106.84)] [SINK PIN] 
+           (11) UFSM/MEM_ADDR_reg[8]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (142.09, 110.18)] [SINK PIN] 
+           (11) UFSM/MEM_ADDR_reg[0]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (142.09, 110.52)] [SINK PIN] 
+           (11) UFSM/MEM_WEB_reg/CLK [Ref: sae32hvt/SDFFASX1_HVT] [Location (148.62, 110.52)] [SINK PIN] 
+           (11) UFSM/MEM_IDATA_reg[0]/CLK [Ref: sae32hvt/SDFFASX1_HVT] [Location (145.80, 113.52)] [SINK PIN] 
+           (11) UFSM/MEM_OEB_reg[1]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (151.88, 113.87)] [SINK PIN] 
+           (11) UFSM/MEM_CSB_reg[1]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (157.59, 113.52)] [SINK PIN] 
+           (11) UFSM/MEM_ADDR_reg[5]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (144.43, 116.87)] [SINK PIN] 
+           (11) UFSM/MEM_IDATA_reg[4]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (143.22, 117.21)] [SINK PIN] 
+           (11) UFSM/MEM_CSB_reg[2]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (149.30, 100.49)] [SINK PIN] 
+         (9) UFSM/MEM_IDATA_reg[7]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (130.39, 106.84)] [SINK PIN] 
+         (9) UFSM/I_1:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (118.10, 105.34)] [Net: UFSM/CLKB] [Fanout: 2] [GENCLK: CLOCKB] 
+          (10) UFSM/MEM_CE_reg/CLK [Ref: sae32hvt/DFFARX1_HVT] [Location (116.01, 103.49)] [SINK PIN] 
+          (10) UFSM/PREV_CE_reg/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (117.22, 107.18)] [SINK PIN] 
+         (9) UFSM/MEM_ADDR_reg[1]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (125.07, 103.84)] [SINK PIN] 
+         (9) UFSM/MEM_ADDR_reg[4]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (120.11, 100.49)] [SINK PIN] 
+         (9) UFSM/MEM_IDATA_reg[2]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (134.79, 107.18)] [SINK PIN] 
+         (9) UFSM/MEM_IDATA_reg[5]/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (128.41, 103.49)] [SINK PIN] 
+
+Printing structure of CLOCKCE at root pin UFSM/MEM_CE:
+(H) UFSM/MEM_CE [Ref: FSM] [HIERARCHY PIN: OUTPUT] [GENCLK: CLOCKCE] 
+ (0) USRAM/macro_guide_buf_9:A->Y [Ref: sae32hvt/NBUFFX2_HVT] [Location (298.98, 152.15)] [Net: USRAM/guide_buf_9] [Fanout: 1] 
+  (1) ctosc_dly_trglat_inst_960:A->Y [Ref: sae32hvt/INVX2_HVT] [Location (381.67, 152.15)] [Net: ctosc_dly_trglat_8] [Fanout: 1] 
+   (2) ctosc_dly_trglat_inst_962:A->Y [Ref: sae32hvt/INVX4_HVT] [Location (465.27, 152.15)] [Net: ctosc_dly_trglat_10] [Fanout: 1] 
+    (3) ctosc_dly_trglat_inst_964:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (465.27, 88.62)] [Net: ctosc_dly_trglat_12] [Fanout: 1] 
+     (4) ctosc_dly_trglat_inst_963:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (473.63, 112.02)] [Net: ctosc_dly_trglat_11] [Fanout: 1] 
+      (5) ctosc_dly_trglat_inst_961:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (423.47, 145.46)] [Net: ctosc_dly_trglat_9] [Fanout: 1] 
+       (6) ctosc_dly_trglat_inst_959:A->Y [Ref: sae32hvt/INVX4_HVT] [Location (339.87, 145.46)] [Net: ctosc_dly_trglat_7] [Fanout: 1] 
+        (7) ZCTSINV_65_881:A->Y [Ref: sae32hvt/INVX8_HVT] [Location (297.16, 152.15)] [Net: ZCTSNET_1] [Fanout: 1] 
+         (8) ZCTSINV_60_880:A->Y [Ref: sae32hvt/INVX16_HVT] [Location (291.54, 152.15)] [Net: ZCTSNET_0] [Fanout: 4] 
+          (9) USRAM/genblk1[1].UMEM/CE [Ref: sae32sram/SRAM1RW512x8] [Location (374.96, 222.48)] [SINK PIN] 
+          (9) USRAM/genblk1[2].UMEM/CE [Ref: sae32sram/SRAM1RW512x8] [Location (224.99, 84.41)] [SINK PIN] 
+          (9) USRAM/genblk1[0].UMEM/CE [Ref: sae32sram/SRAM1RW512x8] [Location (224.99, 222.48)] [SINK PIN] 
+          (9) USRAM/genblk1[3].UMEM/CE [Ref: sae32sram/SRAM1RW512x8] [Location (374.96, 84.41)] [SINK PIN] 
+
+Printing structure of CLOCKB at root pin UFSM/I_1/Y:
+(0) UFSM/I_1/Y [Ref: sae32hvt/INVX8_HVT] [Location (119.11, 106.18)] [Net: UFSM/CLKB] [Fanout: 2] [GENCLK: CLOCKB] 
+ (1) UFSM/MEM_CE_reg/CLK [Ref: sae32hvt/DFFARX1_HVT] [Location (116.01, 103.49)] [SINK PIN] 
+ (1) UFSM/PREV_CE_reg/CLK [Ref: sae32hvt/SDFFARX1_HVT] [Location (117.22, 107.18)] [SINK PIN] 
+1

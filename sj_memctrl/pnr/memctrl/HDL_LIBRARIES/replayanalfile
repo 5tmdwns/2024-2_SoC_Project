@@ -1,0 +1,22 @@
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/home/jhpark/soc/proj/pnr/../rtl/memctrl/FSM.v" 
+C/home/jhpark/soc/proj/pnr/memctrl
+/home/jhpark/soc/proj/rtl/memctrl/FSM.v
+FSM
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/home/jhpark/soc/proj/pnr/../rtl/memctrl/SRAM64KB.v" 
+C/home/jhpark/soc/proj/pnr/memctrl
+/home/jhpark/soc/proj/rtl/memctrl/SRAM64KB.v
+SRAM64KB
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/home/jhpark/soc/proj/pnr/../rtl/memctrl/MEMCTRL.v" 
+C/home/jhpark/soc/proj/pnr/memctrl
+/home/jhpark/soc/proj/rtl/memctrl/MEMCTRL.v
+MEMCTRL
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/home/jhpark/soc/proj/pnr/../rtl/memctrl/SRAM2KB.v" 
+C/home/jhpark/soc/proj/pnr/memctrl
+/home/jhpark/soc/proj/rtl/memctrl/SRAM2KB.v
+SRAM2KB
+elaborate MEMCTRL
+set_top_module MEMCTRL

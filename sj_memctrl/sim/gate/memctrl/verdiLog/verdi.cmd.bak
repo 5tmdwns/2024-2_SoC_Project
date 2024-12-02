@@ -1,0 +1,63 @@
+verdiSetActWin -dock widgetDock_<Message>
+debImport "-f" "list.f"
+wvCreateWindow
+wvConvertFile -win $_nWave2 -o \
+           "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb" \
+           "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 {/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+nMemSetPreference
+srcSetDisplayAttr -font {-fromGUI}
+srcSetDisplayAttr -annotFont {Helvetica 10}
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDrag -win $_nTrace1
+wvGetSignalOpen -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/AND2X2_HVT"
+verdiSetActWin -win $_nWave2
+wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL"
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvAddSignal -win $_nWave2 -clear
+wvAddSignal -win $_nWave2 -group {"G1" \
+{/TB_MEMCTRL/ADDR\[15:0\]} \
+{/TB_MEMCTRL/CE} \
+{/TB_MEMCTRL/CLK} \
+{/TB_MEMCTRL/CSB} \
+{/TB_MEMCTRL/IDATA\[7:0\]} \
+{/TB_MEMCTRL/ODATA\[7:0\]} \
+{/TB_MEMCTRL/OEB} \
+{/TB_MEMCTRL/RSTN} \
+{/TB_MEMCTRL/WEB} \
+}
+wvAddSignal -win $_nWave2 -group {"G2" \
+}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 )} 
+wvSetPosition -win $_nWave2 {("G1" 9)}
+wvGetSignalClose -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoomAll -win $_nWave2
+wvZoom -win $_nWave2 169235831.706886 428648420.454668
+wvSetCursor -win $_nWave2 251103682.908572 -snap {("G1" 7)}
+wvSetCursor -win $_nWave2 250555705.323553 -snap {("G1" 6)}
+wvSaveSignal -win $_nWave2 \
+           "/home/jhpark/soc/w09/sim/gate/memctrl/verdiLog/novas_autosave.ses.wave.0"
+debExit
