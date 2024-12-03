@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 4284310.449798 4894854.029929
-cursor 4921515.69933396764
+zoom 0.000000 5504500.000000
+cursor 2450000.000000
 marker 0.000000
 
 ; user define markers
@@ -25,7 +25,7 @@ marker 0.000000
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 9
+markerPos 13
 
 ; event list
 ; addEvent event_name event_expression
@@ -48,6 +48,19 @@ curSTATUS ByChange
 addGroup "G1"
 activeDirFile "" "/mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl/result.fsdb.fsdb"
 addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/USRAM/MEM_ADDR[9:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_CSB[63:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ODATA_SELECT[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_OEB[63:0]
+addSignal -h 15 -holdScope MEM_WEB
+addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
+addSignal -h 15 -holdScope MEM_CE
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/ADDR[15:0]
+addSignal -h 15 -holdScope CLK
+addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ADDR[9:0]
+addSignal -h 15 -holdScope CSB
+addSignal -h 15 -holdScope CE
 addSignal -h 15 -holdScope MEM_CE
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_CSB[63:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_IDATA[7:0]
@@ -55,7 +68,13 @@ addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ODATA_SELECT[5:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_OEB[63:0]
 addSignal -h 15 -holdScope MEM_WEB
 addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope TMP_ODATA[511:0]
+addSignal -h 15 -holdScope OEB
+addSignal -h 15 -holdScope RSTN
+addSignal -h 15 -holdScope WEB
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/USRAM/TMP_ODATA[511:0]
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/ADDR[15:0]
+addSignal -h 15 -holdScope CLK
+addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
@@ -72,7 +91,9 @@ getSignalForm close
 SCOPE_LIST_BEGIN
 "/SRAM1RW32x50"
 "/TB_MEMCTRL/DUT"
+"/TB_MEMCTRL/DUT/UFSM"
 "/TB_MEMCTRL/DUT/USRAM"
+"/TB_MEMCTRL"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

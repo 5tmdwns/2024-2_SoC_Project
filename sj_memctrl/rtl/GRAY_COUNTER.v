@@ -7,8 +7,8 @@ module GRAY_COUNTER #(
 );
     reg [WIDTH-1:0] COUNT;
 
-    always @(posedge CLK or posedge RSTN) begin
-        if (RSTN) begin
+    always @(posedge CLK or negedge RSTN) begin
+        if (!RSTN) begin
             COUNT <= 0;
             OUT <= 0;
         end else begin

@@ -5,8 +5,8 @@ module BINARY_COUNTER #(
     input wire RSTN,
     output reg [WIDTH-1:0] OUT
 );
-    always @(posedge CLK or posedge RSTN) begin
-        if (RSTN) begin
+    always @(posedge CLK or negedge RSTN) begin
+        if (!RSTN) begin
             OUT <= 0;
         end else begin
             OUT <= OUT + 1;

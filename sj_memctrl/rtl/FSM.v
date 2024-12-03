@@ -35,8 +35,8 @@ module FSM(/*AUTOARG*/
             MEM_ADDR         <= ADDR[9:0];
             MEM_CE           <= CE;
             MEM_WEB          <= WEB;
-	 	    MEM_OEB          <= (ADDR[15:10] == 24'd0) ?  {64{OEB}} | (~64'd1) : {64{OEB}} | (~(64'd1 << ADDR[15:10]));
-	 	    MEM_CSB          <= (ADDR[15:10] == 24'd0) ?  {64{CSB}} | (~64'd1) : {64{CSB}} | (~(64'd1 << ADDR[15:10]));
+	 	    MEM_OEB          <= {64{OEB}} | (~(64'd1 << ADDR[15:10]));
+	 	    MEM_CSB          <= {64{CSB}} | (~(64'd1 << ADDR[15:10]));
             MEM_IDATA        <= IDATA;
             MEM_ODATA_SELECT <= ADDR[15:10];
         end

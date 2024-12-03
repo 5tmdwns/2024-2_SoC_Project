@@ -1,4 +1,4 @@
-/home/jhpark/soc/w09/lib/sram/verilog/saed32sram.v
-/home/jhpark/soc/w09/lib/stdcell_hvt/verilog/saed32nm_hvt.v
-/home/jhpark/soc/w09/sim/gate/memctrl/TB_MEMCTRL.v
-/home/jhpark/soc/w09/syn/memctrl/outputs/MEMCTRL_gate.v
+/home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
+/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/verilog/saed32nm_hvt.v
+/mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/gate/TB_MEMCTRL_gate.v
+/mnt/home/soc17/soc/soc_proj/sj_memctrl/syn/outputs/MEMCTRL_gate.v

@@ -1,8 +1,8 @@
 set TOPDESIGN MEMCTRL
 set RTL_FILES { \
-./../../rtl/memctrl/FSM.v \
-./../../rtl/memctrl/SRAM2KB.v \
-./../../rtl/memctrl/MEMCTRL.v \
+./../rtl/FSM.v \
+./../rtl/SRAM64KB.v \
+./../rtl/MEMCTRL.v \
 }
 read_file -format verilog $RTL_FILES
 current_design $TOPDESIGN

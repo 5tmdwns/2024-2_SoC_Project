@@ -1,12 +1,12 @@
 Magic 271485
-Revision Verdi_U-2023.03-SP2
+Revision Verdi_V-2023.12-SP2-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 2558 806 100 65
+viewPort 0 25 1440 735 274 77
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
-openDirFile -d / "" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb"
+openDirFile -d / "" "/mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/gate/result.fsdb" "/mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/gate/result.fsdb.fsdb"
 
 ; file time scale:
 ; fileTimeScale ### s|ms|us|ns|ps
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 169235831.706886 428648420.454668
-cursor 250008580.000000
-marker 0.000000
+zoom 1752450.079535 1757205.472301
+cursor 1754420.000000
+marker 1753740.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 9
+markerPos 17
 
 ; event list
 ; addEvent event_name event_expression
@@ -46,30 +46,46 @@ curSTATUS ByChange
 
 
 addGroup "G1"
-activeDirFile "" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb"
-addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/ADDR[15:0]
+addGroup "G3"
+addGroup "G4"
+activeDirFile "" "/mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/gate/result.fsdb.fsdb"
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/ADDR[15:0]
 addSignal -h 15 -holdScope CE
 addSignal -h 15 -holdScope CLK
 addSignal -h 15 -holdScope CSB
 addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ADDR[9:0]
+addSignal -h 15 -holdScope MEM_CE
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_CSB[63:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_OEB[63:0]
+addSignal -h 15 -holdScope MEM_WEB
 addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
 addSignal -h 15 -holdScope OEB
 addSignal -h 15 -holdScope RSTN
 addSignal -h 15 -holdScope WEB
-addGroup "G2"
+addSubGroup "G2"
+endSubGroup "G2"
+addGroup "G5"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
-activeDirFile "" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb"
+activeDirFile "" "/mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/gate/result.fsdb.fsdb"
 
 GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
 getSignalForm close
 
-"/AND2X2_HVT"
+"/AND2X1_HVT"
+"/TB_MEMCTRL"
+"/TB_MEMCTRL/DUT"
+"/TB_MEMCTRL/DUT/USRAM"
 
 SCOPE_LIST_BEGIN
-"/AND2X2_HVT"
+"/AND2X1_HVT"
+"/TB_MEMCTRL/DUT"
 "/TB_MEMCTRL"
+"/TB_MEMCTRL/DUT/UFSM"
+"/TB_MEMCTRL/DUT/USRAM"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

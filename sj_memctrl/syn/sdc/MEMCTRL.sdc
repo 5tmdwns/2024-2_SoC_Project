@@ -9,16 +9,11 @@ set_clock_uncertainty -hold 0.1 [get_clock CLOCK]
 set_clock_transition 0.5 [get_clock CLOCK]
 
 #GENCLK
-create_generated_clock -name "CLOCKCE" -divide_by 2 -invert -source [get_ports CLK] [get_pins UFSM/MEM_CE]
+create_generated_clock -name "CLOCKCE" -divide_by 2 -source [get_ports CLK] [get_pins UFSM/MEM_CE]
 set_clock_latency 1 [get_clock CLOCKCE]
 set_clock_uncertainty -setup 0.3 [get_clock CLOCKCE]
 set_clock_uncertainty -hold 0.1 [get_clock CLOCKCE]
 set_clock_transition 0.5 [get_clock CLOCKCE]
-create_generated_clock -name "CLOCKB" -invert -divide_by 1 -source [get_ports CLK] [get_pins -of_objects [get_net UFSM/CLKB] -filter "direction==out"]
-set_clock_latency 1 [get_clock CLOCKB]
-set_clock_uncertainty -setup 0.3 [get_clock CLOCKB]
-set_clock_uncertainty -hold 0.1 [get_clock CLOCKB]
-set_clock_transition 0.5 [get_clock CLOCKB]
 
 #RESET
 set_ideal_network [get_port RSTN]

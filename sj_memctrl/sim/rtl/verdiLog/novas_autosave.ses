@@ -26,8 +26,8 @@ fdb_campaign =
 fdb_tool = 
 [hb]
 postSimFile = /mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl/result.fsdb.fsdb
-syncTime = 4921515.699
-viewport = 8 31 1440 837 0 0 237 893
+syncTime = 2450000
+viewport = 0 23 1440 837 0 0 166 863
 activeNode = "TB_MEMCTRL"
 activeScope = "TB_MEMCTRL"
 activeFile = "./TB_MEMCTRL.v"
