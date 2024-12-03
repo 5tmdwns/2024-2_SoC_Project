@@ -47,7 +47,7 @@ simv
 list.f
 43
 XILINXHOME=/home/eda/xilinx
-XDG_SESSION_ID=33025
+XDG_SESSION_ID=33419
 XDG_RUNTIME_DIR=/run/user/1045
 XDG_DATA_DIRS=/home/soc17/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
@@ -66,9 +66,9 @@ VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64
 STARRC_HOME=/home/eda/synopsys/starrc/T-2022.03-SP5/amd64_starrc
-SSH_TTY=/dev/pts/48
-SSH_CONNECTION=116.121.85.197 1476 163.180.160.78 22
-SSH_CLIENT=116.121.85.197 1476 22
+SSH_TTY=/dev/pts/28
+SSH_CONNECTION=116.121.85.197 1440 163.180.160.78 22
+SSH_CLIENT=116.121.85.197 1440 22
 SNPS_VCS_PYTHON3=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
 SNPS_VCS_CLANG_PATH=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -93,11 +93,11 @@ DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 0
 9
 1730940338 /home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
-1733056366 ./TB_MEMCTRL.v
-1733056365 ./../../../rtl/memctrl/SRAM2KB.v
-1733056365 ./../../../rtl/memctrl/MEMCTRL.v
-1733056365 ./../../../rtl/memctrl/FSM.v
-1733139388 list.f
+1733157157 ./TB_MEMCTRL.v
+1733157119 ./../../rtl/SRAM64KB.v
+1733157119 ./../../rtl/MEMCTRL.v
+1733157119 ./../../rtl/FSM.v
+1733204179 list.f
 1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
 1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/novas.tab
 1721617572 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/vcsdp_lite.tab
@@ -107,5 +107,5 @@ DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 1721618482 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so
 1721618554 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvfs.so
 1721036392 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/pli.a
-1733139672 simv.daidir
+1733204192 simv.daidir
 -1 partitionlib

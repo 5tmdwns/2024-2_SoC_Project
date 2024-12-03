@@ -25,9 +25,9 @@ fdb_proj =
 fdb_campaign = 
 fdb_tool = 
 [hb]
-postSimFile = /mnt/home/soc17/soc/proj/sim/rtl/memctrl/result.fsdb.fsdb
-syncTime = 3500000
-viewport = 8 31 1440 853 0 0 262 1438
+postSimFile = /mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl/result.fsdb.fsdb
+syncTime = 4921515.699
+viewport = 8 31 1440 837 0 0 237 893
 activeNode = "TB_MEMCTRL"
 activeScope = "TB_MEMCTRL"
 activeFile = "./TB_MEMCTRL.v"
@@ -57,19 +57,19 @@ sdfCheckUndef = FALSE
 simFlow = FALSE
 [hb.design]
 importCmd = "-f" "list.f" 
-invokeDir = /mnt/home/soc17/soc/proj/sim/rtl/memctrl
+invokeDir = /mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl
 [hb.sourceTab.1]
 scope = TB_MEMCTRL
-File = /mnt/home/soc17/soc/proj/sim/rtl/memctrl/TB_MEMCTRL.v
+File = /mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl/TB_MEMCTRL.v
 Line = 2
 [nMemoryManager]
-WaveformFile = /mnt/home/soc17/soc/proj/sim/rtl/memctrl/result.fsdb.fsdb
+WaveformFile = /mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl/result.fsdb.fsdb
 UserActionNum = 0
 nMemWindowNum = 0
 [wave.0]
-viewPort = 0 25 1440 751 234 65
+viewPort = 0 25 1440 735 296 65
 primaryWindow = TRUE
-SessionFile = /mnt/home/soc17/soc/proj/sim/rtl/memctrl/verdiLog/novas_autosave.ses.wave.0
+SessionFile = /mnt/home/soc17/soc/soc_proj/sj_memctrl/sim/rtl/verdiLog/novas_autosave.ses.wave.0
 displayGrid = FALSE
 hierarchicalName = FALSE
 waveformToolTip = FALSE
