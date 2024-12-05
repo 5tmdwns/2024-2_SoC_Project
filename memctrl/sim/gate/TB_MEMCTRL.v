@@ -195,9 +195,9 @@ module TB_MEMCTRL;
       #(`tck*4);
       RSTN = 1;
    end
-	initial begin
-			  $sdf_annotate("");
-	end
+   initial begin
+      $sdf_annotate("./../../syn/outputs/MEMCTRL_gate.sdf");
+   end
    initial begin
       init();
       #(`tck*10);
