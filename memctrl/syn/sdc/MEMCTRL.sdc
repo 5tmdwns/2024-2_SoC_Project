@@ -2,15 +2,15 @@
 # CLOCK
 ###################################################################
 #MAINCLOCK
-create_clock -name "CLOCK" -period 3 [get_ports CLK]
-set_clock_latency 0.5 [get_clock CLOCK]
+create_clock -name "CLOCK" -period 6 -waveform {0 5} [get_ports CLK]
+set_clock_latency 1 [get_clock CLOCK]
 set_clock_uncertainty -setup 0.3 [get_clock CLOCK]
 set_clock_uncertainty -hold 0.1 [get_clock CLOCK]
 set_clock_transition 0.5 [get_clock CLOCK]
 
 #GENCLK
 create_generated_clock -name "CLOCKCE" -divide_by 2 -source [get_ports CLK] [get_pins UFSM/MEM_CE]
-set_clock_latency 0.5 [get_clock CLOCKCE]
+set_clock_latency 1 [get_clock CLOCKCE]
 set_clock_uncertainty -setup 0.3 [get_clock CLOCKCE]
 set_clock_uncertainty -hold 0.1 [get_clock CLOCKCE]
 set_clock_transition 0.5 [get_clock CLOCKCE]
