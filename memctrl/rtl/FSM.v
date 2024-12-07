@@ -44,31 +44,50 @@ module FSM(/*AUTOARG*/
 	 MEM_CSB_BANK4          <= {16{1'b1}};
          MEM_IDATA        <= 8'b0;
          MEM_ODATA_SELECT <= 4'b0;
-      end 
+      end
       else begin
          MEM_ADDR         <= ADDR[9:0];
          MEM_WEB          <= WEB;
-         MEM_CE <= CE;
-	 MEM_IDATA <= IDATA;
-	 MEM_ODATA_SELECT <= ADDR[13:10];
-	 if (ADDR[15:14] == 2'd3) begin
-	    MEM_OEB_BANK4 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
-	    MEM_CSB_BANK4 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
-	 end
-	 else if (ADDR[15:14] == 2'd2) begin
-	    MEM_OEB_BANK3 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
-	    MEM_CSB_BANK3 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
-	 end
-	 else if (ADDR[15:14] == 2'd1) begin
-	    MEM_OEB_BANK2 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
-	    MEM_CSB_BANK2 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
-	 end
-	 else  begin
-	    MEM_OEB_BANK1 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
-	    MEM_CSB_BANK1 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
-	 end
+	      MEM_IDATA <= IDATA;
+	      MEM_ODATA_SELECT <= ADDR[13:10];
+         case (ADDR[15:14])
+         2'd3 : begin
+            MEM_OEB_BANK4 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CSB_BANK4 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CE <= CE;       
+         end
+         2'd2 : begin
+            MEM_OEB_BANK3 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CSB_BANK3 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CE <= CE;        
+         end
+         2'd1 : begin
+            MEM_OEB_BANK2 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CSB_BANK2 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CE <= CE;        
+         end
+         default : begin
+            MEM_OEB_BANK1 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CSB_BANK1 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+            MEM_CE <= CE;        
+         end
+         endcase
+	//  if (ADDR[15:14] == 2'd3) begin
+	//     MEM_OEB_BANK4 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+	//     MEM_CSB_BANK4 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+	//  end
+	//  else if (ADDR[15:14] == 2'd2) begin
+	//     MEM_OEB_BANK3 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+	//     MEM_CSB_BANK3 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+	//  end
+	//  else if (ADDR[15:14] == 2'd1) begin
+	//     MEM_OEB_BANK2 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+	//     MEM_CSB_BANK2 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+	//  end
+	//  else  begin
+	//     MEM_OEB_BANK1 <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
+	//     MEM_CSB_BANK1 <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
+	//  end
       end
    end
-   // MEM_OEB_BANK1          <= {16{OEB}} | (~(16'd1 << ADDR[13:10]));
-   //    MEM_CSB_BANK1          <= {16{CSB}} | (~(16'd1 << ADDR[13:10]));
 endmodule

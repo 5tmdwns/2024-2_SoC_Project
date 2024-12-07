@@ -11,13 +11,13 @@ wvSetPosition -win $_nWave2 {("G1" 0)}
 nMemSetPreference
 srcSetDisplayAttr -font {-fromGUI}
 srcSetDisplayAttr -annotFont {DejaVu Sans Mono 8}
-wvSetCursor -win $_nWave2 258780.552952
-verdiWindowResize -win $_Verdi_1 "237" "108" "1440" "837"
+verdiWindowResize -win $_Verdi_1 "8" "31" "1440" "837"
 verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
 srcDrag -win $_nTrace1
-verdiDockWidgetMaximize -dock windowDock_nWave_2
+wvSetCursor -win $_nWave2 141291.143393
 verdiSetActWin -win $_nWave2
-wvSetCursor -win $_nWave2 162054.358013
+verdiDockWidgetMaximize -dock windowDock_nWave_2
+wvSetCursor -win $_nWave2 192439.550141
 wvGetSignalOpen -win $_nWave2
 wvGetSignalSetScope -win $_nWave2 "/SRAM1RW32x50"
 wvGetSignalSetScope -win $_nWave2 "/TB_MEMCTRL/DUT"
@@ -94,23 +94,18 @@ wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 \
            18 19 20 21 22 23 24 25 26 )} 
 wvSetPosition -win $_nWave2 {("G1" 26)}
 wvGetSignalClose -win $_nWave2
-wvSetCursor -win $_nWave2 314993.158388 -snap {("G1" 19)}
+wvSetCursor -win $_nWave2 326134.395501 -snap {("G1" 22)}
 wvZoomAll -win $_nWave2
-wvZoom -win $_nWave2 511484.067479 2587805.529522
-wvSetCursor -win $_nWave2 1464996.266543 -snap {("G1" 7)}
-wvSetCursor -win $_nWave2 3646140.208762 -snap {("G1" 13)}
-wvSetCursor -win $_nWave2 1432214.241859 -snap {("G1" 9)}
-wvSetCursor -win $_nWave2 4271936.482091 -snap {("G1" 14)}
-wvSetCursor -win $_nWave2 4254422.992721 -snap {("G1" 7)}
-wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
-wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
-wvSetRadix -win $_nWave2 -format Bin
-wvSetCursor -win $_nWave2 3670640.013702 -snap {("G1" 2)}
-wvSetCursor -win $_nWave2 3641450.864751 -snap {("G1" 2)}
-wvSetCursor -win $_nWave2 3682315.673282 -snap {("G1" 3)}
-wvSetCursor -win $_nWave2 3723180.481814 -snap {("G1" 4)}
-wvSetCursor -win $_nWave2 3581126.623586 -snap {("G1" 2)}
-wvSetCursor -win $_nWave2 3662856.240648 -snap {("G1" 6)}
+wvZoom -win $_nWave2 3367692.127460 4319761.480787
+wvSetCursor -win $_nWave2 4250935.599838 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 1454513.740571 -snap {("G1" 7)}
+wvSelectSignal -win $_nWave2 {( "G1" 14 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 6 )} 
+wvSetCursor -win $_nWave2 3350377.343761 -snap {("G1" 7)}
+wvSetCursor -win $_nWave2 3649293.213831 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 3948209.083901 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 4246171.976052 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 3644490.467837 -snap {("G1" 7)}
 wvSaveSignal -win $_nWave2 \
            "/mnt/home/soc17/soc/soc_proj/memctrl/sim/rtl/verdiLog/novas_autosave.ses.wave.0"
 debExit

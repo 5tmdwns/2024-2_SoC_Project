@@ -16,7 +16,7 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 2662162.212159 4738483.674202
+zoom 3076996.457795 4029065.811122
 cursor 3650000.000000
 marker 0.000000
 
@@ -47,7 +47,7 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl/sim/rtl/result.fsdb.fsdb"
-addSignal -h 15 -UNSIGNED -BIN /TB_MEMCTRL/DUT/ADDR[15:0]
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/ADDR[15:0]
 addSignal -h 15 -holdScope CE
 addSignal -h 15 -holdScope CLK
 addSignal -h 15 -holdScope CSB

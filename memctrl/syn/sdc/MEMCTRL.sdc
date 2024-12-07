@@ -2,7 +2,7 @@
 # CLOCK
 ###################################################################
 #MAINCLOCK
-create_clock -name "CLOCK" -period 6 -waveform {0 5} [get_ports CLK]
+create_clock -name "CLOCK" -period 10 -waveform {0 5} [get_ports CLK]
 set_clock_latency 1 [get_clock CLOCK]
 set_clock_uncertainty -setup 0.3 [get_clock CLOCK]
 set_clock_uncertainty -hold 0.1 [get_clock CLOCK]
