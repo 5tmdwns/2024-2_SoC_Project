@@ -26,8 +26,8 @@ fdb_campaign =
 fdb_tool = 
 [hb]
 postSimFile = /mnt/home/soc17/soc/soc_proj/memctrl/sim/gate/result.fsdb.fsdb
-syncTime = 579077.122
-viewport = 0 23 1440 837 0 0 233 898
+syncTime = 6300000
+viewport = 0 23 1440 837 0 0 165 898
 activeNode = "TB_MEMCTRL"
 activeScope = "TB_MEMCTRL"
 activeFile = "./TB_MEMCTRL.v"
@@ -67,7 +67,7 @@ WaveformFile = /mnt/home/soc17/soc/soc_proj/memctrl/sim/gate/result.fsdb.fsdb
 UserActionNum = 0
 nMemWindowNum = 0
 [wave.0]
-viewPort = 0 25 1440 735 233 172
+viewPort = 0 27 1440 733 273 172
 primaryWindow = TRUE
 SessionFile = /mnt/home/soc17/soc/soc_proj/memctrl/sim/gate/verdiLog/novas_autosave.ses.wave.0
 displayGrid = FALSE

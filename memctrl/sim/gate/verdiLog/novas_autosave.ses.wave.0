@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_V-2023.12-SP2-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1440 735 233 172
+viewPort 0 27 1440 733 273 172
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 7424637.721372 9655227.927557
-cursor 579077.12215320917
+zoom 2701519.756839 4368019.756839
+cursor 6300000.000000
 marker 0.000000
 
 ; user define markers
@@ -84,10 +84,10 @@ getSignalForm close
 
 "/AND2X2_HVT"
 "/TB_MEMCTRL"
+"/TB_MEMCTRL/DUT"
 
 SCOPE_LIST_BEGIN
 "/AND2X2_HVT"
-"/TNBUFFX8_HVT"
 "/TB_MEMCTRL"
 "/TB_MEMCTRL/DUT"
 SCOPE_LIST_END

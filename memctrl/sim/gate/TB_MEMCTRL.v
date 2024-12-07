@@ -38,43 +38,63 @@ module TB_MEMCTRL;
       WEB   <=  1;
     endtask
 
-    task write_bank(input [15:0] base_addr);	
-      integer i;
-      for (i = 0; i < 5; i = i + 1) begin
-         ADDR  <=  base_addr + i * 100;
-         CE    <=  1;
-         CSB   <=  0;
-         IDATA <=  $random($time);
-         OEB   <=  1;
-         WEB   <=  0;
-         #(`tck*1);
-         ADDR  <=  ADDR;
-         CE    <=  0;
-         CSB   <=  1;
-         IDATA <= '0;
-         OEB   <=  1;
-         WEB   <=  1;
-         #(`tck*1);
+    task write_cycle;
+      integer i, j;
+      reg [15:0] base_addr [0:3]; 
+      begin
+        base_addr[0] = 16'h0000;
+        base_addr[1] = 16'h4000;
+        base_addr[2] = 16'h8000;
+        base_addr[3] = 16'hC000;
+
+        for (i = 0; i < 5; i = i + 1) begin
+          for (j = 0; j < 4; j = j + 1) begin
+            ADDR  <= base_addr[j] + i * 100;
+            CE    <=  1;
+            CSB   <=  0;
+            IDATA <=  $random($time);
+            OEB   <=  1;
+            WEB   <=  0;
+            #(`tck*1);
+            ADDR  <=  ADDR;
+            CE    <=  0;
+            CSB   <=  1;
+            IDATA <= '0;
+            OEB   <=  1;
+            WEB   <=  1;
+            #(`tck*1);
+          end
+        end
       end
     endtask
 
-    task read_bank(input [15:0] base_addr);	
-      integer i;
-      for (i = 0; i < 5; i = i + 1) begin
-         ADDR  <=  base_addr + i * 100;
-         CE    <=  1;
-         CSB   <=  0;
-         IDATA <= '0;
-         OEB   <=  0;
-         WEB   <=  1;
-         #(`tck*1);
-         ADDR  <=  ADDR;
-         CE    <=  0;
-         CSB   <=  1;
-         IDATA <= '0;
-         OEB   <=  1;
-         WEB   <=  1;
-         #(`tck*1);
+    task read_cycle;
+      integer i, j;
+      reg [15:0] base_addr [0:3]; 
+      begin
+        base_addr[0] = 16'h0000;
+        base_addr[1] = 16'h4000;
+        base_addr[2] = 16'h8000;
+        base_addr[3] = 16'hC000;
+
+        for (i = 0; i < 5; i = i + 1) begin
+          for (j = 0; j < 4; j = j + 1) begin
+            ADDR  <= base_addr[j] + i * 100;
+            CE    <=  1;
+            CSB   <=  0;
+            IDATA <= '0;
+            OEB   <=  0;
+            WEB   <=  1;
+            #(`tck*1);
+            ADDR  <=  ADDR;
+            CE    <=  0;
+            CSB   <=  1;
+            IDATA <= '0;
+            OEB   <=  1;
+            WEB   <=  1;
+            #(`tck*1);
+          end
+        end
       end
     endtask
 
@@ -96,16 +116,13 @@ module TB_MEMCTRL;
     initial begin
       init();
       #(`tck*5);
-        write_bank(16'h0000);
-        write_bank(16'h4000);
-        write_bank(16'h8000);
-        write_bank(16'hC000);
+
+      write_cycle();
       #(`tck*10);
-        read_bank(16'h0000);
-        read_bank(16'h4000);
-        read_bank(16'h8000);
-        read_bank(16'hC000);
+
+      read_cycle();
       #(`tck*10);
+
       $finish;
     end
 

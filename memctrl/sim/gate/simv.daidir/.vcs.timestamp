@@ -96,7 +96,7 @@ DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 1733565912 ./../../syn/outputs/MEMCTRL_gate.sdf
 1730940335 /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/verilog/saed32nm_hvt.v
 1730940338 /home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
-1733570904 ./TB_MEMCTRL.v
+1733574387 ./TB_MEMCTRL.v
 1733565912 ./../../syn/outputs/MEMCTRL_gate.v
 1733569629 list.f
 1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
@@ -108,5 +108,5 @@ DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 1721618482 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so
 1721618554 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvfs.so
 1721036392 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/pli.a
-1733570917 simv.daidir
+1733574403 simv.daidir
 -1 partitionlib
