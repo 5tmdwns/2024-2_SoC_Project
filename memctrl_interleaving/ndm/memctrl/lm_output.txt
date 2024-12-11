@@ -1,0 +1,62 @@
+ 
+                              Library Manager (TM)
+
+             Version U-2022.12-SP1 for linux64 - Jan 27, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+lm_shell> create_workspace -technology /home/eda/soc/lib/gpdk/32n/tech/milkyway/saed32nm_1p9m_mw.tf saed32hvt
+Warning: Layer 'VIA1' 'onGrid' and 'onWireTrack' coexist. (TECH-025)
+Information: Loading technology file '/home/eda/soc/lib/gpdk/32n/tech/milkyway/saed32nm_1p9m_mw.tf' (FILE-007)
+... created workspace saed32hvt
+lm_shell> 
+lm_shell> read_db /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16v125c.db
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16v125c.db' (FILE-007)
+{saed32hvt_ff1p16v125c}
+lm_shell> read_db /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16vn40c.db
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16vn40c.db' (FILE-007)
+{saed32hvt_ff1p16vn40c}
+lm_shell> read_db /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db' (FILE-007)
+{saed32hvt_ss0p95v125c}
+lm_shell> read_db /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.db
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.db' (FILE-007)
+{saed32hvt_ss0p95vn40c}
+lm_shell> read_lef /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/lef/saed32nm_hvt_1p9m.lef
+Information: The default value of lib.workspace.library_developer_mode will be 'true' in future release. (LMUI-054)
+Information: Loading LEF file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/lef/saed32nm_hvt_1p9m.lef' (FILE-007)
+Information: Read LEF into a new library 'saed32nm_hvt_1p9m'. (LEFR-022)
+Warning: Line 56, Invalid bus bit characters '_<>' are specified; using default characters '[]'. (LEFR-011)
+{saed32nm_hvt_1p9m}
+lm_shell> 
+lm_shell> start_gui
+lm_shell> change_selection [get_workspaces {saed32hvt}]
+lm_shell> 
+lm_shell> change_selection [get_libs {saed32hvt_ff1p16vn40c}]
+lm_shell> change_selection [get_lib_cells -include_subcells {saed32hvt_ff1p16vn40c/AND2X1_HVT/timing}]
+lm_shell> change_selection [get_designs -filter {view_name == design} {AND2X1_HVT}]
+lm_shell> current_block saed32nm_hvt_1p9m:AND2X1_HVT.design
+lm_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+lm_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1.092 1.721} -scale 0.0075
+lm_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1.025 -0.015} -scale 0.0075
+lm_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+lm_shell> quit
+Maximum memory usage for this session: 348.00 MB
+CPU usage for this session:     11 seconds (  0.00 hours)
+Elapsed time for this session:     75 seconds (  0.02 hours)
+Thank you for using Library Manager.
+

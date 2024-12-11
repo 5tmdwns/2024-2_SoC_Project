@@ -1,0 +1,77 @@
+Magic 271485
+Revision Verdi_U-2023.03-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 2558 806 100 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 169235831.706886 428648420.454668
+cursor 250008580.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 9
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb"
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/ADDR[15:0]
+addSignal -h 15 -holdScope CE
+addSignal -h 15 -holdScope CLK
+addSignal -h 15 -holdScope CSB
+addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
+addSignal -h 15 -holdScope OEB
+addSignal -h 15 -holdScope RSTN
+addSignal -h 15 -holdScope WEB
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/jhpark/soc/w09/sim/gate/memctrl/result.fsdb.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/AND2X2_HVT"
+
+SCOPE_LIST_BEGIN
+"/AND2X2_HVT"
+"/TB_MEMCTRL"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

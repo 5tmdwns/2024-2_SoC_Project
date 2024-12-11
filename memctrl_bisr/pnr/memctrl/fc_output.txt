@@ -1,0 +1,597 @@
+ 
+                              Fusion Compiler (TM)
+
+             Version U-2022.12-SP1 for linux64 - Jan 27, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Loading user preference file /home/soc17/.synopsys_fc_gui/preferences.tcl
+fc_shell> source run_fc.tcl
+Warning: Layer 'VIA1' 'onGrid' and 'onWireTrack' coexist. (TECH-025)
+Information: Loading technology file '/home/eda/soc/lib/gpdk/32n/tech/milkyway/saed32nm_1p9m_mw.tf' (FILE-007)
+Information: By default, the HDL template library is 'WORK' (LBR-??).
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/FSM.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.02, CPU = 00:00:00.01
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM64KB.v
+Warning:  /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM64KB.v:20: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM64KB.v:34: A unnamed generate block with an LRM-defined name 'genblk2' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Elapsed = 00:00:00.01, CPU = 00:00:00.01
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM2KB.v
+Warning:  /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM2KB.v:20: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Warning:  /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM2KB.v:34: A unnamed generate block with an LRM-defined name 'genblk2' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Elapsed = 00:00:00.01, CPU = 00:00:00.01
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/MEMCTRL.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.01, CPU = 00:00:00.00
+Presto compilation completed successfully. (MEMCTRL)
+Information: Elaborating HDL template WORK:FSM instantiated from 'MEMCTRL'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine FSM line 27 in file
+                '/mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MEM_IDATA_reg    | Flip-flop |   7   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|    MEM_IDATA_reg    | Flip-flop |   1   |  N  | Y  | N  | Y  | N  | N  | N  |
+|    MEM_ADDR_reg     | Flip-flop |   9   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|     MEM_WEB_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     MEM_OEB_reg     | Flip-flop |   4   |  Y  | Y  | N  | Y  | N  | N  | N  |
+|     MEM_CSB_reg     | Flip-flop |   4   |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine FSM line 44 in file
+                '/mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/FSM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     MEM_CE_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     PREV_CE_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (FSM)
+Information: Elaborating HDL template WORK:SRAM2KB instantiated from 'MEMCTRL'. (ELAB-193)
+Presto compilation completed successfully. (SRAM2KB)
+Number of modules read: 3
+Top level ports:        33
+Total in all modules
+  Ports:                120
+  Nets:                 293
+  Instances:            144
+Elapsed = 00:00:00.13, CPU = 00:00:00.12
+Information: User units loaded from library 'sae32sram' (LNK-040)
+Information: Added key list 'DesignWare' to design 'MEMCTRL'. (DWS-0216)
+Elapsed = 00:00:00.35, CPU = 00:00:00.20
+****************************************
+ Report : check_design 
+ Options: { dp_pre_floorplan }
+ Design : MEMCTRL
+ Version: U-2022.12-SP1
+ Date   : Fri Dec  6 16:27:48 2024
+****************************************
+
+Running atomic-check 'dp_pre_floorplan'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DPUI-924     Warn   10         The routing directions for layer '%s' are missing. Auto deriving...
+  ----------------------------------------------------------------------------------------------------
+  Total 10 non-EMS messages : 0 errors, 10 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+Information: Non-EMS messages are saved into file 'check_design2024Dec06162748.log'.
+Warning: Creating 'clock' on a hierarchical pin 'UFSM/MEM_CE'. (UIC-018)
+Information: Timer using 4 threads
+Warning: No site rows found in floorplan. (LGL-397)
+INFO: compile_fusion is running in balanced flow mode.
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Starting 'compile_fusion -to initial_map' (FLW-8000)
+Information: Time: 2024-12-06 16:27:48 / Session: 0.01 hr / Command: 0.00 hr / Memory: 493 MB (FLW-8100)
+INFO: Start environment monitoring: recipes
+INFO: compile_fusion is running in balanced flow mode.
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Error: Generated clock 'CLOCKCE' with source pin 'UFSM/MEM_CE' 'rise_edge' is not satisfiable; zero source latency will be used. (GRF-011)
+Error: Generated clock 'CLOCKCE' with source pin 'UFSM/MEM_CE' 'fall_edge' is not satisfiable; zero source latency will be used. (GRF-011)
+Warning: Step initClockTermsForMV (and possibly its children) printed 1 error messages. Continuing flow despite Errors. (FLW-2542)
+Information: >>>>>>> 2 unique error and warning message tags while observing initClockTermsForMV: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1     1  0 FLW-2542  WARNING   Warning: Step initClockTermsForMV (and possibly its children... (MSG-3032)
+Information:     2     2  0 GRF-011   ERROR     Error: Generated clock 'CLOCKCE' with source pin 'UFSM/MEM_C... (MSG-3032)
+Information:     3     3  0        2  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 3 error&warning MSGs observed during initClockTermsForMV (MSG-3103)
+INFO: updateGlobalOptions
+INFO: use Native GDC
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+Warning: Step prelude (and possibly its children) printed 1 error messages. Continuing flow despite Errors. (FLW-2542)
+Information: >>>>>>> 3 unique error and warning message tags while observing prelude: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     2     2  0 FLW-2542  WARNING   Warning: Step prelude (and possibly its children) printed 1 ... (MSG-3032)
+Information:     9     7  0 LGL-397   WARNING   Warning: No site rows found in floorplan. (LGL-397)             (MSG-3032)
+Information:     2     2  0 GRF-011   ERROR     Error: Generated clock 'CLOCKCE' with source pin 'UFSM/MEM_C... (MSG-3032)
+Information:    13    11  0        3  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 11 error&warning MSGs observed during prelude (MSG-3103)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_map (FLW-8000)
+Information: Time: 2024-12-06 16:27:49 / Session: 0.01 hr / Command: 0.00 hr / Memory: 529 MB (FLW-8100)
+----------------------------------------------------------------------------------------------------------
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Starting compile_fusion / initial_map / MV Cell Insertion (FLW-8000)
+Information: Time: 2024-12-06 16:27:49 / Session: 0.01 hr / Command: 0.00 hr / Memory: 539 MB (FLW-8100)
+Information: Result of compile_fusion / initial_map / MV Cell Insertion (FLW-8500)
+Information: Total number of MV cells in the design. (MV-334)
+Information: Ending   compile_fusion / initial_map / MV Cell Insertion (FLW-8001)
+Information: Time: 2024-12-06 16:27:49 / Session: 0.01 hr / Command: 0.00 hr / Memory: 539 MB (FLW-8100)
+
+Information: Starting compile_fusion / initial_map / Logic Simplification (1) (FLW-8000)
+Information: Time: 2024-12-06 16:27:49 / Session: 0.01 hr / Command: 0.00 hr / Memory: 539 MB (FLW-8100)
+Information: The hierarchy UFSM is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy USRAM is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: 1 of 2 hierarchies are ungrouped. Use report_ungroup for a list. (UNG-1003)
+Information: 1 of 2 hierarchies are not ungrouped because of restrictions. Use report_ungroup for a list. (UNG-1005)
+Information: Result of compile_fusion / initial_map / Auto Ungroup (FLW-8500)
+Information: Ungroup Summary Report (UNG-1007)
+-------------------------------------------------------------------
+Hierarchy                                                 Count
+-------------------------------------------------------------------
+Auto ungrouped hierarchies                                  1
+Hierarchies preserved due to restrictions                   1
+-------------------------------------------------------------------
+Information: Register Bits Before Sharing = 28, After Sharing = 28, Savings = 0 (SQM-2000)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Ending   compile_fusion / initial_map / Logic Simplification (1) (FLW-8001)
+Information: Time: 2024-12-06 16:27:54 / Session: 0.01 hr / Command: 0.00 hr / Memory: 596 MB (FLW-8100)
+
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Starting compile_fusion / initial_map / Early Logic Optimization (FLW-8000)
+Information: Time: 2024-12-06 16:27:55 / Session: 0.01 hr / Command: 0.00 hr / Memory: 690 MB (FLW-8100)
+Information: Timer using 4 threads
+Information: Ending   compile_fusion / initial_map / Early Logic Optimization (FLW-8001)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 754 MB (FLW-8100)
+
+Information: Starting compile_fusion / initial_map / High-Level Optimization and Technology Mapping (FLW-8000)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 754 MB (FLW-8100)
+Information: Added key list 'DesignWare' to design 'MEMCTRL'. (DWS-0216)
+Warning: No cell bus will be mapped to multibit because there is no multibit cells in the cell libraries. (SQM-1040)
+Warning: Shift register Inferencing is enabled so only head flop will be replaced with scan cell and not all registers in shift register chains are scan replaced. (SQM-1074)
+Information: Inferred a shift register of length 2 with UFSM/PREV_CE_reg as head in module FSM. (SQM-2005)
+Information: 1 out of 2 SQM-1040 messages were not printed due to limit 1 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Information: 1 out of 2 SQM-1074 messages were not printed due to limit 1 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Information: Ending   compile_fusion / initial_map / High-Level Optimization and Technology Mapping (FLW-8001)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 754 MB (FLW-8100)
+
+Information: Register Bits Before Sharing = 28, After Sharing = 28, Savings = 0 (SQM-2000)
+Information: Starting compile_fusion / initial_map / Logic Simplification (2) (FLW-8000)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 774 MB (FLW-8100)
+Information: Ending   compile_fusion / initial_map / Logic Simplification (2) (FLW-8001)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 774 MB (FLW-8100)
+
+Information: Result of compile_fusion / initial_map / Clock Gate Insertion (FLW-8500)
+Number of Pre-Existing Clock Gates with dont touch attribute: 0
+Number of ICG library cells with CTS purpose: 4
+--------------------------------------------------------------------------------
+                          Tool Gated Register Summary                           
+--------------------------------------------------------------------------------
+Clock Gating Type                   | Number of   | Register Count | Equivalent 
+                                    | Clock Gates |                | Bitwidth   
+--------------------------------------------------------------------------------
+Regular Clock Gating                |           0 |              0 |          0
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                 Regular Clock Gating Ungated Register Summary                  
+--------------------------------------------------------------------------------
+ Ungated Reason                                            | Count | Bitwidth   
+--------------------------------------------------------------------------------
+ Enable is Constant One.                                   |    28 |       28
+--------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -      62237.64           -          65              0.01       773
+Information: Ending   compile_fusion / initial_map (FLW-8001)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 774 MB (FLW-8100)
+
+Information: >>>>>>> 3 unique error and warning message tags while observing compile_fusion / initial_map: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1     1  1 SQM-1074  WARNING   Warning: Shift register Inferencing is enabled so only head ... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   Warning: No cell bus will be mapped to multibit because ther... (MSG-3032)
+Information:    33    24  0 LGL-397   WARNING   Warning: No site rows found in floorplan. (LGL-397)             (MSG-3032)
+Information:    35    26  2        3  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 26 error&warning MSGs observed during compile_fusion / initial_map (MSG-3103)
+
+Warning: Duplicate callback function set for step 'fc/logic_opto/dwProcessPrecond1' (FLW-2224)
+Warning: Duplicate callback function set for step 'fc/logic_opto/dwProcessPrecond1' (FLW-2224)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+*******************************************************************************
+                             Summary of UPF Cells                              
+*******************************************************************************
+This is NOT a UPF design.
+UPF is NOT loaded.
+UPF is NOT committed.
+-------------------------------------------------------------------------------
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+Warning: Step fc (and possibly its children) printed 1 error messages. Continuing flow despite Errors. (FLW-2542)
+Information: >>>>>>> 6 unique error and warning message tags while observing fc: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     3     3  0 FLW-2542  WARNING   Warning: Step fc (and possibly its children) printed 1 error... (MSG-3032)
+Information:     2     2  0 FLW-2224  WARNING   Warning: Duplicate callback function set for step 'fc/logic_... (MSG-3032)
+Information:     1     1  1 SQM-1074  WARNING   Warning: Shift register Inferencing is enabled so only head ... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   Warning: No cell bus will be mapped to multibit because ther... (MSG-3032)
+Information:    35    33  0 LGL-397   WARNING   Warning: No site rows found in floorplan. (LGL-397)             (MSG-3032)
+Information:     2     2  0 GRF-011   ERROR     Error: Generated clock 'CLOCKCE' with source pin 'UFSM/MEM_C... (MSG-3032)
+Information:    44    42  2        6  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 42 error&warning MSGs observed during fc (MSG-3103)
+Information: Timer using 4 threads
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 8 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 6 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     3     3  0 FLW-2542  WARNING   Warning: Step fc (and possibly its children) printed 1 error... (MSG-3032)
+Information:     2     2  0 FLW-2224  WARNING   Warning: Duplicate callback function set for step 'fc/logic_... (MSG-3032)
+Information:     1     1  1 SQM-1074  WARNING   Warning: Shift register Inferencing is enabled so only head ... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   Warning: No cell bus will be mapped to multibit because ther... (MSG-3032)
+Information:    35    34  0 LGL-397   WARNING   Warning: No site rows found in floorplan. (LGL-397)             (MSG-3032)
+Information:     2     2  0 GRF-011   ERROR     Error: Generated clock 'CLOCKCE' with source pin 'UFSM/MEM_C... (MSG-3032)
+Information:    44    43  2        6  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 43 error&warning MSGs observed during fusion (MSG-3103)
+Information: Ending   'compile_fusion -to initial_map' (FLW-8001)
+Information: Time: 2024-12-06 16:27:58 / Session: 0.01 hr / Command: 0.00 hr / Memory: 774 MB (FLW-8100)
+Information: Related supplies are not explicitly specified on 33 port(s) and primary supplies (VDD, VSS) of top power domain will be assumed as the related supply. (UPF-467)
+Information: Power intent has been successfully committed. (UPF-072)
+Information: Total 0 isolation cell(s) in the design. (MV-021)
+Information: Total 0 level shifter cell(s) in the design. (MV-021)
+Information: Total 0 enable level shifter cell(s) in the design. (MV-021)
+Information: Total 0 repeater cell(s) in the design. (MV-021)
+Information: Total 0 retention cell(s) in the design. (MV-021)
+Information: Total 0 power switch cell(s) in the design. (MV-021)
+Information: Total 0 netlist change(s) and disconnections have been made to resolve conflicts between power intent and PG netlist. (UPF-073)
+****************************************
+Report : Power/Ground Connection Summary
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Fri Dec  6 16:27:58 2024
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 0/65
+Ground net VSS                0/65
+--------------------------------------------------------------------------------
+Information: connections of 130 power/ground pin(s) are created or changed.
+Information: The design specific attribute override for layer 'M1' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'MRDL' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The returned value for layer 'M1' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M2' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M3' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M4' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M5' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M6' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M7' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M8' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M9' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+****************************************
+Report : Ignored Layers
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Fri Dec  6 16:27:58 2024
+****************************************
+Layer Attribute                 Value
+--------------------------------------------------------------------------------
+Min Routing Layer               (none given)
+Max Routing Layer               (none given)
+RC Estimation Ignored Layers    (none given)
+Information: The command 'set_ignored_layers' cleared the undo history. (UNDO-016)
+****************************************
+Report : Ignored Layers
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Fri Dec  6 16:27:58 2024
+****************************************
+Layer Attribute                 Value
+--------------------------------------------------------------------------------
+Min Routing Layer               M1
+Max Routing Layer               M6
+RC Estimation Ignored Layers    PO M7 M8 M9 MRDL 
+Information: Saving 'MEMCTRL:MEMCTRL.design' to 'MEMCTRL:MEMCTRL_01_READ_DESIGN.design'. (DES-028)
+Saving library 'MEMCTRL'
+Warning: this option -shape is not valid when you specify the -boundary option. (DPI-204)
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 62.24%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+Information: The command 'check_legality' cleared the undo history. (UNDO-016)
+
+************************
+
+running check_legality
+
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 0 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 0 vias out of 0 total vias.
+
+check_legality for block design MEMCTRL ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0500 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 16 ref cells (8 fillers) from library
+Warning: Standard cell instance UFSM/ctmi_69 is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/MEM_ADDR_reg[7] is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/MEM_IDATA_reg[5] is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/MEM_IDATA_reg[4] is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/MEM_IDATA_reg[3] is not placed. (LGL-003)
+Note - message 'LGL-003' limit (5) exceeded. Remainder will be suppressed.
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+
+Sorting rows.
+Checking spacing rule legality.
+
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design MEMCTRL succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+****************************************
+Report : check_mv_design
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Fri Dec  6 16:27:59 2024
+****************************************
+
+---------- Power domain rule ----------
+No errors or warnings.
+
+---------- Supply set rule ----------
+No errors or warnings.
+
+---------- Supply net rule ----------
+No errors or warnings.
+
+---------- Supply port rule ----------
+No errors or warnings.
+
+---------- Isolation strategy rule ----------
+No errors or warnings.
+
+---------- Level shifter strategy rule ----------
+No errors or warnings.
+
+---------- Retention strategy rule ----------
+No errors or warnings.
+
+---------- Power switch strategy rule ----------
+No errors or warnings.
+
+---------- Repeater rule ----------
+No errors or warnings.
+
+---------- Terminal boundary rule ----------
+No errors or warnings.
+
+---------- Isolation cell rule ----------
+No errors or warnings.
+
+---------- Level shifter cell rule ----------
+No errors or warnings.
+
+---------- Retention cell rule ----------
+No errors or warnings.
+
+---------- Switch cell rule ----------
+No errors or warnings.
+
+---------- PGMUX rule ----------
+No errors or warnings.
+
+---------- Diode cell rule ----------
+No errors or warnings.
+
+---------- Model rule ----------
+No errors or warnings.
+
+---------- Isolation rule ----------
+No errors or warnings.
+
+---------- Voltage shifting rule ----------
+No errors or warnings.
+
+---------- Tie-off connection rule ----------
+No errors or warnings.
+
+---------- Analog net rule ----------
+No errors or warnings.
+
+---------- Physical block pin rule ----------
+No errors or warnings.
+
+---------- PG pin rule ----------
+No errors or warnings.
+
+---------- Signal pin rule ----------
+No errors or warnings.
+
+---------- Summary ----------
+Information: Total 0 error(s) and 0 warning(s) from check_mv_design. (MV-082)
+Information: Saving 'MEMCTRL:MEMCTRL.design' to 'MEMCTRL:MEMCTRL_02_FLOORPLAN.design'. (DES-028)
+Saving library 'MEMCTRL'
+Information: 56 out of 61 LGL-003 messages were not printed due to limit 5  (MSG-3913)
+fc_shell> start_gui
+Load ICV ICCII menu file: /home/eda/synopsys/icvalidator/T-2022.03/etc/tcl-u/Icc2Menu.tcl
+ + VUE INFO: Please click View->IC Validator VUE in LayoutWindow menu
+            to launch VUE.
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE INFO: Found a usable port: 2447
+
+fc_shell> quit
+Maximum memory usage for this session: 773.53 MB
+Maximum memory usage for this session including child processes: 773.53 MB
+CPU usage for this session:     54 seconds (  0.01 hours)
+Elapsed time for this session:    253 seconds (  0.07 hours)
+Thank you for using Fusion Compiler.
+
