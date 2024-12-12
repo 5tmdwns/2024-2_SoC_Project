@@ -1,0 +1,13 @@
+/home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/BISR_FSM.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/BIST.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/BIST_FSM.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/BinaryCounter.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/GrayCounter.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/LFSR16B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/LFSR8B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/MEMCTRL.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/SPARE_SRAM3KB.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/SRAM64KB.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/rtl/memctrl/Toggle8B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr/sim/rtl/memctrl/TB_MEMCTRL.v

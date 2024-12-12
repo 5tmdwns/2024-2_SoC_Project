@@ -1,0 +1,22 @@
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/FSM.v" 
+C/mnt/home/soc17/soc/proj/pnr/memctrl
+/mnt/home/soc17/soc/proj/rtl/memctrl/FSM.v
+FSM
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM64KB.v" 
+C/mnt/home/soc17/soc/proj/pnr/memctrl
+/mnt/home/soc17/soc/proj/rtl/memctrl/SRAM64KB.v
+SRAM64KB
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/SRAM2KB.v" 
+C/mnt/home/soc17/soc/proj/pnr/memctrl
+/mnt/home/soc17/soc/proj/rtl/memctrl/SRAM2KB.v
+SRAM2KB
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc17/soc/proj/pnr/../rtl/memctrl/MEMCTRL.v" 
+C/mnt/home/soc17/soc/proj/pnr/memctrl
+/mnt/home/soc17/soc/proj/rtl/memctrl/MEMCTRL.v
+MEMCTRL
+elaborate MEMCTRL
+set_top_module MEMCTRL

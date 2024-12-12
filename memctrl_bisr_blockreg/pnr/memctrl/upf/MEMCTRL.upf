@@ -1,0 +1,34 @@
+## UPF EXAM ##
+
+create_power_domain TOP -include_scope 
+
+# supply net creation for domain TOP
+create_supply_net VDD -domain TOP
+create_supply_net VSS -domain TOP
+
+# supply port creattion for domain TOP
+create_supply_port VDD -domain TOP
+create_supply_port VSS -domain TOP
+
+# connect supply net and port
+connect_supply_net VDD -port VDD
+connect_supply_net VSS -port VSS
+
+# set domain supply net
+set_domain_supply_net TOP  -primary_power_net VDD \
+                           -primary_ground_net VSS
+
+# add port state inform 
+add_port_state VDD	-state {VDD_ON 0.95}
+add_port_state VSS	-state {VSS_OFF 0.00}
+
+# power states 
+create_pst top_state 	-supplies {VDD VSS}
+add_pst_state all_on -pst top_state -state {VDD_ON VSS_OFF}
+
+# connect ports
+connect_supply_net VDD -ports [get_pins -hier */VDD]
+
+
+connect_supply_net VSS -ports [get_pins -hier */VSS]
+

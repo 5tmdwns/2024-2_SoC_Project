@@ -1,0 +1,1567 @@
+ 
+                              Fusion Compiler (TM)
+
+             Version U-2022.12-SP1 for linux64 - Jan 27, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+fc_shell> source ./run_fc.tcl
+Warning: Layer 'VIA1' 'onGrid' and 'onWireTrack' coexist. (TECH-025)
+Information: Loading technology file '/home/eda/soc/lib/gpdk/32n/tech/milkyway/saed32nm_1p9m_mw.tf' (FILE-007)
+Information: By default, the HDL template library is 'WORK' (LBR-??).
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/BinaryCounter.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.04, CPU = 00:00:00.01
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/LFSR16B.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/Toggle8B.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.02, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/FSM.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/LFSR8B.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/GrayCounter.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/SRAM64KB.v
+Warning:  /mnt/home/soc29/p9/pnr/../rtl/memctrl/SRAM64KB.v:23: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Presto compilation completed successfully.
+Elapsed = 00:00:00.00, CPU = 00:00:00.00
+Running PRESTO HDLC
+Compiling source file /mnt/home/soc29/p9/pnr/../rtl/memctrl/MEMCTRL.v
+Presto compilation completed successfully.
+Elapsed = 00:00:00.02, CPU = 00:00:00.00
+Presto compilation completed successfully. (MEMCTRL)
+Information: Elaborating HDL template WORK:FSM instantiated from 'MEMCTRL'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine FSM line 58 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/FSM.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| MEM_ODATA_SELECT_reg | Flip-flop |   6   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|     MEM_ADDR_reg     | Flip-flop |  10   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|      MEM_CE_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     MEM_WEB_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     MEM_OEB_reg      | Flip-flop |  64   |  Y  | Y  | N  | Y  | N  | N  | N  |
+|     MEM_CSB_reg      | Flip-flop |  64   |  Y  | Y  | N  | Y  | N  | N  | N  |
+|    MEM_IDATA_reg     | Flip-flop |   8   |  Y  | Y  | Y  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (FSM)
+Information: Elaborating HDL template WORK:SRAM64KB instantiated from 'MEMCTRL'. (ELAB-193)
+
+Statistics for case statements in always block at line 38 in file
+        '/mnt/home/soc29/p9/pnr/../rtl/memctrl/SRAM64KB.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (SRAM64KB)
+Information: Elaborating HDL template WORK:BIST instantiated from 'FSM'. (ELAB-193)
+
+Statistics for case statements in always block at line 43 in file
+        '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 55 in file
+        '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            56            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 82 in file
+        '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 93 in file
+        '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           107            |     no/auto      |
+===============================================
+  state register: state
+
+Inferred memory devices in process
+        in routine BIST line 73 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   4   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | Y  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine BIST line 93 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BIST.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+|     BIST_MEM_OEB_reg      | Flip-flop |  64   |  Y  | Y  | N  | Y  | N  | N  | N  |
+|       BIST_PASS_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    BIST_MEM_IDATA_reg     | Flip-flop |   8   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|     BIST_MEM_ADDR_reg     | Flip-flop |  10   |  Y  | Y  | Y  | N  | N  | N  | N  |
+| BIST_MEM_ODATA_SELECT_reg | Flip-flop |   6   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|      BIST_MEM_CE_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     BIST_MEM_WEB_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     BIST_MEM_CSB_reg      | Flip-flop |  64   |  Y  | Y  | N  | Y  | N  | N  | N  |
+=====================================================================================
+Presto compilation completed successfully. (BIST)
+Information: Elaborating HDL template WORK:LFSR16B instantiated from 'BIST'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine LFSR16B line 15 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/LFSR16B.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       OUT_reg       | Flip-flop |   1   |  N  | Y  | N  | Y  | N  | N  | N  |
+|       OUT_reg       | Flip-flop |  15   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|    COUNTING_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    CLK_COUNT_reg    | Flip-flop |   3   |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (LFSR16B)
+Information: Elaborating HDL template WORK:GrayCounter instantiated from 'BIST'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine GrayCounter line 16 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/GrayCounter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  BinaryCounter_reg  | Flip-flop |  16   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|    COUNTING_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    CLK_COUNT_reg    | Flip-flop |   3   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|       OUT_reg       | Flip-flop |  16   |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (GrayCounter)
+Information: Elaborating HDL template WORK:BinaryCounter instantiated from 'BIST'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine BinaryCounter line 16 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/BinaryCounter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       OUT_reg       | Flip-flop |  16   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|    COUNTING_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    CLK_COUNT_reg    | Flip-flop |   3   |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (BinaryCounter)
+Information: Elaborating HDL template WORK:LFSR8B instantiated from 'BIST'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine LFSR8B line 15 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/LFSR8B.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       OUT_reg       | Flip-flop |   1   |  N  | Y  | N  | Y  | N  | N  | N  |
+|       OUT_reg       | Flip-flop |   7   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|    COUNTING_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    CLK_COUNT_reg    | Flip-flop |   3   |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (LFSR8B)
+Information: Elaborating HDL template WORK:Toggle8B instantiated from 'BIST'. (ELAB-193)
+
+Inferred memory devices in process
+        in routine Toggle8B line 15 in file
+                '/mnt/home/soc29/p9/pnr/../rtl/memctrl/Toggle8B.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       OUT_reg       | Flip-flop |   8   |  Y  | Y  | Y  | N  | N  | N  | N  |
+|    COUNTING_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    CLK_COUNT_reg    | Flip-flop |   3   |  Y  | Y  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Toggle8B)
+Number of modules read: 9
+Top level ports:        43
+Total in all modules
+  Ports:                650
+  Nets:                 4432
+  Instances:            2476
+Elapsed = 00:00:00.34, CPU = 00:00:00.31
+Information: User units loaded from library 'sae32sram' (LNK-040)
+Information: Added key list 'DesignWare' to design 'MEMCTRL'. (DWS-0216)
+Elapsed = 00:00:00.49, CPU = 00:00:00.40
+****************************************
+ Report : check_design 
+ Options: { dp_pre_floorplan }
+ Design : MEMCTRL
+ Version: U-2022.12-SP1
+ Date   : Thu Dec 12 06:52:42 2024
+****************************************
+
+Running atomic-check 'dp_pre_floorplan'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DPUI-924     Warn   10         The routing directions for layer '%s' are missing. Auto deriving...
+  ----------------------------------------------------------------------------------------------------
+  Total 10 non-EMS messages : 0 errors, 10 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+Information: Non-EMS messages are saved into file 'check_design2024Dec12065242.log'.
+Warning: Creating 'clock' on a hierarchical pin 'UFSM/MEM_CE'. (UIC-018)
+Information: Timer using 4 threads
+Warning: No site rows found in floorplan. (LGL-397)
+INFO: compile_fusion is running in balanced flow mode.
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Starting 'compile_fusion -to initial_map' (FLW-8000)
+Information: Time: 2024-12-12 06:52:42 / Session: 0.00 hr / Command: 0.00 hr / Memory: 511 MB (FLW-8100)
+INFO: Start environment monitoring: recipes
+INFO: compile_fusion is running in balanced flow mode.
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+INFO: updateGlobalOptions
+INFO: use Native GDC
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_map (FLW-8000)
+Information: Time: 2024-12-12 06:52:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 547 MB (FLW-8100)
+----------------------------------------------------------------------------------------------------------
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Starting compile_fusion / initial_map / MV Cell Insertion (FLW-8000)
+Information: Time: 2024-12-12 06:52:44 / Session: 0.00 hr / Command: 0.00 hr / Memory: 555 MB (FLW-8100)
+Information: Result of compile_fusion / initial_map / MV Cell Insertion (FLW-8500)
+Information: Total number of MV cells in the design. (MV-334)
+Information: Ending   compile_fusion / initial_map / MV Cell Insertion (FLW-8001)
+Information: Time: 2024-12-12 06:52:44 / Session: 0.00 hr / Command: 0.00 hr / Memory: 555 MB (FLW-8100)
+
+Information: Starting compile_fusion / initial_map / Logic Simplification (1) (FLW-8000)
+Information: Time: 2024-12-12 06:52:44 / Session: 0.00 hr / Command: 0.00 hr / Memory: 555 MB (FLW-8100)
+Information: The hierarchy UFSM/UBIST/LFSR_DATA_GEN is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy UFSM/UBIST/LFSR_ADDR_GEN is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy UFSM/UBIST/Toggle_DATA_GEN is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy UFSM/UBIST/BIN_ADDR_GEN is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy UFSM/UBIST/GRAY_ADDR_GEN is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy UFSM/UBIST is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy USRAM is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy UFSM is not ungrouped due to restrictions. (UNG-1004)
+Information: 7 of 8 hierarchies are ungrouped. Use report_ungroup for a list. (UNG-1003)
+Information: 1 of 8 hierarchies are not ungrouped because of restrictions. Use report_ungroup for a list. (UNG-1005)
+Information: Result of compile_fusion / initial_map / Auto Ungroup (FLW-8500)
+Information: Ungroup Summary Report (UNG-1007)
+-------------------------------------------------------------------
+Hierarchy                                                 Count
+-------------------------------------------------------------------
+Auto ungrouped hierarchies                                  7
+Hierarchies preserved due to restrictions                   1
+-------------------------------------------------------------------
+Information: The register UFSM/UBIST/LFSR_ADDR_GEN/CLK_COUNT_reg[0] is removed because it is merged to register UFSM/UBIST/LFSR_DATA_GEN/CLK_COUNT_reg[0]. (SQM-4102)
+Information: The register UFSM/UBIST/LFSR_ADDR_GEN/COUNTING_reg is removed because it is merged to register UFSM/UBIST/LFSR_DATA_GEN/COUNTING_reg. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[6] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[5] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[4] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[3] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[2] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[1] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[0] is removed because it is merged to register UFSM/UBIST/Toggle_DATA_GEN/OUT_reg[7]. (SQM-4102)
+Information: The register UFSM/UBIST/LFSR_ADDR_GEN/CLK_COUNT_reg[1] is removed because it is merged to register UFSM/UBIST/LFSR_DATA_GEN/CLK_COUNT_reg[1]. (SQM-4102)
+Information: Register Bits Before Sharing = 414, After Sharing = 403, Savings = 11 (SQM-2000)
+Information: 10 out of 11 MSG-3549 messages were not printed due to limit 1 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Information: 1 out of 11 SQM-4102 messages were not printed due to limit 10 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Ending   compile_fusion / initial_map / Logic Simplification (1) (FLW-8001)
+Information: Time: 2024-12-12 06:52:49 / Session: 0.01 hr / Command: 0.00 hr / Memory: 605 MB (FLW-8100)
+
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+Information: Starting compile_fusion / initial_map / Early Logic Optimization (FLW-8000)
+Information: Time: 2024-12-12 06:52:50 / Session: 0.01 hr / Command: 0.00 hr / Memory: 705 MB (FLW-8100)
+Information: Timer using 4 threads
+Information: Ending   compile_fusion / initial_map / Early Logic Optimization (FLW-8001)
+Information: Time: 2024-12-12 06:52:53 / Session: 0.01 hr / Command: 0.00 hr / Memory: 792 MB (FLW-8100)
+
+Information: Starting compile_fusion / initial_map / High-Level Optimization and Technology Mapping (FLW-8000)
+Information: Time: 2024-12-12 06:52:53 / Session: 0.01 hr / Command: 0.00 hr / Memory: 792 MB (FLW-8100)
+Information: Added key list 'DesignWare' to design 'MEMCTRL'. (DWS-0216)
+Information: Inferred a shift register of length 16 with UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[0] as head in module FSM. (SQM-2005)
+Information: Inferred a shift register of length 8 with UFSM/UBIST/LFSR_DATA_GEN/OUT_reg[0] as head in module FSM. (SQM-2005)
+Warning: No cell bus will be mapped to multibit because there is no multibit cells in the cell libraries. (SQM-1040)
+Warning: Shift register Inferencing is enabled so only head flop will be replaced with scan cell and not all registers in shift register chains are scan replaced. (SQM-1074)
+Information: 1 out of 2 SQM-1040 messages were not printed due to limit 1 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Information: 1 out of 2 SQM-1074 messages were not printed due to limit 1 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Information: Ending   compile_fusion / initial_map / High-Level Optimization and Technology Mapping (FLW-8001)
+Information: Time: 2024-12-12 06:52:56 / Session: 0.01 hr / Command: 0.00 hr / Memory: 792 MB (FLW-8100)
+
+Information: Register Bits Before Sharing = 403, After Sharing = 403, Savings = 0 (SQM-2000)
+Information: 21 out of 22 MSG-3549 messages were not printed due to limit 1 (after 'compile_fusion' at run_fc.tcl:50) (MSG-3913)
+Information: Starting compile_fusion / initial_map / Logic Simplification (2) (FLW-8000)
+Information: Time: 2024-12-12 06:52:57 / Session: 0.01 hr / Command: 0.00 hr / Memory: 831 MB (FLW-8100)
+Information: Ending   compile_fusion / initial_map / Logic Simplification (2) (FLW-8001)
+Information: Time: 2024-12-12 06:52:57 / Session: 0.01 hr / Command: 0.00 hr / Memory: 831 MB (FLW-8100)
+
+Information: Result of compile_fusion / initial_map / Clock Gate Insertion (FLW-8500)
+Number of Pre-Existing Clock Gates with dont touch attribute: 0
+Number of ICG library cells with CTS purpose: 4
+--------------------------------------------------------------------------------
+                          Tool Gated Register Summary                           
+--------------------------------------------------------------------------------
+Clock Gating Type                   | Number of   | Register Count | Equivalent 
+                                    | Clock Gates |                | Bitwidth   
+--------------------------------------------------------------------------------
+Regular Clock Gating                |           9 |            230 |        230
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                 Regular Clock Gating Ungated Register Summary                  
+--------------------------------------------------------------------------------
+ Ungated Reason                                            | Count | Bitwidth   
+--------------------------------------------------------------------------------
+ Enable is Constant One.                                   |   162 |      162
+ Minimum Bitwidth Not Met.                                 |    11 |       11
+--------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -    1656310.38           -        1432              0.01       830
+Information: Ending   compile_fusion / initial_map (FLW-8001)
+Information: Time: 2024-12-12 06:52:57 / Session: 0.01 hr / Command: 0.00 hr / Memory: 831 MB (FLW-8100)
+
+Information: >>>>>>> 3 unique error and warning message tags while observing compile_fusion / initial_map: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1     1  1 SQM-1074  WARNING   Shift register Inferencing is enabled so only head flop will... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   No cell bus will be mapped to multibit because there is no m... (MSG-3032)
+Information:    33    24  0 LGL-397   WARNING   Warning: No site rows found in floorplan. (LGL-397)             (MSG-3032)
+Information:    35    26  2        3  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 26 error&warning MSGs observed during compile_fusion / initial_map (MSG-3103)
+
+Warning: Duplicate callback function set for step 'fc/logic_opto/dwProcessPrecond1' (FLW-2224)
+Warning: Duplicate callback function set for step 'fc/logic_opto/dwProcessPrecond1' (FLW-2224)
+Warning: No site rows found in floorplan. (LGL-397)
+Warning: No site rows found in floorplan. (LGL-397)
+*******************************************************************************
+                             Summary of UPF Cells                              
+*******************************************************************************
+This is NOT a UPF design.
+UPF is NOT loaded.
+UPF is NOT committed.
+-------------------------------------------------------------------------------
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+Information: Timer using 4 threads
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 8 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 4 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     2     2  0 FLW-2224  WARNING   Warning: Duplicate callback function set for step 'fc/logic_... (MSG-3032)
+Information:     1     1  1 SQM-1074  WARNING   Shift register Inferencing is enabled so only head flop will... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   No cell bus will be mapped to multibit because there is no m... (MSG-3032)
+Information:    35    34  0 LGL-397   WARNING   Warning: No site rows found in floorplan. (LGL-397)             (MSG-3032)
+Information:    39    38  2        4  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 38 error&warning MSGs observed during fusion (MSG-3103)
+Information: Ending   'compile_fusion -to initial_map' (FLW-8001)
+Information: Time: 2024-12-12 06:52:57 / Session: 0.01 hr / Command: 0.00 hr / Memory: 831 MB (FLW-8100)
+Information: Related supplies are not explicitly specified on 43 port(s) and primary supplies (VDD, VSS) of top power domain will be assumed as the related supply. (UPF-467)
+Information: Power intent has been successfully committed. (UPF-072)
+Information: Total 0 isolation cell(s) in the design. (MV-021)
+Information: Total 0 level shifter cell(s) in the design. (MV-021)
+Information: Total 0 enable level shifter cell(s) in the design. (MV-021)
+Information: Total 0 repeater cell(s) in the design. (MV-021)
+Information: Total 0 retention cell(s) in the design. (MV-021)
+Information: Total 0 power switch cell(s) in the design. (MV-021)
+Information: Total 0 netlist change(s) and disconnections have been made to resolve conflicts between power intent and PG netlist. (UPF-073)
+****************************************
+Report : Power/Ground Connection Summary
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Thu Dec 12 06:52:57 2024
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 0/1432
+Ground net VSS                0/1432
+--------------------------------------------------------------------------------
+Information: connections of 2864 power/ground pin(s) are created or changed.
+Information: The design specific attribute override for layer 'M1' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'MRDL' is set in the current block 'MEMCTRL', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The returned value for layer 'M1' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M2' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M3' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M4' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M5' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M6' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M7' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M8' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+Information: The returned value for layer 'M9' is the design specific attribute override defined within the current block 'MEMCTRL'. (ATTR-11)
+****************************************
+Report : Ignored Layers
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Thu Dec 12 06:52:57 2024
+****************************************
+Layer Attribute                 Value
+--------------------------------------------------------------------------------
+Min Routing Layer               (none given)
+Max Routing Layer               (none given)
+RC Estimation Ignored Layers    (none given)
+Information: The command 'set_ignored_layers' cleared the undo history. (UNDO-016)
+****************************************
+Report : Ignored Layers
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Thu Dec 12 06:52:57 2024
+****************************************
+Layer Attribute                 Value
+--------------------------------------------------------------------------------
+Min Routing Layer               M1
+Max Routing Layer               M6
+RC Estimation Ignored Layers    PO M7 M8 M9 MRDL 
+Information: Saving 'MEMCTRL:MEMCTRL.design' to 'MEMCTRL:MEMCTRL_01_READ_DESIGN.design'. (DES-028)
+Saving library 'MEMCTRL'
+Warning: this option -shape is not valid when you specify the -boundary option. (DPI-204)
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 51.28%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+527.2769
+818.699
+Information: The command 'check_legality' cleared the undo history. (UNDO-016)
+
+************************
+
+running check_legality
+
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 0 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 0 vias out of 0 total vias.
+
+check_legality for block design MEMCTRL ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0200 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 36 ref cells (8 fillers) from library
+Warning: Standard cell instance UFSM/ctmi_2930 is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/ctmi_2912 is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[13] is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/UBIST/LFSR_DATA_GEN/CLK_COUNT_reg[2] is not placed. (LGL-003)
+Warning: Standard cell instance UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[12] is not placed. (LGL-003)
+Note - message 'LGL-003' limit (5) exceeded. Remainder will be suppressed.
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+
+Sorting rows.
+Checking spacing rule legality.
+
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design MEMCTRL succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+****************************************
+Report : check_mv_design
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Thu Dec 12 06:52:58 2024
+****************************************
+
+---------- Power domain rule ----------
+No errors or warnings.
+
+---------- Supply set rule ----------
+No errors or warnings.
+
+---------- Supply net rule ----------
+No errors or warnings.
+
+---------- Supply port rule ----------
+No errors or warnings.
+
+---------- Isolation strategy rule ----------
+No errors or warnings.
+
+---------- Level shifter strategy rule ----------
+No errors or warnings.
+
+---------- Retention strategy rule ----------
+No errors or warnings.
+
+---------- Power switch strategy rule ----------
+No errors or warnings.
+
+---------- Repeater rule ----------
+No errors or warnings.
+
+---------- Terminal boundary rule ----------
+No errors or warnings.
+
+---------- Isolation cell rule ----------
+No errors or warnings.
+
+---------- Level shifter cell rule ----------
+No errors or warnings.
+
+---------- Retention cell rule ----------
+No errors or warnings.
+
+---------- Switch cell rule ----------
+No errors or warnings.
+
+---------- PGMUX rule ----------
+No errors or warnings.
+
+---------- Diode cell rule ----------
+No errors or warnings.
+
+---------- Model rule ----------
+No errors or warnings.
+
+---------- Isolation rule ----------
+No errors or warnings.
+
+---------- Voltage shifting rule ----------
+No errors or warnings.
+
+---------- Tie-off connection rule ----------
+No errors or warnings.
+
+---------- Analog net rule ----------
+No errors or warnings.
+
+---------- Physical block pin rule ----------
+No errors or warnings.
+
+---------- PG pin rule ----------
+No errors or warnings.
+
+---------- Signal pin rule ----------
+No errors or warnings.
+
+---------- Summary ----------
+Information: Total 0 error(s) and 0 warning(s) from check_mv_design. (MV-082)
+Information: Saving 'MEMCTRL:MEMCTRL.design' to 'MEMCTRL:MEMCTRL_02_FLOORPLAN.design'. (DES-028)
+Saving library 'MEMCTRL'
+All strategies have been removed.
+No pattern is found.
+No PG region is found.
+No via def rule is found.
+All strategy via rules have been removed.
+Error: Nothing matched for blockage_list (SEL-005)
+Information: The command 'set_pg_via_master_rule' cleared the undo history. (UNDO-016)
+Successfully set via def rule pgvia_10x10.
+Successfully create PG ring pattern core_ring_pattern.
+Successfully set PG strategy core_ring.
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Set tag to CORE_RING
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy core_ring.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Creating rings.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 2 stacked vias.
+Number of vias: 2
+Checking DRC for 2 stacked vias:0% 50% 100%
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy core_ring.
+Checking 16 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 2 stacked vias:0% 50% 100%
+Found -2 dangling/floating vias.
+Start iteration 2:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy core_ring.
+Checking 16 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 4 stacked vias:0% 20% 50% 70% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag CORE_RING to committed wires.
+Committed 16 wires.
+Committing wires takes 0.00 seconds.
+Committed 20 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+Successfully create PG ring pattern Macro_ring.
+Successfully set PG strategy MEMCTRL_macro_ring.
+Successfully set strategy via rule M_ring_vias.
+Sanity check for inputs.
+Set tag to MACRO_RING
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy MEMCTRL_macro_ring.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Creating rings.
+Creating via connection between strategies and existing shapes.
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy MEMCTRL_macro_ring.
+Checking 512 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag MACRO_RING to committed wires.
+Committed 512 wires.
+Committing wires takes 0.00 seconds.
+Committed 512 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+Successfully create macro connection pattern Macro_ring_pin.
+Successfully set PG strategy Macro_pins_via.
+Sanity check for inputs.
+No strategy-level via rule is specified, the default rule will be applied.
+Set tag to Macro_RING_con
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy Macro_pins_via.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Connecting macros and pads.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 15488 stacked vias.
+Number of threads: 4
+Number of partitions: 264
+Direction of partitions: horizontal
+Number of vias: 15488
+Checking DRC for 15488 stacked vias:5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+15488 regular vias are not fixed
+Via DRC checking runtime 3.00 seconds.
+via connection runtime: 3 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 15488 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag Macro_RING_con to committed wires.
+Committed 15488 wires.
+Committing wires takes 0.00 seconds.
+Committed 15488 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 14 seconds.
+Successfully compiled PG.
+Overall runtime: 14 seconds.
+Define region based on polygon shape.
+Create region MESH
+Variable 4.64 is defined in -parameters option but not used by any pattern expression.
+Variable 19.456 is defined in -parameters option but not used by any pattern expression.
+Variable 5.088 is defined in -parameters option but not used by any pattern expression.
+Warning: Some defined variables in -parameters option are not used by other options. (PGR-501)
+Successfully create mesh pattern METAL8_PG_PATTERN.
+Successfully set PG strategy METAL8_MAPPING_STRATEGY.
+Only via_master is specified in the rule, the via_master will be applied to all intersections.
+Please specified intersection rule or filtering rule if this is not desired.
+Successfully set strategy via rule M8_via.
+Sanity check for inputs.
+Set tag to MESH_8
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy METAL8_MAPPING_STRATEGY.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Creating straps and vias in power plan.
+Creating wire shapes for strategies METAL8_MAPPING_STRATEGY .
+Creating wire shapes runtime: 0 seconds
+Blockage cutting and DRC fixing for wire shapes for strategies METAL8_MAPPING_STRATEGY .
+Check and fix DRC for 1774 wires for strategy METAL8_MAPPING_STRATEGY.
+Number of threads: 4
+Number of partitions: 16
+Direction of partitions: vertical
+Number of wires: 1774
+Checking DRC for 1774 wires:10% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Creating 1774 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via shapes for strategies METAL8_MAPPING_STRATEGY .
+Number of threads: 4
+Working on strategy METAL8_MAPPING_STRATEGY.
+Number of detected intersections: 0
+Total runtime of via shapes creation: 0 seconds
+Runtime of via DRC checking for strategy METAL8_MAPPING_STRATEGY: 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag MESH_8 to committed wires.
+Committed 1774 wires.
+Committing wires takes 0.00 seconds.
+Committed 0 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+Variable 1.104 is defined in -parameters option but not used by any pattern expression.
+Variable 13.376 is defined in -parameters option but not used by any pattern expression.
+Variable 5.584 is defined in -parameters option but not used by any pattern expression.
+Warning: Some defined variables in -parameters option are not used by other options. (PGR-501)
+Successfully create mesh pattern METAL7_PG_PATTERN.
+Successfully set PG strategy METAL7_MAPPING_STRATEGY.
+Only via_master is specified in the rule, the via_master will be applied to all intersections.
+Please specified intersection rule or filtering rule if this is not desired.
+Successfully set strategy via rule M7_via.
+Sanity check for inputs.
+Set tag to MESH_7
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy METAL7_MAPPING_STRATEGY.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Creating straps and vias in power plan.
+Creating wire shapes for strategies METAL7_MAPPING_STRATEGY .
+Creating wire shapes runtime: 0 seconds
+Blockage cutting and DRC fixing for wire shapes for strategies METAL7_MAPPING_STRATEGY .
+Check and fix DRC for 1371 wires for strategy METAL7_MAPPING_STRATEGY.
+Number of threads: 4
+Number of partitions: 26
+Direction of partitions: horizontal
+Number of wires: 1371
+Checking DRC for 1371 wires:5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 70% 80% 85% 90% 95% 100%
+Creating 1371 wires after DRC fixing.
+Wire DRC checking runtime 1.00 seconds.
+Creating via shapes for strategies METAL7_MAPPING_STRATEGY .
+Number of threads: 4
+Working on strategy METAL7_MAPPING_STRATEGY.
+Number of detected intersections: 0
+Total runtime of via shapes creation: 0 seconds
+Runtime of via DRC checking for strategy METAL7_MAPPING_STRATEGY: 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag MESH_7 to committed wires.
+Committed 1371 wires.
+Committing wires takes 0.00 seconds.
+Committed 0 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 1 seconds.
+Successfully compiled PG.
+Overall runtime: 1 seconds.
+Error: Nothing matched for blockage_list (SEL-005)
+Information: The command 'create_pg_wire_pattern' cleared the undo history. (UNDO-016)
+Successfully create mesh pattern P_m2_triple.
+Successfully set PG strategy S_m2_vddvss.
+Only via_master is specified in the rule, the via_master will be applied to all intersections.
+Please specified intersection rule or filtering rule if this is not desired.
+Successfully set strategy via rule M2_via.
+Sanity check for inputs.
+Set tag to low_MESH_2
+DRC checking and fixing will be skipped for created shapes.
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy S_m2_vddvss.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Creating straps and vias in power plan.
+Creating wire shapes for strategies S_m2_vddvss .
+Creating wire shapes runtime: 0 seconds
+Blockage cutting and DRC fixing for wire shapes for strategies S_m2_vddvss .
+Creating via shapes for strategies S_m2_vddvss .
+Number of threads: 4
+Working on strategy S_m2_vddvss.
+Number of detected intersections: 0
+Total runtime of via shapes creation: 0 seconds
+Creating via connection between strategies and existing shapes.
+via connection runtime: 0 seconds.
+Commiting wires and vias.
+Setting tag low_MESH_2 to committed wires.
+Committed 5208 wires.
+Committing wires takes 0.00 seconds.
+Committed 0 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+Successfully set via def rule pgvia_1x2.
+Variable M1 is defined in -parameters option but not used by other option.
+Variable 0.06 is defined in -parameters option but not used by other option.
+Variable 3.344 is defined in -parameters option but not used by other option.
+Warning: Some defined variables in -parameters option are not used by other options. (PGR-501)
+Successfully create standard cell rail pattern std_rail_pattern.
+Successfully set PG strategy M1_std_cell_rail.
+Successfully set strategy via rule M2_via_stdcellrail.
+Sanity check for inputs.
+Set tag to STD_RAIL_M1
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy M1_std_cell_rail.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 64
+Number of Pads: 0
+Creating standard cell rails.
+Creating standard cell rails for strategy M1_std_cell_rail.
+DRC checking and fixing for standard cell rail strategy M1_std_cell_rail.
+Number of threads: 4
+Number of partitions: 104
+Direction of partitions: horizontal
+Number of wires: 5511
+Checking DRC for 5511 wires:5% 10% 15% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Creating 5511 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 137447 stacked vias.
+Number of vias: 410
+Checking DRC for 410 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Number of threads: 4
+Number of partitions: 104
+Direction of partitions: horizontal
+Number of vias: 137037
+Checking DRC for 137037 stacked vias:5% 10% 15% 20% 25% 30% 35% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Via DRC checking runtime 9.00 seconds.
+via connection runtime: 9 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 137447 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag STD_RAIL_M1 to committed wires.
+Committed 5511 wires.
+Committing wires takes 0.00 seconds.
+Committed 137447 vias.
+Committed 0 wires for via creation.
+Committing vias takes 0.00 seconds.
+Overall PG creation runtime: 10 seconds.
+Successfully compiled PG.
+Overall runtime: 10 seconds.
+All strategies have been removed.
+All patterns have been removed.
+All PG regions have been removed.
+All via def rules have been removed.
+All strategy via rules have been removed.
+Command check_pg_drc started  at Thu Dec 12 06:53:24 2024
+Command check_pg_drc finished at Thu Dec 12 06:53:24 2024
+CPU usage for check_pg_drc: 3.33 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 1.00 seconds ( 0.00 hours)
+No errors found.
+Check net VDD vias...
+Number of missing vias on VIA6 layer: 1120
+Number of missing vias on VIA7 layer: 6279
+Total number of missing vias: 7399
+Checking net VDD vias took 1 seconds.
+Check net VSS vias...
+Number of missing vias on VIA6 layer: 1152
+Number of missing vias on VIA7 layer: 5430
+Total number of missing vias: 6582
+Checking net VSS vias took 1 seconds.
+Overall runtime: 2 seconds.
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 0
+Number of Macro Cells: 64
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 14042
+Number of VDD Vias: 53891
+Number of VDD Terminals: 1
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 9540
+  Number of floating vias: 8010
+  Number of floating std cells: 0
+  Number of floating hard macros: 64
+  Number of floating I/O pads: 0
+  Number of floating terminals: 1
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 15838
+Number of VSS Vias: 99576
+Number of VSS Terminals: 1
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 9621
+  Number of floating vias: 8010
+  Number of floating std cells: 0
+  Number of floating hard macros: 64
+  Number of floating I/O pads: 0
+  Number of floating terminals: 1
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+Successfully set via def rule pgvia_10x10.
+Set tag to core_M7_8_via
+Query intersections and create vias.
+Object query runtime: 0 seconds.
+Determining intersections for 1782 shapes starts
+Intersection detection runtime: 0 seconds.
+Instantiating vias for 696 intersections starts
+Via instantiation runtime: 0 seconds.
+Starting via DRC checking ...
+Number of vias: 696
+Checking DRC for 696 stacked vias:0% 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Overall via DRC checking runtime: 0 seconds.
+Checking dangling/floating vias.
+Start iteration 1: Checking 696 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Committed 696 vias.
+Setting tag core_M7_8_via to committed wires.
+Committing vias takes 0.00 seconds.
+Overall runtime: 0 seconds.
+Successfully created PG Vias.
+Successfully set via def rule pgvia_3x3.
+Set tag to M6_7_via
+Query intersections and create vias.
+Object query runtime: 0 seconds.
+Determining intersections for 1627 shapes starts
+Intersection detection runtime: 0 seconds.
+Instantiating vias for 2272 intersections starts
+Via instantiation runtime: 0 seconds.
+Starting via DRC checking ...
+Number of threads: 4
+Number of partitions: 20
+Direction of partitions: horizontal
+Number of vias: 2272
+Checking DRC for 2272 stacked vias:5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Overall via DRC checking runtime: 0 seconds.
+Checking dangling/floating vias.
+Start iteration 1: Checking 2272 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Committed 2272 vias.
+Setting tag M6_7_via to committed wires.
+Committing vias takes 0.00 seconds.
+Overall runtime: 0 seconds.
+Successfully created PG Vias.
+Successfully set via def rule pgvia_5x8.
+Set tag to M7_8_via
+Query intersections and create vias.
+Object query runtime: 0 seconds.
+Determining intersections for 3145 shapes starts
+Intersection detection runtime: 0 seconds.
+Instantiating vias for 11013 intersections starts
+Via instantiation runtime: 0 seconds.
+Starting via DRC checking ...
+Number of threads: 4
+Number of partitions: 26
+Direction of partitions: horizontal
+Number of vias: 11013
+Checking DRC for 11013 stacked vias:5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Overall via DRC checking runtime: 0 seconds.
+Checking dangling/floating vias.
+Start iteration 1: Checking 11013 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Committed 11013 vias.
+Setting tag M7_8_via to committed wires.
+Committing vias takes 1.00 seconds.
+Overall runtime: 2 seconds.
+Successfully created PG Vias.
+Information: The command 'set_pg_via_master_rule' cleared the undo history. (UNDO-016)
+Successfully set via def rule pgvia_2x4.
+Set tag to M2_7_via
+Query intersections and create vias.
+Object query runtime: 0 seconds.
+Determining intersections for 6579 shapes starts
+Intersection detection runtime: 0 seconds.
+Instantiating vias for 33649 intersections starts
+Via instantiation runtime: 0 seconds.
+Starting via DRC checking ...
+Number of threads: 4
+Number of partitions: 32
+Direction of partitions: vertical
+Number of vias: 21550
+Checking DRC for 21550 stacked vias:5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Number of threads: 4
+Number of partitions: 13
+Direction of partitions: horizontal
+Number of vias: 12099
+Checking DRC for 12099 stacked vias:5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% 100%
+Overall via DRC checking runtime: 8 seconds.
+Checking dangling/floating vias.
+Start iteration 1: Checking 33649 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Start iteration 2: Checking 32861 stacked vias:0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Committed 164305 vias.
+Setting tag M2_7_via to committed wires.
+Committing vias takes 1.00 seconds.
+Overall runtime: 10 seconds.
+Successfully created PG Vias.
+Command check_pg_drc started  at Thu Dec 12 06:53:40 2024
+Command check_pg_drc finished at Thu Dec 12 06:53:42 2024
+CPU usage for check_pg_drc: 7.40 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 2.20 seconds ( 0.00 hours)
+Total number of errors found: 108
+   108 insufficient spacings on M6
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------
+Information: The command 'check_pg_missing_vias' cleared the undo history. (UNDO-016)
+Check net VDD vias...
+Number of missing vias: 0
+Checking net VDD vias took 0 seconds.
+Check net VSS vias...
+Number of missing vias: 0
+Checking net VSS vias took 1 seconds.
+Overall runtime: 1 seconds.
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 1368
+Number of Macro Cells: 64
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 14042
+Number of VDD Vias: 120465
+Number of VDD Terminals: 1
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 1368
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 15838
+Number of VSS Vias: 211288
+Number of VSS Terminals: 1
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 1368
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 1 seconds.
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 0
+Number of Macro Cells: 64
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 14042
+Number of VDD Vias: 120465
+Number of VDD Terminals: 1
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 15838
+Number of VSS Vias: 211288
+Number of VSS Terminals: 1
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 0
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 1 seconds.
+Information: Saving 'MEMCTRL:MEMCTRL.design' to 'MEMCTRL:MEMCTRL_03_POWERPLAN.design'. (DES-028)
+Saving library 'MEMCTRL'
+Information: 1363 out of 1368 LGL-003 messages were not printed due to limit 5  (MSG-3913)
+fc_shell> start_gui
+Load ICV ICCII menu file: /home/eda/synopsys/icvalidator/T-2022.03/etc/tcl-u/Icc2Menu.tcl
+ + VUE INFO: Please click View->IC Validator VUE in LayoutWindow menu
+            to launch VUE.
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE INFO: Found a usable port: 2454
+
+fc_shell> check_route
+Information: The command 'check_routes' cleared the undo history. (UNDO-016)
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = M6
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Skipping 1 internal pins that are not physical. Set route.common.verbose_level to > 0 and run routing command to get skipped pin names.
+Info: number of net_type_blockage: 0 
+Error: Cell UFSM/ctmi_2930 is not placed. (ZRT-064)
+Error: Cell UFSM/ctmi_2912 is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[13] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_DATA_GEN/CLK_COUNT_reg[2] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[12] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[11] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[10] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[9] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[8] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[7] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[6] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[36] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[5] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[35] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[4] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[34] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[3] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[33] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[2] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[32] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[1] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[31] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/LFSR_ADDR_GEN/OUT_reg[0] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[30] is not placed. (ZRT-064)
+Error: Cell UFSM/clock_gate_UBIST/Toggle_DATA_GEN/CLK_COUNT_reg is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[29] is not placed. (ZRT-064)
+Error: Cell UFSM/ctmi_3485 is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[28] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_ADDR_reg[9] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[27] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_ADDR_reg[8] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[26] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_ADDR_reg[7] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[25] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_ADDR_reg[6] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[24] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_ADDR_reg[5] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[23] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_ADDR_reg[4] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[22] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[63] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[21] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[62] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[20] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[61] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[19] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[60] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[18] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[59] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[17] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[58] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[16] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[57] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[15] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[56] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[14] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[55] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[13] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_OEB_reg[54] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[12] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_WEB_reg is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[11] is not placed. (ZRT-064)
+Error: Cell UFSM/ctmi_3486 is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[10] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[63] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[9] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[62] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[8] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[61] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[7] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[60] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[6] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[59] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[5] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[58] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[4] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[57] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[3] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[56] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[2] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[55] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[1] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[0] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[54] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[7] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[53] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[6] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[52] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[5] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[4] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[51] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[3] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[50] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[2] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[49] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[1] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_IDATA_reg[0] is not placed. (ZRT-064)
+Error: Cell UFSM/MEM_CSB_reg[48] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/state_reg[3] is not placed. (ZRT-064)
+Error: Cell UFSM/UBIST/state_reg[2] is not placed. (ZRT-064)
+Warning: Found 1368 unplaced cells (ZRT-611)
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.32 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.32 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+
+
+Start checking for open nets ... 
+
+net(MEM_ADDR[9]) has floating ports (dbId = 43 idx_ = 43 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[8]) has floating ports (dbId = 44 idx_ = 44 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[7]) has floating ports (dbId = 45 idx_ = 45 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[6]) has floating ports (dbId = 46 idx_ = 46 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[5]) has floating ports (dbId = 47 idx_ = 47 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[4]) has floating ports (dbId = 48 idx_ = 48 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[3]) has floating ports (dbId = 49 idx_ = 49 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[2]) has floating ports (dbId = 50 idx_ = 50 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[1]) has floating ports (dbId = 51 idx_ = 51 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_ADDR[0]) has floating ports (dbId = 52 idx_ = 52 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_CE) has floating ports (dbId = 53 idx_ = 53 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_WEB) has floating ports (dbId = 54 idx_ = 54 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[7]) has floating ports (dbId = 183 idx_ = 183 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[6]) has floating ports (dbId = 184 idx_ = 184 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[5]) has floating ports (dbId = 185 idx_ = 185 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[4]) has floating ports (dbId = 186 idx_ = 186 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[3]) has floating ports (dbId = 187 idx_ = 187 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[2]) has floating ports (dbId = 188 idx_ = 188 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[1]) has floating ports (dbId = 189 idx_ = 189 numNodes = 64 numEdges = 0 numCmps = 64)
+net(MEM_IDATA[0]) has floating ports (dbId = 190 idx_ = 190 numNodes = 64 numEdges = 0 numCmps = 64)
+Total number of nets = 705, of which 0 are not extracted
+Total number of open nets = 20, of which 0 are frozen
+
+Check 705 nets, 20 have Errors
+
+[CHECK OPEN NETS] Elapsed real time: 0:00:00 
+[CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[CHECK OPEN NETS] Total (MB): Used   42  Alloctr   43  Proc 14281 
+Printing options for 'route.common.*'
+
+Printing options for 'route.detail.*'
+
+Printing options for 'route.auto_via_ladder.*'
+
+
+Begin full DRC check ...
+
+Information: Using 4 threads for routing. (ZRT-444)
+[DRC CHECK] Elapsed real time: 0:00:00 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DRC CHECK] Stage (MB): Used    0  Alloctr    0  Proc  252 
+[DRC CHECK] Total (MB): Used  131  Alloctr  132  Proc 14578 
+Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      0
+
+
+Total Wire Length =                    0 micron
+Total Number of Contacts =             0
+Total Number of Wires =                0
+Total Number of PtConns =              0
+Total Number of Routed Wires =       0
+Total Routed Wire Length =           0 micron
+Total Number of Routed Contacts =       0
+        Layer       M1 :          0 micron
+        Layer       M2 :          0 micron
+        Layer       M3 :          0 micron
+        Layer       M4 :          0 micron
+        Layer       M5 :          0 micron
+        Layer       M6 :          0 micron
+        Layer       M7 :          0 micron
+        Layer       M8 :          0 micron
+        Layer       M9 :          0 micron
+        Layer     MRDL :          0 micron
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate =  0.00% (0 / 0 vias)
+ 
+ 
+  Total double via conversion rate    =  0.00% (0 / 0 vias)
+ 
+ 
+  The optimized via conversion rate based on total routed via count =  0.00% (0 / 0 vias)
+ 
+ 
+
+
+Verify Summary:
+
+Total number of nets = 705, of which 0 are not extracted
+Total number of open nets = 20, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 0
+Total number of antenna violations = no antenna rules defined
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+
+fc_shell> gui_show_error_data
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1141.850 868.664} -scale 0.0068
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1145.770 868.698} -scale 0.0068
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1141.864 861.664} -scale 0.0068
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1145.783 861.664} -scale 0.0068
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+fc_shell> set i 0
+0
+fc_shell> foreach x $MACROBBOX {
+   set llx [ expr [ lindex $x 0 0] + 5 ]
+   set urx [ expr [ lindex $x 1 0] - 5 ]
+   set lly [ expr [ lindex $x 0 1] + 5 ]
+   set ury [ expr [ lindex $x 1 1] - 5 ]
+set new_bboxes "{$llx $lly} {$urx $ury}"
+create_routing_blockage -name "mc_routing_blk_${i}" -layers "M2 M3 M4 M5 M6 M7 M8 M9 MRDL" -boundary $new_bboxes
+incr i
+}
+fc_shell> set MACROBBOX [get_attr [get_cells $ALLMACRO] bbox] ;
+{{6.7320 16.3920} {245.0000 130.4530}} {{291.0089 16.3920} {529.2769 130.4530}} {{575.2858 16.3920} {813.5538 130.4530}} {{6.7320 176.4534} {245.0000 290.5144}} {{291.0089 176.4534} {529.2769 290.5144}} {{575.2858 176.4534} {813.5538 290.5144}} {{6.7320 336.5148} {245.0000 450.5758}} {{291.0089 336.5148} {529.2769 450.5758}} {{575.2858 336.5148} {813.5538 450.5758}} {{6.7320 496.5762} {245.0000 610.6372}} {{291.0089 496.5762} {529.2769 610.6372}} {{575.2858 496.5762} {813.5538 610.6372}} {{6.7320 656.6376} {245.0000 770.6986}} {{291.0089 656.6376} {529.2769 770.6986}} {{6.7320 816.6990} {245.0000 930.7600}} {{291.0089 816.6990} {529.2769 930.7600}} {{859.5538 16.3920} {1097.8218 130.4530}} {{1143.8307 16.3920} {1382.0987 130.4530}} {{1428.1076 16.3920} {1666.3756 130.4530}} {{859.5538 176.4534} {1097.8218 290.5144}} {{1143.8307 176.4534} {1382.0987 290.5144}} {{1428.1076 176.4534} {1666.3756 290.5144}} {{859.5538 336.5148} {1097.8218 450.5758}} {{1143.8307 336.5148} {1382.0987 450.5758}} {{1428.1076 336.5148} {1666.3756 450.5758}} {{859.5538 496.5762} {1097.8218 610.6372}} {{1143.8307 496.5762} {1382.0987 610.6372}} {{1428.1076 496.5762} {1666.3756 610.6372}} {{1143.8307 656.6376} {1382.0987 770.6986}} {{1428.1076 656.6376} {1666.3756 770.6986}} {{1143.8307 816.6990} {1382.0987 930.7600}} {{1428.1076 816.6990} {1666.3756 930.7600}} {{6.7320 966.6994} {245.0000 1080.7604}} {{291.0089 966.6994} {529.2769 1080.7604}} {{6.7320 1126.7608} {245.0000 1240.8218}} {{291.0089 1126.7608} {529.2769 1240.8218}} {{6.7320 1286.8222} {245.0000 1400.8832}} {{291.0089 1286.8222} {529.2769 1400.8832}} {{575.2858 1286.8222} {813.5538 1400.8832}} {{6.7320 1446.8836} {245.0000 1560.9446}} {{291.0089 1446.8836} {529.2769 1560.9446}} {{575.2858 1446.8836} {813.5538 1560.9446}} {{6.7320 1606.9450} {245.0000 1721.0060}} {{291.0089 1606.9450} {529.2769 1721.0060}} {{575.2858 1606.9450} {813.5538 1721.0060}} {{6.7320 1767.0064} {245.0000 1881.0674}} {{291.0089 1767.0064} {529.2769 1881.0674}} {{575.2858 1767.0064} {813.5538 1881.0674}} {{1143.8307 966.6994} {1382.0987 1080.7604}} {{1428.1076 966.6994} {1666.3756 1080.7604}} {{1143.8307 1126.7608} {1382.0987 1240.8218}} {{1428.1076 1126.7608} {1666.3756 1240.8218}} {{859.5538 1286.8222} {1097.8218 1400.8832}} {{1143.8307 1286.8222} {1382.0987 1400.8832}} {{1428.1076 1286.8222} {1666.3756 1400.8832}} {{859.5538 1446.8836} {1097.8218 1560.9446}} {{1143.8307 1446.8836} {1382.0987 1560.9446}} {{1428.1076 1446.8836} {1666.3756 1560.9446}} {{859.5538 1606.9450} {1097.8218 1721.0060}} {{1143.8307 1606.9450} {1382.0987 1721.0060}} {{1428.1076 1606.9450} {1666.3756 1721.0060}} {{859.5538 1767.0064} {1097.8218 1881.0674}} {{1143.8307 1767.0064} {1382.0987 1881.0674}} {{1428.1076 1767.0064} {1666.3756 1881.0674}}
+fc_shell> set i 0
+0
+fc_shell> foreach x $MACROBBOX {
+   set llx [ expr [ lindex $x 0 0] + 5 ]
+   set urx [ expr [ lindex $x 1 0] - 5 ]
+   set lly [ expr [ lindex $x 0 1] + 5 ]
+   set ury [ expr [ lindex $x 1 1] - 5 ]
+set new_bboxes "{$llx $lly} {$urx $ury}"
+create_routing_blockage -name "mc_routing_blk_${i}" -layers "M2 M3 M4 M5 M6 M7 M8 M9 MRDL" -boundary $new_bboxes
+incr i
+}
+fc_shell> set i 0
+0
+fc_shell> foreach x $MACROBBOX {
+   set llx [ expr [ lindex $x 0 0] + 5 ]
+   set urx [ expr [ lindex $x 1 0] - 5 ]
+   set lly [ expr [ lindex $x 0 1] + 5 ]
+   set ury [ expr [ lindex $x 1 1] - 5 ]
+set new_bboxes "{$llx $lly} {$urx $ury}"
+create_routing_blockage -name "mc_routing_blk_${i}" -layers "M2 M3 M4 M5 M6 M7 M8 M9 MRDL" -boundary $new_bboxes
+incr i
+}
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1430.172 74.069} -scale 0.0548
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {1426.171 74.069} -scale 0.0548
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+fc_shell> remove_placement_blockage [get_placement_blockages -filter "blockage_type == hard"]
+64
+fc_shell> 
