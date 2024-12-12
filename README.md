@@ -1,5 +1,5 @@
 # soc_proj
-## RTL -> CHIP FINISH!@
+##### RTL -> CHIP FINISH!@
 
 SRAM MEMCTRL Project
 
