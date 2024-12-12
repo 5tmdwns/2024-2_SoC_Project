@@ -1,3 +1,5 @@
 # soc_proj
+# RTL -> CHIP FINISH!@
 
-최상위 MEMCTRL
+SRAM MEMCTRL Project
+
