@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_V-2023.12-SP2-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1439 727 296 75
+viewPort 0 25 1436 724 296 75
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 187515681.818145 190539421.487567
-cursor 0.000000
+zoom 702336704.386700 722222593.969532
+cursor 1035500000.000000
 marker 0.000000
 
 ; user define markers
@@ -25,7 +25,7 @@ marker 0.000000
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 21
+markerPos 19
 
 ; event list
 ; addEvent event_name event_expression
@@ -67,8 +67,6 @@ addSignal -h 15 -holdScope OEB
 addSignal -h 15 -holdScope RSTN
 addSignal -h 15 -holdScope WEB
 addGroup "G2"
-addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/UFSM/BIST_ODATA[7:0]
-addGroup "G3"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
@@ -79,13 +77,12 @@ getSignalForm close
 
 "/SRAM1RW32x50"
 "/TB_MEMCTRL"
-"/TB_MEMCTRL/DUT"
 
 SCOPE_LIST_BEGIN
 "/SRAM1RW32x50"
-"/TB_MEMCTRL/DUT"
 "/TB_MEMCTRL"
-"/TB_MEMCTRL/DUT/UFSM"
+"/TB_MEMCTRL/read"
+"/TB_MEMCTRL/DUT"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

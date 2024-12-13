@@ -4,7 +4,7 @@
 #set edkdir    "./../../lib"
 #set lib_hvt   "${edkdir}/stdcell_hvt/db_nldm"                 ;#Logic cell library directory
 #set lib_mem   "${edkdir}/sram/db_nldm"                 ;#Logic cell library directory
-set edkdir    "/home/eda/pdk/GPDK/32nm/new/EDK/SAED32_EDK/lib"
+set edkdir    "/home/eda/soc/lib/gpdk/32n/lib"
 set lib_hvt   "${edkdir}/stdcell_hvt/db_nldm"                 ;#Logic cell library directory
 set lib_mem   "${edkdir}/sram/db_nldm"                 ;#Logic cell library directory
 set RTL_path  "./../../rtl/memctrl"                            ;#RTL directory

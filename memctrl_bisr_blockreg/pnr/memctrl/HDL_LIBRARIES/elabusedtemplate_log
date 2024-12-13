@@ -1,3 +1,9 @@
 MEMCTRL
 FSM
-SRAM2KB
+SRAM64KB
+BIST
+LFSR16B
+GrayCounter
+BinaryCounter
+LFSR8B
+Toggle8B

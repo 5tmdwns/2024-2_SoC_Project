@@ -473,7 +473,6 @@ foreach x $MACROBBOX {
 	create_routing_blockage -name "mc_routing_blk_${i}" -layers "M2 M3 M4 M5 M6 M7 M8 M9 MRDL" -boundary $new_bboxes
 	incr i
 }
-return
 ################
 #insert_guide_buffer    input단에 바짝붙여서 load effect 줄임
 ################
@@ -1151,7 +1150,7 @@ create_via_def -is_default -lower_layer M1 \
 	       -upper_layer M2 -cut_size {0.020 0.020} \
  	       -lower_enclosure {0.015 0.015} -cut_layer VIA1 \
 	       -upper_enclosure {0.015 0.015} VIA12_thin
-
+return
 ##################################################################
 ### Routing - Detailed Route
 ##################################################################

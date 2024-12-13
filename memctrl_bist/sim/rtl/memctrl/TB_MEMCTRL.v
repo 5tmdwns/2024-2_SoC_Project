@@ -98,6 +98,17 @@ module TB_MEMCTRL;
 		 BIST_EN <= 1;
 		 BIST_MODE <= 3'b001;
        #(`tck*500);
+		 BIST_EN <= 0;
+		 #(`tck*4.5);
+		 BIST_EN <= 1;
+		 BIST_MODE <= 3'b010;
+		 #(`tck*500);
+		 BIST_EN <= 0;
+		 #(`tck*4.5);
+		 BIST_EN <= 1;
+		 BIST_MODE <= 3'b100;
+		 #(`tck*500);
+		 BIST_EN <= 0;
        $finish;
 	 end
    initial begin

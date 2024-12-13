@@ -1,30 +1,30 @@
 1        
 0 ./../../../syn/memctrl/outputs/MEMCTRL_gate.sdf_c
 45
-+itf+/home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/vcsdp_lite.tab
++itf+/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/vcsdp_lite.tab
 +lint=all,noVCDE
 +maxdelays
 +sdfverbose
 +v2k
-+vcs+dumpvars+result.fsdb
++vcs+dumpvars+TB_MEMCTRL.fsdb
 +vcsd1
 +vpi
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
--Mcfl= -pipe -fPIC -O -I/home/eda/synopsys/vcs/U-2023.03-SP2/include
+-Mcfl= -pipe -fPIC -O -I/home/eda/synopsys/vcs/V-2023.12-SP2-1/include
 -Mcplusplus=g++
 -Mcrt0=
 -Mcrtn=
 -Mcsrc=
 -Mexternalobj=
 -Mldflags= -rdynamic
--Mobjects= /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/libvirsim.so /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/liberrorinf.so /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/libsnpsmalloc.so /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/libvfs.so /home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/pli.a
+-Mobjects= /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvirsim.so /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/liberrorinf.so /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvfs.so /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/pli.a
 -Mout=simv
--Msaverestoreobj=/home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/vcs_save_restore_new.o
--Msyslibs=/home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/pli.a -ldl -lm
+-Msaverestoreobj=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/LINUX64/pli.a -ldl -lm
 -Mvcsaceobjs=
--Mxcflags= -pipe -fPIC -I/home/eda/synopsys/vcs/U-2023.03-SP2/include
+-Mxcflags= -pipe -fPIC -I/home/eda/synopsys/vcs/V-2023.12-SP2-1/include
 -Mxllcflags=
 -P
 -P
@@ -40,98 +40,73 @@
 -picarchive
 -sverilog
 -timescale=1ns/1ps
-/home/eda/synopsys/vcs/U-2023.03-SP2/linux64/bin/vcs1
+/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/bin/vcs1
 ./logs/compile.log
 simv
-/home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/novas.tab
-/home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/verdi.tab
+/home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/novas.tab
+/home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
 list.f
-68
-XMODIFIERS=@im=ibus
-XDG_SESSION_ID=1525
-XDG_RUNTIME_DIR=/run/user/1000
-XDG_MENU_PREFIX=gnome-
-XDG_DATA_DIRS=/home/jhpark/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
-XDG_CURRENT_DESKTOP=GNOME
-XCELIUMHOME=/home/eda/cadence/xcelium19
-VTE_VERSION=5204
-VNCDESKTOP=biclab:1 (jhpark)
+43
+XILINXHOME=/home/eda/xilinx
+XDG_SESSION_ID=38931
+XDG_RUNTIME_DIR=/run/user/1060
+XDG_DATA_DIRS=/home/soc32/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
-VERDI_HOME=/home/eda/synopsys/verdi/U-2023.03-SP2
+VIVADOHOME=/home/eda/xilinx/Vivado/2024.1
+VERDI_HOME=/home/eda/synopsys/verdi/V-2023.12-SP2-1
+VCS_PYTHON3=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
 VCS_PATHMAP_PRELOAD_DONE=1
 VCS_MX_HOME_INTERNAL=1
 VCS_MODE_FLAG=64
 VCS_LOG_FILE=./logs/compile.log
-VCS_HOME=/home/eda/synopsys/vcs/U-2023.03-SP2
+VCS_HOME=/home/eda/synopsys/vcs/V-2023.12-SP2-1
 VCS_EXEC_DONE=1
 VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH=linux64
 UNAME=/bin/uname
-TOOL_HOME=/home/eda/synopsys/vcs/U-2023.03-SP2/linux64
-STARRCHOME=/home/eda/synopsys/starrc/T-2022.03-SP5
-SSH_TTY=/dev/pts/8
-SSH_CONNECTION=115.138.48.55 60048 163.180.159.158 22
-SSH_CLIENT=115.138.48.55 60048 22
-SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
-SSH_AGENT_PID=382
-SNPS_VCS_PYTHON3=/home/eda/synopsys/vcs/U-2023.03-SP2/linux64/bin/Python-3.6.1/bin/python3
-SNPS_VCS_CLANG_PATH=/home/eda/synopsys/vcs/U-2023.03-SP2/linux64/clang
+TOOL_HOME=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64
+STARRC_HOME=/home/eda/synopsys/starrc/T-2022.03-SP5/amd64_starrc
+SSH_TTY=/dev/pts/81
+SSH_CONNECTION=172.21.53.249 59665 163.180.160.78 22
+SSH_CLIENT=172.21.53.249 59665 22
+SNPS_VCS_PYTHON3=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
+SNPS_VCS_CLANG_PATH=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/32739,unix/unix:/tmp/.ICE-unix/32739
+SNPS_HOME=/home/eda/synopsys
+SG_HOME=/home/eda/synopsys/spyglass/Q-2020.03-SP2-3/SPYGLASS_HOME
 SCRNAME=vcs
 SCRIPT_NAME=vcs
-QT_IM_MODULE=ibus
+SCLHOME=/home/eda/synopsys/scl/2023.03-SP1
 QT_GRAPHICSSYSTEM_CHECKED=1
 QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
 QTDIR=/usr/lib64/qt-3.3
-PTHOME=/home/eda/synopsys/prime/T-2022.03-SP5
+PT_HOME=/home/eda/synopsys/prime/T-2022.03-SP5
 OVA_UUM=0
-OA_HOME=/home/eda/cadence/ic618isr17/oa_v22.60.054
-MMSIMHOME=/home/eda/cadence/spectre181
-MGLS_LICENSE_FILE=1717@143.248.230.188:1717@143.248.230.189:1717@163.180.144.105
-MGC_HOME=/home/eda/siemens/calibre/calibre_2021.4_25.11/aoi_cal_2021.4_25.11
-MGCROOT=/home/eda/siemens
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
-LCHOME=/home/eda/synopsys/lc/S-2021.06
-INNOVUSHOME=/home/eda/cadence/innovus191
-IMSETTINGS_MODULE=none
-IMSETTINGS_INTEGRATE_DESKTOP=yes
-ICV_HOME_DIR=/home/eda/synopsys/icvalidator/V-2023.12
+ICV_HOME_DIR=/home/eda/synopsys/icvalidator/T-2022.03
 HISTCONTROL=ignoredups
-GNOME_TERMINAL_SERVICE=:1.101
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/9a3bff5d_8e56_43a4_a067_adc1a6134b9b
-GNOME_SHELL_SESSION_MODE=classic
-GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-FCHOME=/home/eda/synopsys/fusioncompiler/U-2022.12-SP1
-DCHOME=/home/eda/synopsys/syn/S-2021.06-SP4
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5WOWvy0u7C,guid=71dd34c0166acb1e616130fb672a1399
-COLORTERM=truecolor
-CDS_Netlisting_Mode=Analog
-CDS_INST_DIR=/home/eda/cadence/ic618isr17
-CDS_AUTO_64BIT=ALL
-CDSROOT=/home/eda/cadence
-CDSHOME=/home/eda/cadence/ic618isr17
-CALIBRE_HOME=/home/eda/siemens/calibre/calibre_2021.4_25.11/aoi_cal_2021.4_25.11
+FUSION_HOME=/home/eda/synopsys/fusioncompiler/U-2022.12-SP1
+DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 0
 0
 9
-1730879196 ./../../../syn/memctrl/outputs/MEMCTRL_gate.sdf
-1730873774 ./../../../lib/stdcell_hvt/verilog/saed32nm_hvt.v
-1730873784 ./../../../lib/sram/verilog/saed32sram.v
-1730881722 ./TB_MEMCTRL.v
-1730879195 ./../../../syn/memctrl/outputs/MEMCTRL_gate.v
-1730879258 list.f
-1693225683 /home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/verdi.tab
-1693225683 /home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/novas.tab
-1693040877 /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/vcsdp_lite.tab
+1733531096 ./../../../syn/memctrl/outputs/MEMCTRL_gate.sdf
+1730940338 /home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
+1730940335 /home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/verilog/saed32nm_hvt.v
+1733556260 ./TB_MEMCTRL.v
+1733531096 ./../../../syn/memctrl/outputs/MEMCTRL_gate.v
+1733519018 list.f
+1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
+1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/novas.tab
+1721617572 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/vcsdp_lite.tab
 5
-1693043931 /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/libvirsim.so
-1693042805 /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/liberrorinf.so
-1693042720 /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/libsnpsmalloc.so
-1693042802 /home/eda/synopsys/vcs/U-2023.03-SP2/linux64/lib/libvfs.so
-1693220067 /home/eda/synopsys/verdi/U-2023.03-SP2/share/PLI/VCS/LINUX64/pli.a
-1730881729 simv.daidir
+1721620112 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvirsim.so
+1721618558 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/liberrorinf.so
+1721618482 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so
+1721618554 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvfs.so
+1721036392 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/pli.a
+1733632977 simv.daidir
 -1 partitionlib

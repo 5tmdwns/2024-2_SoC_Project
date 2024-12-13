@@ -1,4 +1,11 @@
-/mnt/home/soc17/soc/proj/rtl/memctrl/FSM.v
-/mnt/home/soc17/soc/proj/rtl/memctrl/SRAM64KB.v
-/mnt/home/soc17/soc/proj/rtl/memctrl/SRAM2KB.v
-/mnt/home/soc17/soc/proj/rtl/memctrl/MEMCTRL.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/BinaryCounter.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/LFSR16B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/Toggle8B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/FSM.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/BIST.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/LFSR8B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/GrayCounter.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/SRAM64KB.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/BISR.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/SPARE_SRAM3KB.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/MEMCTRL.v

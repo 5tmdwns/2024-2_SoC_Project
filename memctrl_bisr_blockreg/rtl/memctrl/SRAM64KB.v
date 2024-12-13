@@ -103,4 +103,5 @@ module SRAM64KB(/*AUTOARG*/
             6'd63 : ODATA = GATE_ODATA [511:504];
         endcase
     end
+
 endmodule

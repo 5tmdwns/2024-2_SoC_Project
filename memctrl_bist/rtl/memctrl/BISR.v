@@ -1,8 +1,0 @@
-module BISR(/*AUTOARG*/);
-
-
-
-
-
-
-endmodule
