@@ -47,7 +47,7 @@ simv
 list.f
 43
 XILINXHOME=/home/eda/xilinx
-XDG_SESSION_ID=43526
+XDG_SESSION_ID=45290
 XDG_RUNTIME_DIR=/run/user/1045
 XDG_DATA_DIRS=/home/soc17/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 VMR_MODE_FLAG=64
@@ -66,9 +66,9 @@ VCS_ARCH=linux64
 UNAME=/bin/uname
 TOOL_HOME=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64
 STARRC_HOME=/home/eda/synopsys/starrc/T-2022.03-SP5/amd64_starrc
-SSH_TTY=/dev/pts/9
-SSH_CONNECTION=116.121.85.197 1517 163.180.160.78 22
-SSH_CLIENT=116.121.85.197 1517 22
+SSH_TTY=/dev/pts/135
+SSH_CONNECTION=116.121.85.197 1449 163.180.160.78 22
+SSH_CLIENT=116.121.85.197 1449 22
 SNPS_VCS_PYTHON3=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
 SNPS_VCS_CLANG_PATH=/home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/clang
 SNPS_INTERNAL_VCS_LINUX_OS=linux
@@ -91,19 +91,21 @@ FUSION_HOME=/home/eda/synopsys/fusioncompiler/U-2022.12-SP1
 DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 0
 0
-15
+17
 1730940338 /home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
-1734042538 ./TB_MEMCTRL.v
-1734005490 ./../../../rtl/memctrl/SRAM64KB.v
-1734005490 ./../../../rtl/memctrl/FSM.v
-1734029806 ./../../../rtl/memctrl/MEMCTRL.v
-1734005490 ./../../../rtl/memctrl/BIST.v
-1734005490 ./../../../rtl/memctrl/Toggle8B.v
-1734005490 ./../../../rtl/memctrl/LFSR8B.v
-1734005490 ./../../../rtl/memctrl/GrayCounter.v
-1734005490 ./../../../rtl/memctrl/BinaryCounter.v
-1734005490 ./../../../rtl/memctrl/LFSR16B.v
-1734005490 list.f
+1734172631 ./TB_MEMCTRL.v
+1734141756 ./../../../rtl/memctrl/SPARE_SRAM3KB.v
+1734141762 ./../../../rtl/memctrl/SRAM64KB.v
+1734150510 ./../../../rtl/memctrl/FSM.v
+1734150561 ./../../../rtl/memctrl/MEMCTRL.v
+1734187701 ./../../../rtl/memctrl/BISR.v
+1734171224 ./../../../rtl/memctrl/BIST.v
+1734141768 ./../../../rtl/memctrl/Toggle8B.v
+1734141745 ./../../../rtl/memctrl/LFSR8B.v
+1734141731 ./../../../rtl/memctrl/GrayCounter.v
+1734141711 ./../../../rtl/memctrl/BinaryCounter.v
+1734141738 ./../../../rtl/memctrl/LFSR16B.v
+1734150530 list.f
 1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
 1721037471 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/novas.tab
 1721617572 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/vcsdp_lite.tab
@@ -113,5 +115,5 @@ DC_HOME=/home/eda/synopsys/syn/S-2021.06-SP4
 1721618482 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so
 1721618554 /home/eda/synopsys/vcs/V-2023.12-SP2-1/linux64/lib/libvfs.so
 1721036392 /home/eda/synopsys/verdi/V-2023.12-SP2-1/share/PLI/VCS/linux64/pli.a
-1734042547 simv.daidir
+1734187713 simv.daidir
 -1 partitionlib

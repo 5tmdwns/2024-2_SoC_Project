@@ -1,0 +1,4 @@
+/home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
+/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/verilog/saed32nm_hvt.v
+/mnt/home/soc32/soc/proj3/p1/sim/pnr/memctrl/TB_MEMCTRL.v
+/mnt/home/soc32/soc/proj3/p1/sta/post/netlist/MEMCTRL.v

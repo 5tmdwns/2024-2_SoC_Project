@@ -1,16 +1,16 @@
 module LFSR16B(/*AUTOARG*/
-              // Outputs
-              OUT,
-              // Inputs
-              CLK, RSTN, EN
-              );
+               // Outputs
+               OUT,
+               // Inputs
+               CLK, RSTN, EN
+               );
    input CLK;
    input RSTN;
    input EN;
    output reg [15:0] OUT;
 
-   reg COUNTING;
-   reg [2:0] CLK_COUNT;
+   reg 		     COUNTING;
+   reg [2:0] 	     CLK_COUNT;
 
    always @(posedge CLK or negedge RSTN) begin
       if (!RSTN) begin

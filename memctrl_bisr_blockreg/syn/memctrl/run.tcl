@@ -9,6 +9,8 @@ set RTL_FILES { \
 ./../../rtl/memctrl/LFSR16B.v \
 ./../../rtl/memctrl/LFSR8B.v \
 ./../../rtl/memctrl/Toggle8B.v \
+./../../rtl/memctrl/BISR.v \
+./../../rtl/memctrl/SPARE_SRAM3KB.v
 }
 read_file -format verilog $RTL_FILES
 current_design $TOPDESIGN

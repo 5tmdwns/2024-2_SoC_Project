@@ -2,11 +2,11 @@ Magic 271485
 Revision Verdi_V-2023.12-SP2-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1920 915 288 63
+viewPort 0 25 1440 735 288 63
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
-openDirFile -d / "" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr/sim/rtl/memctrl/result.fsdb" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr/sim/rtl/memctrl/result.fsdb.fsdb"
+openDirFile -d / "" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr_bigreg/sim/rtl/memctrl/result.fsdb" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr_bigreg/sim/rtl/memctrl/result.fsdb.fsdb"
 
 ; file time scale:
 ; fileTimeScale ### s|ms|us|ns|ps
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 401676091.843288 492489816.955684
-cursor 446000000.000000
+zoom 414656364.470503 463412486.828727
+cursor 448500000.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 0
+top 2
 ; marker line index
-markerPos 33
+markerPos 44
 
 ; event list
 ; addEvent event_name event_expression
@@ -46,21 +46,7 @@ curSTATUS ByChange
 
 
 addGroup "G1"
-activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr/sim/rtl/memctrl/result.fsdb.fsdb"
-addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/ADDR[15:0]
-addSignal -h 15 -holdScope BIST_EN
-addSignal -h 15 -UNSIGNED -HEX -holdScope BIST_MODE[2:0]
-addSignal -h 15 -holdScope BIST_PASS
-addSignal -h 15 -holdScope CE
-addSignal -h 15 -holdScope CLK
-addSignal -h 15 -holdScope CSB
-addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
-addSignal -h 15 -holdScope OEB
-addSignal -h 15 -holdScope RSTN
-addSignal -h 15 -holdScope WEB
-addGroup "G2"
-addGroup "G3"
+activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr_bigreg/sim/rtl/memctrl/result.fsdb.fsdb"
 addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/ADDR[15:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope BISR_MEM_ADDR[6:0]
 addSignal -h 15 -holdScope BISR_MEM_CE
@@ -70,9 +56,14 @@ addSignal -h 15 -UNSIGNED -HEX -holdScope BISR_MEM_ODATA[7:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope BISR_MEM_ODATA_SELECT[4:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope BISR_MEM_OEB[24:0]
 addSignal -h 15 -holdScope BISR_MEM_WEB
-addGroup "G5"
-addGroup "G4"
-addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/MEM_ADDR[9:0]
+addSignal -h 15 -holdScope BIST_EN
+addSignal -h 15 -UNSIGNED -HEX -holdScope BIST_MODE[2:0]
+addSignal -h 15 -holdScope BIST_PASS
+addSignal -h 15 -holdScope CE
+addSignal -h 15 -holdScope CLK
+addSignal -h 15 -holdScope CSB
+addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ADDR[9:0]
 addSignal -h 15 -holdScope MEM_CE
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_CSB[63:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_IDATA[7:0]
@@ -80,23 +71,41 @@ addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ODATA[7:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ODATA_SELECT[5:0]
 addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_OEB[63:0]
 addSignal -h 15 -holdScope MEM_WEB
-addGroup "G6"
+addSignal -h 15 -UNSIGNED -HEX -holdScope NEED_REPAIR_ADDR[9:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope NEED_REPAIR_SELECT[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
+addSignal -h 15 -holdScope OEB
+addSignal -h 15 -holdScope RSTN
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBISR_MEM_ADDR[9:0]
+addSignal -h 15 -holdScope UBISR_MEM_CE
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBISR_MEM_CSB[63:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBISR_MEM_IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBISR_MEM_ODATA_SELECT[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBISR_MEM_OEB[63:0]
+addSignal -h 15 -holdScope UBISR_MEM_WEB
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBIST_MEM_ADDR[9:0]
+addSignal -h 15 -holdScope UBIST_MEM_CE
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBIST_MEM_CSB[63:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBIST_MEM_IDATA[7:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBIST_MEM_ODATA_SELECT[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope UBIST_MEM_OEB[63:0]
+addSignal -h 15 -holdScope UBIST_MEM_WEB
+addSignal -h 15 -holdScope WEB
+addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
-activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr/sim/rtl/memctrl/result.fsdb.fsdb"
+activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl_bisr_bigreg/sim/rtl/memctrl/result.fsdb.fsdb"
 
 GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
 getSignalForm close
 
 "/SRAM1RW32x50"
 "/TB_MEMCTRL"
-"/TB_MEMCTRL/DUT"
 
 SCOPE_LIST_BEGIN
 "/SRAM1RW32x50"
 "/TB_MEMCTRL/DUT"
-"/TB_MEMCTRL"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

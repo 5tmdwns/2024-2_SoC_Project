@@ -9,8 +9,8 @@ module LFSR8B(/*AUTOARG*/
    input EN;
    output reg [7:0] OUT;
 
-   reg COUNTING;
-   reg [2:0] CLK_COUNT;
+   reg 		    COUNTING;
+   reg [2:0] 	    CLK_COUNT;
 
    always @(posedge CLK or negedge RSTN) begin
       if (!RSTN) begin

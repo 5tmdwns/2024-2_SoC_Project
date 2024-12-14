@@ -1,0 +1,12 @@
+./outputs/MEMCTRL.minTLU_-40.spef for scenarios: 
+	 scenario: func.ff_n40c, corner type: late/early
+
+./outputs/MEMCTRL.maxTLU_125.spef for scenarios: 
+	 scenario: func.ss_125c, corner type: late/early
+
+./outputs/MEMCTRL.minTLU_125.spef for scenarios: 
+	 scenario: func.ff_125c, corner type: late/early
+
+./outputs/MEMCTRL.maxTLU_-40.spef for scenarios: 
+	 scenario: func.ss_n40c, corner type: late/early
+
