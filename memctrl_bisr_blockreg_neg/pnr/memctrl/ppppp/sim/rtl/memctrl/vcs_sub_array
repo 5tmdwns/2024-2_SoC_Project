@@ -1,0 +1,47 @@
+#!/bin/sh
+#Initial variable setup
+list_file=""
+result_fsdb=""
+top_module=""
+
+# Option argument parsing
+while getopts "f:o:t:" opt; do
+  case $opt in
+    f) list_file="$OPTARG" ;;  # Set the list file
+    o) result_fsdb="$OPTARG" ;;  # Set the output FSDB file
+    t) top_module="$OPTARG" ;;  # Set the top module
+    \?) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;
+  esac
+done
+
+# Mandatory argument check
+if [ -z "$list_file" ] || [ -z "$result_fsdb" ] || [ -z "$top_module" ]; then
+    echo "Usage: $0 -f <list file> -o <output fsdb file> -t <top module>"
+    exit 1
+fi
+
+# Clean existing FSDB files and logs directory
+rm *.fsdb -rf
+rm logs -rf
+
+# Create logs directory
+mkdir logs
+
+# VCS compilation
+# VCS compilation
+vcs -full64 -debug_acc+all +v2k -sverilog +maxdelays +sdfverbose +lint=all,noVCDE \
+    -notice -line -timescale=1ns/1ps -l ./logs/compile.log -o simv -f $list_file \
+    +vcs+dumpvars+$result_fsdb -t $top_module \
+    +fsdb+mda=on +fsdb+all=on +fsdb+force=on \
+    -debug_pp -lca \
+    +memcbk \
+    +vcs+fsdbon \
+    -debug_region+cell+encrypt \
+    -P ${VERDI_HOME}/share/PLI/VCS/linux64/novas.tab ${VERDI_HOME}/share/PLI/VCS/linux64/pli.a
+
+# Run simulation
+./simv
+
+# Check results with Verdi
+verdi -ssf $result_fsdb -f $list_file
+

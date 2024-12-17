@@ -1,17 +1,17 @@
 `define tck 100
 module TB_MEMCTRL;
-   reg  [15:0] ADDR; 
-   reg         CE; 
-   reg         CLK; 
-   reg         CSB; 
-   reg  [7:0]  IDATA;
-   reg         OEB; 
-   reg         RSTN; 
-   reg         WEB;
-	reg			BIST_EN;
+  reg  [15:0] ADDR; 
+  reg         CE; 
+  reg         CLK; 
+  reg         CSB; 
+  reg  [7:0]  IDATA;
+  reg         OEB; 
+  reg         RSTN; 
+  reg         WEB;
+	reg			    BIST_EN;
 	reg  [2:0]  BIST_MODE;
 
-   wire [7:0]  ODATA;
+  wire [7:0]  ODATA;
 
 
    MEMCTRL
@@ -29,8 +29,8 @@ module TB_MEMCTRL;
         .OEB                                  (OEB),
         .RSTN                                 (RSTN),
         .WEB                                  (WEB),
-		  .BIST_EN										 (BIST_EN),
-		  .BIST_MODE									 (BIST_MODE[2:0]));
+		    .BIST_EN					        			  		(BIST_EN),
+		    .BIST_MODE			  				          	(BIST_MODE[2:0]));
 
     ////////////////////////////////////////////////////////////////
     // TASKS
@@ -43,7 +43,7 @@ module TB_MEMCTRL;
       OEB   <=  1;
       WEB   <=  1;
     endtask
-
+/*
     task write;	
       ADDR  <=  ADDR;
       CE    <=  1;
@@ -77,43 +77,28 @@ module TB_MEMCTRL;
       WEB   <=  1;
 	   #(`tck*1);
     endtask
-
+*/
     ////////////////////////////////////////////////////////////////
     // STIMULI
     ////////////////////////////////////////////////////////////////
     initial begin
-       CLK = 0;
-       forever #(`tck*0.5) CLK = ~ CLK; 
+      CLK = 0;
+      forever #(`tck*0.5) CLK = ~ CLK; 
     end
     initial begin
-       RSTN = 0;
-       #(`tck*4);
-       RSTN = 1;
+      RSTN = 0;
+      #(`tck*4);
+      RSTN = 1;
     end
 	 initial begin
-       init();
-		 BIST_EN <= 0;
-		 BIST_MODE <= 0;
-		 #(`tck*4.5);
-		 BIST_EN <= 1;
-		 BIST_MODE <= 3'b001;
-       #(`tck*500);
-		 BIST_EN <= 0;
-		 #(`tck*4.5);
-		 BIST_EN <= 1;
-		 BIST_MODE <= 3'b010;
-		 #(`tck*500);
-		 BIST_EN <= 0;
-		 #(`tck*4.5);
-		 BIST_EN <= 1;
-		 BIST_MODE <= 3'b100;
-		 #(`tck*500);
-		 BIST_EN <= 0;
-       $finish;
+      init();
+		  BIST_EN <= 0;
+		  BIST_MODE <= 0;
+		  #(`tck*4.5);
+		  BIST_EN <= 1;
+		  BIST_MODE <= 3'b001;
+      #(`tck*200);
+      $finish;
 	 end
-   initial begin
-      $dumpfile("tb_memctrl.vcd");
-      $dumpvars(0, TB_MEMCTRL);
-   end
 
 endmodule

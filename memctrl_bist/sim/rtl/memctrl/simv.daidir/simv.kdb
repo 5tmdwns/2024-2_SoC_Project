@@ -1,7 +1,7 @@
 rc file Version 1.0
 
 [Design]
-COMPILE_PATH=/mnt/home/soc17/soc/soc_proj/memctrl_bist/sim/rtl/memctrl
+COMPILE_PATH=/mnt/home/soc32/soc/proj7/p1/sim/rtl/memctrl
 VCS_HOME=/home/eda/synopsys/vcs/V-2023.12-SP2-1
 VERDI_HOME=/home/eda/synopsys/verdi/V-2023.12-SP2-1
 SystemC=FALSE

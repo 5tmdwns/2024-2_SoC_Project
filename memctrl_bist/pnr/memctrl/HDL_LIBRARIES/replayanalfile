@@ -1,57 +1,47 @@
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/BinaryCounter.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/BinaryCounter.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/BinaryCounter.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/BinaryCounter.v
 BinaryCounter
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/LFSR16B.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/LFSR16B.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/LFSR16B.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/LFSR16B.v
 LFSR16B
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/Toggle8B.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/Toggle8B.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/Toggle8B.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/Toggle8B.v
 Toggle8B
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/FSM.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/FSM.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/FSM.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/FSM.v
 FSM
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/BIST.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/BIST.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/BIST.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/BIST.v
 BIST
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/LFSR8B.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/LFSR8B.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/LFSR8B.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/LFSR8B.v
 LFSR8B
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/GrayCounter.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/GrayCounter.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/GrayCounter.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/GrayCounter.v
 GrayCounter
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/SRAM64KB.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/SRAM64KB.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/SRAM64KB.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/SRAM64KB.v
 SRAM64KB
 set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/BISR.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/BISR.v
-BISR
-set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/SPARE_SRAM3KB.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/SPARE_SRAM3KB.v
-SPARE_SRAM3KB
-set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
-analyze -format verilog  "/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/../rtl/memctrl/MEMCTRL.v" 
-C/mnt/home/soc17/soc/soc_proj/memctrl_bist/pnr/memctrl
-/mnt/home/soc17/soc/soc_proj/memctrl_bist/rtl/memctrl/MEMCTRL.v
+analyze -format verilog  "/mnt/home/soc32/soc/proj7/p1/pnr/../rtl/memctrl/MEMCTRL.v" 
+C/mnt/home/soc32/soc/proj7/p1/pnr/memctrl
+/mnt/home/soc32/soc/proj7/p1/rtl/memctrl/MEMCTRL.v
 MEMCTRL
 elaborate MEMCTRL
 set_top_module MEMCTRL

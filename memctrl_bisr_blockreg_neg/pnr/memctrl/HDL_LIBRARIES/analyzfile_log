@@ -1,0 +1,11 @@
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/BinaryCounter.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/LFSR16B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/Toggle8B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/FSM.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/BIST.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/LFSR8B.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/GrayCounter.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/SRAM64KB.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/BISR.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/SPARE_SRAM3KB.v
+/mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/rtl/memctrl/MEMCTRL.v

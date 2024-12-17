@@ -1,0 +1,4 @@
+initialize_floorplan -shape R -side_length {{939 939} {939 939}} -core_offset {100.0 50.0}
+set core_bdry     "[get_attr [get_core_area] bbox]"
+set new_bdry      "{425.5430 425.8460} {1014.4590 1014.1520}"
+

@@ -2,11 +2,11 @@ Magic 271485
 Revision Verdi_V-2023.12-SP2-1
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1436 724 296 75
+viewPort 0 25 1439 727 296 75
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
-openDirFile -d / "" "/mnt/home/soc17/soc/soc_proj/memctrl_bist/sim/rtl/memctrl/result.fsdb" "/mnt/home/soc17/soc/soc_proj/memctrl_bist/sim/rtl/memctrl/result.fsdb.fsdb"
+openDirFile -d / "" "/mnt/home/soc32/soc/proj7/p1/sim/rtl/memctrl/result.fsdb" "/mnt/home/soc32/soc/proj7/p1/sim/rtl/memctrl/result.fsdb.fsdb"
 
 ; file time scale:
 ; fileTimeScale ### s|ms|us|ns|ps
@@ -16,8 +16,8 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 702336704.386700 722222593.969532
-cursor 1035500000.000000
+zoom 0.000000 206040000.000000
+cursor 0.000000
 marker 0.000000
 
 ; user define markers
@@ -25,7 +25,7 @@ marker 0.000000
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 19
+markerPos 12
 
 ; event list
 ; addEvent event_name event_expression
@@ -46,8 +46,8 @@ curSTATUS ByChange
 
 
 addGroup "G1"
-activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl_bist/sim/rtl/memctrl/result.fsdb.fsdb"
-addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/DUT/ADDR[15:0]
+activeDirFile "" "/mnt/home/soc32/soc/proj7/p1/sim/rtl/memctrl/result.fsdb.fsdb"
+addSignal -h 15 -UNSIGNED -HEX /TB_MEMCTRL/ADDR[15:0]
 addSignal -h 15 -holdScope BIST_EN
 addSignal -h 15 -UNSIGNED -HEX -holdScope BIST_MODE[2:0]
 addSignal -h 15 -holdScope BIST_PASS
@@ -55,13 +55,6 @@ addSignal -h 15 -holdScope CE
 addSignal -h 15 -holdScope CLK
 addSignal -h 15 -holdScope CSB
 addSignal -h 15 -UNSIGNED -HEX -holdScope IDATA[7:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ADDR[9:0]
-addSignal -h 15 -holdScope MEM_CE
-addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_CSB[63:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_IDATA[7:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_ODATA_SELECT[5:0]
-addSignal -h 15 -UNSIGNED -HEX -holdScope MEM_OEB[63:0]
-addSignal -h 15 -holdScope MEM_WEB
 addSignal -h 15 -UNSIGNED -HEX -holdScope ODATA[7:0]
 addSignal -h 15 -holdScope OEB
 addSignal -h 15 -holdScope RSTN
@@ -70,19 +63,16 @@ addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
-activeDirFile "" "/mnt/home/soc17/soc/soc_proj/memctrl_bist/sim/rtl/memctrl/result.fsdb.fsdb"
+activeDirFile "" "/mnt/home/soc32/soc/proj7/p1/sim/rtl/memctrl/result.fsdb.fsdb"
 
 GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
 getSignalForm close
 
 "/SRAM1RW32x50"
-"/TB_MEMCTRL"
 
 SCOPE_LIST_BEGIN
 "/SRAM1RW32x50"
 "/TB_MEMCTRL"
-"/TB_MEMCTRL/read"
-"/TB_MEMCTRL/DUT"
 SCOPE_LIST_END
 
 GETSIGNALFORM_SCOPE_HIERARCHY_END

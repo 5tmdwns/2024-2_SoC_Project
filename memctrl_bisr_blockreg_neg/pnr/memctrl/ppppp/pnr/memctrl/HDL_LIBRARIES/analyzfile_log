@@ -1,0 +1,17 @@
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/BINARY_COUNTER_16B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/COMP_8B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_GRAY_COUNTER_16B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_LFSR_16B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/FSM.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/LFSR_8B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/SRAM64KB.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_BINARY_COUNTER_16B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/SRAM2KB.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_TOGGLE_DATA_8B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/SPARE_SRAM.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/BISR.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/GRAY_COUNTER_16B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TOGGLE_DATA_8B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_LFSR_8B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/LFSR_16B.v
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/MEMCTRL.v

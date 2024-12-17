@@ -1,0 +1,11 @@
+./../../rtl/memctrl/FSM.v
+./../../rtl/memctrl/MEMCTRL.v
+./../../rtl/memctrl/SRAM64KB.v
+./../../rtl/memctrl/BINARY_COUNTER_16B.v
+./../../rtl/memctrl/GRAY_COUNTER_16B.v
+./../../rtl/memctrl/LFSR_16B.v
+./../../rtl/memctrl/LFSR_8B.v
+./../../rtl/memctrl/TOGGLE_DATA_8B.v
+./../../rtl/memctrl/COMP_8B.v
+./TB_MEMCTRL.v
+/home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v

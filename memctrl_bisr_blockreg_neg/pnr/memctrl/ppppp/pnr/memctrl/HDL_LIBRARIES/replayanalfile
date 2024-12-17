@@ -1,0 +1,87 @@
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/BINARY_COUNTER_16B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/BINARY_COUNTER_16B.v
+BINARY_COUNTER_16B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/COMP_8B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/COMP_8B.v
+COMP_8B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/TB_GRAY_COUNTER_16B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_GRAY_COUNTER_16B.v
+TB_GRAY_COUNTER_16B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/TB_LFSR_16B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_LFSR_16B.v
+TB_LFSR_16B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/FSM.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/FSM.v
+FSM
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/LFSR_8B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/LFSR_8B.v
+LFSR_8B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/SRAM64KB.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/SRAM64KB.v
+SRAM64KB
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/TB_BINARY_COUNTER_16B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_BINARY_COUNTER_16B.v
+TB_BINARY_COUTNER16B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/SRAM2KB.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/SRAM2KB.v
+SRAM2KB
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/TB_TOGGLE_DATA_8B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_TOGGLE_DATA_8B.v
+TOGGLE_DATA_8B_tb
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/SPARE_SRAM.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/SPARE_SRAM.v
+SPARE_SRAM3KB
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/BISR.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/BISR.v
+BISR
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/GRAY_COUNTER_16B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/GRAY_COUNTER_16B.v
+GRAY_COUNTER_16B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/TOGGLE_DATA_8B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TOGGLE_DATA_8B.v
+TOGGLE_DATA_8B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/TB_LFSR_8B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/TB_LFSR_8B.v
+TB_LFSR_8B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/LFSR_16B.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/LFSR_16B.v
+LFSR_16B
+set search_path [list . /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn ] 
+analyze -format verilog  "/mnt/home/soc26/soc/ppppp/pnr/../rtl/memctrl/MEMCTRL.v" 
+C/mnt/home/soc26/soc/ppppp/pnr/memctrl
+/mnt/home/soc26/soc/ppppp/rtl/memctrl/MEMCTRL.v
+MEMCTRL
+elaborate MEMCTRL
+set_top_module MEMCTRL

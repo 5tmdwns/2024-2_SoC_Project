@@ -1,0 +1,1 @@
+vcs_sub -f list.f -t TB_MEMCTRL -o result.fsdb

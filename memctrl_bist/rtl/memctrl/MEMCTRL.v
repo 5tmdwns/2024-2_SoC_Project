@@ -1,9 +1,9 @@
 module MEMCTRL(/*AUTOARG*/
                // Outputs
-               ODATA, BIST_PASS, //BIST_END,
+               ODATA, BIST_PASS,
                // Inputs
-               ADDR, CE, CLK, CSB, IDATA, OEB, RSTN, WEB, BIST_EN, BIST_MODE
-               );
+               ADDR, CE, CLK, CSB, IDATA, OEB, RSTN, WEB, BIST_EN, BIST_MODE);
+               
     input  [15:0]        ADDR;
     input                CE;
     input                CLK;
@@ -25,7 +25,6 @@ module MEMCTRL(/*AUTOARG*/
     wire   [63:0]        MEM_OEB;
     wire   [63:0]        MEM_CSB;
     wire   [7:0]         MEM_IDATA;
-    wire   [5:0]         MEM_ODATA_SELECT;
 
     ////////////////////////////////////////////////
     // FSM CONFIGRATION
@@ -40,7 +39,6 @@ module MEMCTRL(/*AUTOARG*/
         .MEM_OEB                        (MEM_OEB[63:0]),
         .MEM_CSB                        (MEM_CSB[63:0]),
         .MEM_IDATA                      (MEM_IDATA[7:0]),
-        .MEM_ODATA_SELECT               (MEM_ODATA_SELECT[5:0]),
         .BIST_PASS                      (BIST_PASS),
         // Inputs
         .CLK                            (CLK),
@@ -69,7 +67,6 @@ module MEMCTRL(/*AUTOARG*/
         .MEM_WEB                        (MEM_WEB),
         .MEM_OEB                        (MEM_OEB[63:0]),
         .MEM_CSB                        (MEM_CSB[63:0]),
-        .MEM_IDATA                      (MEM_IDATA[7:0]),
-        .MEM_ODATA_SELECT               (MEM_ODATA_SELECT[5:0]));
+        .MEM_IDATA                      (MEM_IDATA[7:0]));
 
 endmodule

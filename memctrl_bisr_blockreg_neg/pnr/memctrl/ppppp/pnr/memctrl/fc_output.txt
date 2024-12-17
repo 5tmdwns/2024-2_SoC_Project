@@ -1,0 +1,431 @@
+ 
+                              Fusion Compiler (TM)
+
+             Version U-2022.12-SP1 for linux64 - Jan 27, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Loading user preference file /home/soc26/.synopsys_fc_gui/preferences.tcl
+fc_shell> 
+fc_shell> 
+fc_shell> 
+fc_shell> 
+fc_shell> open_lib ./outputs/<
+Error: File './outputs/<' cannot be found using search_path of: '. /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/syn_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/dw/sim_ver /home/eda/synopsys/fusioncompiler/U-2022.12-SP1/libraries/syn .'. (FILE-002)
+Error: problem in open_lib
+        Use error_info for more info. (CMD-013)
+fc_shell> open_lib ./outputs/MEMCTRL
+Information: Loading library file '/mnt/home/soc26/soc/ppppp/pnr/memctrl/outputs/MEMCTRL' (FILE-007)
+Information: Loading library file '/mnt/home/soc26/soc/ppppp/ndm/sae32sram.ndm' (FILE-007)
+Information: Loading library file '/mnt/home/soc26/soc/ppppp/ndm/sae32hvt.ndm' (FILE-007)
+{MEMCTRL}
+fc_shell> open_block MEMCTRL_08_FILL
+Information: User units loaded from library 'sae32sram' (LNK-040)
+Opening block 'MEMCTRL:MEMCTRL_08_FILL.design' in edit mode
+{MEMCTRL:MEMCTRL_08_FILL.design}
+fc_shell> report_congestion
+Using libraries: MEMCTRL sae32sram sae32hvt
+Updating block MEMCTRL:MEMCTRL_08_FILL.design
+Information: The command 'load_upf' cleared the undo history. (UNDO-016)
+Design 'MEMCTRL' was successfully linked.
+****************************************
+Report : congestion
+Design : MEMCTRL
+Version: U-2022.12-SP1
+Date   : Sun Dec 15 06:36:37 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |     132 |     2 |     130  ( 0.01%) |      19
+H routing |     105 |     2 |     103  ( 0.01%) |      17
+V routing |      27 |     2 |      27  ( 0.00%) |       2
+
+1
+fc_shell> check_lvs
+Information: Using 1 threads for LVS
+[Check Short] Stage 1   Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 1-2 Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 2   Elapsed =    0:00:00, CPU =    0:00:00
+Detected more than 20 short violations. Skip checking short violations
+[Check Short] Stage 3   Elapsed =    0:00:01, CPU =    0:00:01
+[Check Short] End       Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] Init        Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 10%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 20%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 30%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 40%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 50%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 60%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 70%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 80%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 90%         Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] All nets are submitted.
+[Check Net] 100%        Elapsed =    0:00:02, CPU =    0:00:02
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (280.1910 16.7190)(280.3850 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (341.4750 16.7190)(341.9170 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (338.5590 16.7190)(338.7530 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (334.9110 16.7190)(335.1050 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (331.7470 16.7190)(332.1890 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (328.8310 16.7190)(329.0250 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (325.1830 16.7190)(325.3770 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (322.0190 16.7190)(322.4610 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (319.1030 16.7190)(319.2970 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (315.4550 16.7190)(315.6490 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (312.2910 16.7190)(312.7330 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (309.3750 16.7190)(309.5690 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (305.7270 16.7190)(305.9210 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (302.5630 16.7190)(303.0050 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (299.6470 16.7190)(299.8410 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (295.9990 16.7190)(296.1930 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (292.8350 16.7190)(293.2770 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (289.9190 16.7190)(290.1130 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VSS. BBox: (286.2710 16.7190)(286.4650 16.7210). Layer: M2. (RT-586)
+Information: Detected short violation. Cell1: USRAM/genblk1[0].UMEM. Net2: VDD. BBox: (283.1070 16.7190)(283.5490 16.7210). Layer: M2. (RT-586)
+
+===============================================================
+    Maximum number of violations is set to 20
+    Abort checking when more than 20 violations are found
+    All violations might not be found.
+===============================================================
+Total number of input nets is 4498.
+Total number of short violations is 20.
+Total number of open nets is 0.
+Total number of floating route violations is 0.
+
+Elapsed =    0:00:02, CPU =    0:00:02
+1
+fc_shell> check_routes
+Information: The command 'check_routes' cleared the undo history. (UNDO-016)
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = M6
+Found antenna rule mode 4, diode mode 2:
+        layer M1:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M2:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M3:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M4:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M5:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M6:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M7:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M8:  max ratio 1000, diode ratio {0.06 0 400 40000} 
+        layer M9:  max ratio 1000, diode ratio {0.06 0 8000 50000} 
+        layer MRDL:  max ratio 1000, diode ratio {0 0 1 0 0} 
+        layer CO: , diode ratio {0 0 1 0 0} 
+        layer VIA1:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA2:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA3:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA4:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA5:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA6:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA7:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIA8:  max ratio 20, diode ratio {0.06 0 200 1000} 
+        layer VIARDL:  max ratio 20, diode ratio {0 0 1 0 0} 
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Skipping 1 internal pins that are not physical. Set route.common.verbose_level to > 0 and run routing command to get skipped pin names.
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.32 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.32 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Hier-ant-prop: new = 1, old = 0
+
+
+Start checking for open nets ... 
+
+Total number of nets = 4498, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+
+Check 4498 nets, 0 have Errors
+
+[CHECK OPEN NETS] Elapsed real time: 0:00:00 
+[CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[CHECK OPEN NETS] Total (MB): Used   45  Alloctr   46  Proc 12858 
+Printing options for 'route.common.*'
+common.verbose_level                                    :        0                   
+
+Printing options for 'route.detail.*'
+detail.antenna                                          :        true                
+detail.eco_route_use_soft_spacing_for_timing_optimization:       true                
+detail.force_max_number_iterations                      :        false               
+detail.generate_extra_off_grid_pin_tracks               :        true                
+detail.generate_off_grid_feed_through_tracks            :        high                
+detail.timing_driven                                    :        true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+*****Start reporting antenna related parameters*****
+  Antenna/diode mode:
+    Antenna mode 4; diode mode 2
+      Metal lay (M1)0; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA1)1; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M2)1; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA2)2; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M3)2; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA3)3; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M4)3; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA4)4; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M5)4; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA5)5; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M6)5; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA6)6; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M7)6; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA7)7; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M8)7; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 400.000 40000.000 0.000)
+      Cut lay (VIA8)8; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 200.000 1000.000 0.000)
+      Metal lay (M9)8; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.060 0.000 8000.000 50000.000 0.000)
+      Cut lay (VIARDL)9; maxRatio 20.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.000 0.000 1.000 0.000 0.000)
+      Metal lay (MRDL)9; maxRatio 1000.000 maxPRatio 2147483648.000 maxNRatio 2147483648.000; vector (0.000 0.000 1.000 0.000 0.000)
+  Top lay antenna ratio fix threshold == -1
+  Antenna max pin count threshold == -1
+  Check PG net == false
+  MergeGate == true
+  Break antenna to port mode == float
+  Break antenna to macro pin mode == normal
+*****End reporting antenna related parameters*****
+Warning: Skipping antenna analysis for net ADDR[15]. The pin ADDR[15] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[14]. The pin ADDR[14] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[13]. The pin ADDR[13] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[12]. The pin ADDR[12] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[11]. The pin ADDR[11] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[10]. The pin ADDR[10] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[9]. The pin ADDR[9] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[8]. The pin ADDR[8] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[7]. The pin ADDR[7] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[6]. The pin ADDR[6] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[5]. The pin ADDR[5] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[4]. The pin ADDR[4] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[3]. The pin ADDR[3] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[2]. The pin ADDR[2] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[1]. The pin ADDR[1] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net ADDR[0]. The pin ADDR[0] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[7]. The pin IDATA[7] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[6]. The pin IDATA[6] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[5]. The pin IDATA[5] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[4]. The pin IDATA[4] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[3]. The pin IDATA[3] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[2]. The pin IDATA[2] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[1]. The pin IDATA[1] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net IDATA[0]. The pin IDATA[0] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net BIST_MODE[2]. The pin BIST_MODE[2] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net BIST_MODE[1]. The pin BIST_MODE[1] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net BIST_MODE[0]. The pin BIST_MODE[0] on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net CE. The pin CE on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net CLK. The pin CLK on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net CSB. The pin CSB on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net OEB. The pin OEB on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net RSTN. The pin RSTN on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net WEB. The pin WEB on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net BIST_EN. The pin BIST_EN on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Warning: Skipping antenna analysis for net BISR_EN. The pin BISR_EN on cell MEMCTRL_08_FILL does not have enough gate area information. (ZRT-311)
+Skipping antenna analysis for 35 nets as they don't have enough gate area info.
+
+Begin full DRC check ...
+
+Information: Using 1 threads for routing. (ZRT-444)
+Checked 174/638 Partitions, Violations =        0
+Checked 175/638 Partitions, Violations =        0
+Checked 176/638 Partitions, Violations =        0
+Checked 177/638 Partitions, Violations =        0
+Checked 178/638 Partitions, Violations =        0
+Checked 179/638 Partitions, Violations =        0
+Checked 180/638 Partitions, Violations =        0
+Checked 181/638 Partitions, Violations =        0
+Checked 200/638 Partitions, Violations =        3
+Checked 225/638 Partitions, Violations =        3
+Checked 250/638 Partitions, Violations =        3
+Checked 275/638 Partitions, Violations =        3
+Checked 300/638 Partitions, Violations =        15
+Checked 325/638 Partitions, Violations =        15
+Checked 350/638 Partitions, Violations =        15
+Checked 375/638 Partitions, Violations =        15
+Checked 400/638 Partitions, Violations =        15
+Checked 425/638 Partitions, Violations =        15
+Checked 450/638 Partitions, Violations =        15
+Checked 475/638 Partitions, Violations =        19
+Checked 500/638 Partitions, Violations =        19
+Checked 525/638 Partitions, Violations =        19
+Checked 550/638 Partitions, Violations =        19
+Checked 575/638 Partitions, Violations =        19
+Checked 600/638 Partitions, Violations =        19
+Checked 625/638 Partitions, Violations =        19
+[DRC CHECK] Elapsed real time: 0:00:03 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:03 total=0:00:03
+[DRC CHECK] Stage (MB): Used    0  Alloctr    0  Proc   90 
+[DRC CHECK] Total (MB): Used  130  Alloctr  131  Proc 13017 
+Start net based rule analysis
+Found 0 antenna instance ports
+End net based rule analysis
+[Antenna analysis] Elapsed real time: 0:00:00 
+[Antenna analysis] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Antenna analysis] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Antenna analysis] Total (MB): Used  130  Alloctr  131  Proc 13017 
+Information: Merged away 1 aligned/redundant DRCs. (ZRT-305)
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      18
+        Diff net spacing : 2
+        Less than minimum area : 1
+        Needs fat contact : 1
+        Off-grid : 12
+        Short : 2
+
+
+Total Wire Length =                    619249 micron
+Total Number of Contacts =             32832
+Total Number of Wires =                33808
+Total Number of PtConns =              3984
+Total Number of Routed Wires =       33808
+Total Routed Wire Length =           618720 micron
+Total Number of Routed Contacts =       32832
+        Layer                 M1 :      85423 micron
+        Layer                 M2 :     204014 micron
+        Layer                 M3 :     175216 micron
+        Layer                 M4 :      86588 micron
+        Layer                 M5 :      45133 micron
+        Layer                 M6 :      22875 micron
+        Layer                 M7 :          0 micron
+        Layer                 M8 :          0 micron
+        Layer                 M9 :          0 micron
+        Layer               MRDL :          0 micron
+        Via            VIA56SQ_C :        420
+        Via       VIA56SQ_C(rot) :          1
+        Via        VIA56SQ_C_2x1 :          3
+        Via            VIA45SQ_C :        114
+        Via       VIA45SQ_C(rot) :       1156
+        Via            VIA34SQ_C :       3069
+        Via       VIA34SQ_C(rot) :        103
+        Via            VIA23SQ_C :        135
+        Via       VIA23SQ_C(rot) :      13850
+        Via            VIA12SQ_C :       2332
+        Via       VIA12SQ_C(rot) :          3
+        Via           VIA12_thin :      11600
+        Via        VIA12SQ_C_2x1 :         32
+        Via   VIA12SQ_C(rot)_1x2 :          2
+        Via   VIA12SQ_C(rot)_2x1 :          1
+        Via        VIA12SQ_C_1x2 :          3
+        Via     VIA12SQ(rot)_2x1 :          3
+        Via          VIA12SQ_1x2 :          5
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate =  0.15% (49 / 32832 vias)
+ 
+    Layer VIA1       =  0.33% (46     / 13981   vias)
+        Weight 1     =  0.33% (46      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 99.67% (13935   vias)
+    Layer VIA2       =  0.00% (0      / 13985   vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (13985   vias)
+    Layer VIA3       =  0.00% (0      / 3172    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (3172    vias)
+    Layer VIA4       =  0.00% (0      / 1270    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (1270    vias)
+    Layer VIA5       =  0.71% (3      / 424     vias)
+        Weight 1     =  0.71% (3       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 99.29% (421     vias)
+ 
+  Total double via conversion rate    =  0.15% (49 / 32832 vias)
+ 
+    Layer VIA1       =  0.33% (46     / 13981   vias)
+    Layer VIA2       =  0.00% (0      / 13985   vias)
+    Layer VIA3       =  0.00% (0      / 3172    vias)
+    Layer VIA4       =  0.00% (0      / 1270    vias)
+    Layer VIA5       =  0.71% (3      / 424     vias)
+ 
+  The optimized via conversion rate based on total routed via count =  0.15% (49 / 32832 vias)
+ 
+    Layer VIA1       =  0.33% (46     / 13981   vias)
+        Weight 1     =  0.33% (46      vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 99.67% (13935   vias)
+    Layer VIA2       =  0.00% (0      / 13985   vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (13985   vias)
+    Layer VIA3       =  0.00% (0      / 3172    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (3172    vias)
+    Layer VIA4       =  0.00% (0      / 1270    vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 100.00% (1270    vias)
+    Layer VIA5       =  0.71% (3      / 424     vias)
+        Weight 1     =  0.71% (3       vias)
+        Un-optimized =  0.00% (0       vias)
+        Un-mapped    = 99.29% (421     vias)
+ 
+
+
+Verify Summary:
+
+Total number of nets = 4498, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 18
+Total number of antenna violations = 0
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+
+fc_shell> start_gui
+Load ICV ICCII menu file: /home/eda/synopsys/icvalidator/T-2022.03/etc/tcl-u/Icc2Menu.tcl
+ + VUE INFO: Please click View->IC Validator VUE in LayoutWindow menu
+            to launch VUE.
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE WARNING: couldn't open socket: address already in use
+
+ + VUE INFO: Found a usable port: 2458
+
+fc_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+fc_shell> quit
+Maximum memory usage for this session: 713.26 MB
+Maximum memory usage for this session including child processes: 713.26 MB
+CPU usage for this session:     27 seconds (  0.01 hours)
+Elapsed time for this session:    115 seconds (  0.03 hours)
+Thank you for using Fusion Compiler.
+

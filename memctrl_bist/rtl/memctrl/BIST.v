@@ -1,9 +1,9 @@
 module BIST(/*AUTOARG*/
            // Outputs
-           BIST_MEM_ADDR, BIST_MEM_CE, BIST_MEM_WEB, BIST_MEM_OEB, BIST_MEM_CSB, BIST_MEM_IDATA, BIST_MEM_ODATA_SELECT, BIST_PASS,
+           BIST_MEM_ADDR, BIST_MEM_CE, BIST_MEM_WEB, BIST_MEM_OEB, BIST_MEM_CSB, BIST_MEM_IDATA, BIST_PASS,
            // Inputs
-           CLK, RSTN, BIST_EN, BIST_MODE, BIST_ODATA
-           );
+           CLK, RSTN, BIST_EN, BIST_MODE, BIST_ODATA);
+           
     input                    CLK;
     input                    RSTN;
     input                    BIST_EN;
@@ -16,7 +16,6 @@ module BIST(/*AUTOARG*/
     output reg   [63:0]      BIST_MEM_OEB;
     output reg   [63:0]      BIST_MEM_CSB;
     output reg   [7:0]       BIST_MEM_IDATA;
-    output reg   [5:0]       BIST_MEM_ODATA_SELECT;
     output reg               BIST_PASS;
 
 
@@ -94,7 +93,6 @@ module BIST(/*AUTOARG*/
         if (!RSTN) begin
             BIST_MEM_IDATA        <= 8'b0;
             BIST_MEM_ADDR         <= 15'b0;
-            BIST_MEM_ODATA_SELECT <= 6'b0;
 
             BIST_MEM_CE  <= 1'b0;
             BIST_MEM_WEB <= 1'b1;
@@ -108,7 +106,6 @@ module BIST(/*AUTOARG*/
                 IDLE: begin
                     BIST_MEM_IDATA        <= 8'b0;
                     BIST_MEM_ADDR         <= 15'b0;
-                    BIST_MEM_ODATA_SELECT <= 6'b0;
 
                     BIST_MEM_CE  <= 1'b0;
                     BIST_MEM_WEB <= 1'b1;
@@ -120,9 +117,8 @@ module BIST(/*AUTOARG*/
                 WRITE1: begin
                     BIST_MEM_IDATA        <= BIST_MEM_IDATA;
                     BIST_MEM_ADDR         <= BIST_MEM_ADDR_reg[9:0];
-                    BIST_MEM_ODATA_SELECT <= BIST_MEM_ODATA_SELECT;
 
-                    BIST_MEM_CE  <= 0;
+                    BIST_MEM_CE  <= 1'b0;
                     BIST_MEM_WEB <= 1'b1;
                     BIST_MEM_CSB <= 64'hffff_ffff_ffff_ffff;
                     BIST_MEM_OEB <= BIST_MEM_OEB;
@@ -132,7 +128,6 @@ module BIST(/*AUTOARG*/
                 WRITE2: begin
                     BIST_MEM_IDATA        <= BIST_MEM_IDATA_reg;
                     BIST_MEM_ADDR         <= BIST_MEM_ADDR;
-                    BIST_MEM_ODATA_SELECT <= BIST_MEM_ADDR_reg[15:10];
 
                     BIST_MEM_CE  <= 1'b1;
                     BIST_MEM_WEB <= 1'b0;
@@ -150,7 +145,6 @@ module BIST(/*AUTOARG*/
                 READ1: begin
                     BIST_MEM_IDATA        <= BIST_MEM_IDATA;
                     BIST_MEM_ADDR         <= BIST_MEM_ADDR;
-                    BIST_MEM_ODATA_SELECT <= BIST_MEM_ODATA_SELECT;
 
                     BIST_MEM_CE  <= 1'b0;
                     BIST_MEM_WEB <= 1'b1;
@@ -162,7 +156,6 @@ module BIST(/*AUTOARG*/
                 READ2: begin
                     BIST_MEM_IDATA        <= BIST_MEM_IDATA;
                     BIST_MEM_ADDR         <= BIST_MEM_ADDR;
-                    BIST_MEM_ODATA_SELECT <= BIST_MEM_ODATA_SELECT;
 
                     BIST_MEM_CE  <= 1'b1;
                     BIST_MEM_WEB <= 1'b1;

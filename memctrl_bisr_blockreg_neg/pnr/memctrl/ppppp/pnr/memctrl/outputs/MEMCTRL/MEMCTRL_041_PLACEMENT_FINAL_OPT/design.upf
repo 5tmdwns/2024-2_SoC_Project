@@ -1,0 +1,49 @@
+################################################################################
+# Warning: this is an internal database file and is not intended for other usage
+################################################################################
+################################################################################
+#
+# Created by fc (U-2022.12-SP1) internalDesignWriter on Sun Dec 15 06:29:21 2024
+#
+################################################################################
+
+################################################################################
+#
+# Units
+# time_unit               : 1e-09
+# resistance_unit         : 1000000
+# capacitive_load_unit    : 1e-15
+# voltage_unit            : 1
+# current_unit            : 1e-06
+# power_unit              : 1e-12
+################################################################################
+
+# Implemented: supplies
+
+set_design_attributes -elements . -internal_attribute _mv_data_file_version 1
+create_power_domain TOP -include_scope
+create_supply_net -domain TOP VDD
+create_supply_net -domain TOP VSS
+create_supply_port VDD -domain TOP
+create_supply_port VSS -domain TOP
+connect_supply_net VDD -ports {VDD}
+connect_supply_net VSS -ports {VSS}
+set_domain_supply_net TOP -primary_power_net VDD -primary_ground_net VSS
+add_port_state VDD -state {VDD_ON 0.95}
+add_port_state VSS -state {VSS_OFF 0.00}
+create_pst top_state -supplies {VDD VSS}
+add_pst_state all_on -pst top_state -state {VDD_ON VSS_OFF}
+connect_supply_net VDD -ports {USRAM/genblk1[0].UMEM/VDD USRAM/genblk1[1].UMEM/VDD USRAM/genblk1[2].UMEM/VDD USRAM/genblk1[3].UMEM/VDD USRAM/genblk1[4].UMEM/VDD USRAM/genblk1[5].UMEM/VDD USRAM/genblk1[6].UMEM/VDD USRAM/genblk1[7].UMEM/VDD USRAM/genblk1[8].UMEM/VDD USRAM/genblk1[9].UMEM/VDD USRAM/genblk1[10].UMEM/VDD USRAM/genblk1[11].UMEM/VDD USRAM/genblk1[12].UMEM/VDD USRAM/genblk1[13].UMEM/VDD USRAM/genblk1[14].UMEM/VDD USRAM/genblk1[15].UMEM/VDD USRAM/genblk1[16].UMEM/VDD USRAM/genblk1[17].UMEM/VDD USRAM/genblk1[18].UMEM/VDD USRAM/genblk1[19].UMEM/VDD USRAM/genblk1[20].UMEM/VDD USRAM/genblk1[21].UMEM/VDD USRAM/genblk1[22].UMEM/VDD USRAM/genblk1[23].UMEM/VDD USRAM/genblk1[24].UMEM/VDD USRAM/genblk1[25].UMEM/VDD USRAM/genblk1[26].UMEM/VDD USRAM/genblk1[27].UMEM/VDD USRAM/genblk1[28].UMEM/VDD USRAM/genblk1[29].UMEM/VDD USRAM/genblk1[30].UMEM/VDD USRAM/genblk1[31].UMEM/VDD USRAM/genblk1[32].UMEM/VDD USRAM/genblk1[33].UMEM/VDD USRAM/genblk1[34].UMEM/VDD USRAM/genblk1[35].UMEM/VDD USRAM/genblk1[36].UMEM/VDD USRAM/genblk1[37].UMEM/VDD USRAM/genblk1[38].UMEM/VDD USRAM/genblk1[39].UMEM/VDD USRAM/genblk1[40].UMEM/VDD USRAM/genblk1[41].UMEM/VDD USRAM/genblk1[42].UMEM/VDD USRAM/genblk1[43].UMEM/VDD USRAM/genblk1[44].UMEM/VDD USRAM/genblk1[45].UMEM/VDD USRAM/genblk1[46].UMEM/VDD USRAM/genblk1[47].UMEM/VDD USRAM/genblk1[48].UMEM/VDD USRAM/genblk1[49].UMEM/VDD USRAM/genblk1[50].UMEM/VDD USRAM/genblk1[51].UMEM/VDD USRAM/genblk1[52].UMEM/VDD USRAM/genblk1[53].UMEM/VDD USRAM/genblk1[54].UMEM/VDD USRAM/genblk1[55].UMEM/VDD USRAM/genblk1[56].UMEM/VDD USRAM/genblk1[57].UMEM/VDD USRAM/genblk1[58].UMEM/VDD USRAM/genblk1[59].UMEM/VDD USRAM/genblk1[60].UMEM/VDD USRAM/genblk1[61].UMEM/VDD USRAM/genblk1[62].UMEM/VDD USRAM/genblk1[63].UMEM/VDD}
+connect_supply_net VSS -ports {USRAM/genblk1[0].UMEM/VSS USRAM/genblk1[1].UMEM/VSS USRAM/genblk1[2].UMEM/VSS USRAM/genblk1[3].UMEM/VSS USRAM/genblk1[4].UMEM/VSS USRAM/genblk1[5].UMEM/VSS USRAM/genblk1[6].UMEM/VSS USRAM/genblk1[7].UMEM/VSS USRAM/genblk1[8].UMEM/VSS USRAM/genblk1[9].UMEM/VSS USRAM/genblk1[10].UMEM/VSS USRAM/genblk1[11].UMEM/VSS USRAM/genblk1[12].UMEM/VSS USRAM/genblk1[13].UMEM/VSS USRAM/genblk1[14].UMEM/VSS USRAM/genblk1[15].UMEM/VSS USRAM/genblk1[16].UMEM/VSS USRAM/genblk1[17].UMEM/VSS USRAM/genblk1[18].UMEM/VSS USRAM/genblk1[19].UMEM/VSS USRAM/genblk1[20].UMEM/VSS USRAM/genblk1[21].UMEM/VSS USRAM/genblk1[22].UMEM/VSS USRAM/genblk1[23].UMEM/VSS USRAM/genblk1[24].UMEM/VSS USRAM/genblk1[25].UMEM/VSS USRAM/genblk1[26].UMEM/VSS USRAM/genblk1[27].UMEM/VSS USRAM/genblk1[28].UMEM/VSS USRAM/genblk1[29].UMEM/VSS USRAM/genblk1[30].UMEM/VSS USRAM/genblk1[31].UMEM/VSS USRAM/genblk1[32].UMEM/VSS USRAM/genblk1[33].UMEM/VSS USRAM/genblk1[34].UMEM/VSS USRAM/genblk1[35].UMEM/VSS USRAM/genblk1[36].UMEM/VSS USRAM/genblk1[37].UMEM/VSS USRAM/genblk1[38].UMEM/VSS USRAM/genblk1[39].UMEM/VSS USRAM/genblk1[40].UMEM/VSS USRAM/genblk1[41].UMEM/VSS USRAM/genblk1[42].UMEM/VSS USRAM/genblk1[43].UMEM/VSS USRAM/genblk1[44].UMEM/VSS USRAM/genblk1[45].UMEM/VSS USRAM/genblk1[46].UMEM/VSS USRAM/genblk1[47].UMEM/VSS USRAM/genblk1[48].UMEM/VSS USRAM/genblk1[49].UMEM/VSS USRAM/genblk1[50].UMEM/VSS USRAM/genblk1[51].UMEM/VSS USRAM/genblk1[52].UMEM/VSS USRAM/genblk1[53].UMEM/VSS USRAM/genblk1[54].UMEM/VSS USRAM/genblk1[55].UMEM/VSS USRAM/genblk1[56].UMEM/VSS USRAM/genblk1[57].UMEM/VSS USRAM/genblk1[58].UMEM/VSS USRAM/genblk1[59].UMEM/VSS USRAM/genblk1[60].UMEM/VSS USRAM/genblk1[61].UMEM/VSS USRAM/genblk1[62].UMEM/VSS USRAM/genblk1[63].UMEM/VSS}
+
+## Constraints below are generated by snps. Please do not modify.
+set derived_upf true
+
+if ($derived_upf) {
+
+set_design_attributes -elements . -internal_attribute _mv_data_status ready
+set_design_attributes -elements . -internal_attribute _ldi_supply_nets {VDD \
+    VSS} -internal_attribute _ldi_domains {{TOP+VDD+VSS}}
+
+}
+set derived_upf false

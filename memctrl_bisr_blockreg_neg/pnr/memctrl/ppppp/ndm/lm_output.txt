@@ -1,0 +1,1800 @@
+ 
+                              Library Manager (TM)
+
+             Version U-2022.12-SP1 for linux64 - Jan 27, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+lm_shell> source run_ndm.tcl
+Warning: The app_option file.lef.allow_site_conflicts is deprecated. Please resolve the conflicts before going forward. (LMUI-050)
+Warning: Unused conflict site definition will be removed when file.lef.auto_rename_conflict_sites is true. (LEFR-039)
+Warning: Layer 'VIA1' 'onGrid' and 'onWireTrack' coexist. (TECH-025)
+Information: Loading technology file '/home/eda/soc/lib/gpdk/32n/tech/milkyway/saed32nm_1p9m_mw.tf' (FILE-007)
+... created workspace saed32hvt
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16v125c.db' (FILE-007)
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16vn40c.db' (FILE-007)
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db' (FILE-007)
+Information: Loading db file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.db' (FILE-007)
+Information: The default value of lib.workspace.library_developer_mode will be 'true' in future release. (LMUI-054)
+Information: Loading LEF file '/home/eda/soc/lib/gpdk/32n/lib/stdcell_hvt/lef/saed32nm_hvt_1p9m.lef' (FILE-007)
+Information: Read LEF into a new library 'saed32nm_hvt_1p9m'. (LEFR-022)
+Warning: Line 56, Invalid bus bit characters '_<>' are specified; using default characters '[]'. (LEFR-011)
+Checking libraries...
+Using saed32hvt_ff1p16v125c as the base library.
+Warning: Library saed32hvt_ff1p16v125c has 465 duplicate arc(s) (LM-006)
+Warning: Library saed32hvt_ff1p16vn40c has 930 duplicate arc(s) (LM-006)
+Warning: Library saed32hvt_ss0p95v125c has 1395 duplicate arc(s) (LM-006)
+Warning: Library saed32hvt_ss0p95vn40c has 1860 duplicate arc(s) (LM-006)
+Error: Direction 'inout' for port VDD on saed32hvt/AND2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AND2X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AND2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AND2X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND2X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AND2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AND2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AND2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AND2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND2X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AND2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/AND2X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AND2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/AND2X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND2X4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AND3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AND3X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AND3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AND3X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND3X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AND3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AND3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AND3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AND3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND3X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AND3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/AND3X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AND3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/AND3X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND3X4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AND4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AND4X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AND4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AND4X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND4X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AND4X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AND4X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AND4X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AND4X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND4X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AND4X4_HVT/design
+        does not match expected value 'in' from saed32hvt/AND4X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AND4X4_HVT/design
+        does not match expected value 'in' from saed32hvt/AND4X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AND4X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/ANTENNA_HVT/design
+        does not match expected value 'in' from saed32hvt/ANTENNA_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ANTENNA_HVT/design
+        does not match expected value 'in' from saed32hvt/ANTENNA_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ANTENNA_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AO21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO21X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AO21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO21X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO21X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AO21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO21X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AO21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO21X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO21X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AO221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO221X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AO221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO221X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO221X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AO221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO221X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AO221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO221X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO221X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AO222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO222X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AO222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO222X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO222X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AO222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO222X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AO222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO222X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO222X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AO22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO22X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AO22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AO22X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO22X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AO22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO22X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AO22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AO22X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AO22X2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AOBUFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOBUFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOBUFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOBUFX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AOBUFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOBUFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOBUFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOBUFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AOBUFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOBUFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOBUFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/AOBUFX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOBUFX4_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AODFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AODFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AODFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AODFFARX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AODFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AODFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AODFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AODFFARX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AODFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AODFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AODFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFNARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AODFFNARX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AODFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AODFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AODFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AODFFNARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AODFFNARX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI21X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI21X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI21X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI21X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI21X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI21X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI221X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI221X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI221X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI221X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI221X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI221X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI222X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI222X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI222X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI222X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI222X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI222X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI22X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI22X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI22X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/AOI22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI22X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOI22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOI22X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOI22X2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AOINVX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOINVX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOINVX1_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOINVX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AOINVX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOINVX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOINVX2_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOINVX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/AOINVX4_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/AOINVX4_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/AOINVX4_HVT/design
+        does not match expected value 'in' from saed32hvt/AOINVX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block AOINVX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/BSLEX1_HVT/design
+        does not match expected value 'in' from saed32hvt/BSLEX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/BSLEX1_HVT/design
+        does not match expected value 'in' from saed32hvt/BSLEX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block BSLEX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/BSLEX2_HVT/design
+        does not match expected value 'in' from saed32hvt/BSLEX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/BSLEX2_HVT/design
+        does not match expected value 'in' from saed32hvt/BSLEX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block BSLEX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/BSLEX4_HVT/design
+        does not match expected value 'in' from saed32hvt/BSLEX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/BSLEX4_HVT/design
+        does not match expected value 'in' from saed32hvt/BSLEX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block BSLEX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/BUSKP_HVT/design
+        does not match expected value 'in' from saed32hvt/BUSKP_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/BUSKP_HVT/design
+        does not match expected value 'in' from saed32hvt/BUSKP_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block BUSKP_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLNPRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLNPRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLNPRX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLNPRX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPRX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLNPRX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPRX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLNPRX8_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLNPSX16_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX16_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLNPSX16_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX16_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLNPSX16_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLNPSX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLNPSX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLNPSX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLNPSX4_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLNPSX4_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLNPSX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLNPSX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLNPSX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLNPSX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLNPSX8_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLPPRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLPPRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLPPRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLPPRX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPRX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLPPRX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPRX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLPPRX8_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLPPSX16_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX16_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLPPSX16_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX16_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLPPSX16_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLPPSX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLPPSX2_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLPPSX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLPPSX4_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLPPSX4_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLPPSX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CGLPPSX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CGLPPSX8_HVT/design
+        does not match expected value 'in' from saed32hvt/CGLPPSX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CGLPPSX8_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/CLOAD1_HVT/design
+        does not match expected value 'in' from saed32hvt/CLOAD1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/CLOAD1_HVT/design
+        does not match expected value 'in' from saed32hvt/CLOAD1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block CLOAD1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DCAP_HVT/design
+        does not match expected value 'in' from saed32hvt/DCAP_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DCAP_HVT/design
+        does not match expected value 'in' from saed32hvt/DCAP_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DCAP_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DEC24X1_HVT/design
+        does not match expected value 'in' from saed32hvt/DEC24X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DEC24X1_HVT/design
+        does not match expected value 'in' from saed32hvt/DEC24X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DEC24X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DEC24X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DEC24X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DEC24X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DEC24X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DEC24X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DELLN1X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DELLN1X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DELLN1X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DELLN1X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DELLN1X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DELLN2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DELLN2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DELLN2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DELLN2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DELLN2X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DELLN3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DELLN3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DELLN3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/DELLN3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DELLN3X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFARX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFARX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFASRX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFASRX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFASX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFASX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNARX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNARX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASRNX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASRNX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRQX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRQX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASRQX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRQX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRQX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASRQX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASRX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASRX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNASX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFNX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFSSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFSSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFSSRX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFSSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFSSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFSSRX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/DFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/DFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/DFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DHFILLH2_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLH2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DHFILLH2_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLH2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DHFILLH2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/DHFILLHL2_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLHL2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DHFILLHL2_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLHL2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DHFILLHL2_HVT (LM-054)
+Error: Direction 'inout' for port VDDH on saed32hvt/DHFILLHLHLS11_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLHLHLS11_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/DHFILLHLHLS11_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLHLHLS11_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDL on saed32hvt/DHFILLHLHLS11_HVT/design
+        does not match expected value 'in' from saed32hvt/DHFILLHLHLS11_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block DHFILLHLHLS11_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/FADDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/FADDX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/FADDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/FADDX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block FADDX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/FADDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/FADDX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/FADDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/FADDX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block FADDX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/HADDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/HADDX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/HADDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/HADDX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block HADDX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/HADDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/HADDX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/HADDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/HADDX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block HADDX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/IBUFFX16_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX16_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/IBUFFX16_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX16_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block IBUFFX16_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/IBUFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/IBUFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block IBUFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/IBUFFX32_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX32_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/IBUFFX32_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX32_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block IBUFFX32_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/IBUFFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/IBUFFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block IBUFFX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/IBUFFX8_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/IBUFFX8_HVT/design
+        does not match expected value 'in' from saed32hvt/IBUFFX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block IBUFFX8_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX0_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX0_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX0_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX16_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX16_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX16_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX16_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX16_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX1_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX1_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX2_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX2_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX32_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX32_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX32_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX32_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX32_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX4_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX4_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/INVX8_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/INVX8_HVT/design
+        does not match expected value 'in' from saed32hvt/INVX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block INVX8_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDAOX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDAOX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLANDAOX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDAOX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLANDAOX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDAOX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDAOX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDAOX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLANDAOX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDAOX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDAOX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDAOX4_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLANDAOX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDAOX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDAOX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDAOX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDAOX8_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDX4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLANDX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLANDX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLANDX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLANDX8_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLORAOX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORAOX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORAOX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORAOX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORAOX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORAOX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLORAOX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORAOX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORAOX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORAOX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLORAOX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORAOX4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORAOX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORAOX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/ISOLORAOX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORAOX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORAOX8_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORX1_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORX2_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORX4_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORX4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/ISOLORX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/ISOLORX8_HVT/design
+        does not match expected value 'in' from saed32hvt/ISOLORX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block ISOLORX8_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LARX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LARX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASRNX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASRNX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRQX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRQX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASRQX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRQX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRQX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASRQX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASRX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASRX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LASX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LATCHX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LATCHX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LATCHX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LATCHX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LATCHX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LATCHX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LATCHX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LATCHX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LATCHX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LATCHX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/LNANDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LNANDX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/LNANDX1_HVT/design
+        does not match expected value 'in' from saed32hvt/LNANDX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LNANDX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/LNANDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LNANDX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/LNANDX2_HVT/design
+        does not match expected value 'in' from saed32hvt/LNANDX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block LNANDX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/MUX21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX21X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/MUX21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX21X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block MUX21X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/MUX21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX21X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/MUX21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX21X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block MUX21X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/MUX41X1_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX41X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/MUX41X1_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX41X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block MUX41X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/MUX41X2_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX41X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/MUX41X2_HVT/design
+        does not match expected value 'in' from saed32hvt/MUX41X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block MUX41X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND2X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND2X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND2X0_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND2X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND2X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND2X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND2X4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND3X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND3X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND3X0_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND3X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND3X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND3X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND3X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND4X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND4X0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND4X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND4X0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND4X0_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NAND4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND4X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NAND4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NAND4X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NAND4X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NBUFFX16_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX16_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NBUFFX16_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX16_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NBUFFX16_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NBUFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NBUFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NBUFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NBUFFX32_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX32_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NBUFFX32_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX32_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NBUFFX32_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NBUFFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NBUFFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NBUFFX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NBUFFX8_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NBUFFX8_HVT/design
+        does not match expected value 'in' from saed32hvt/NBUFFX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NBUFFX8_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NMT1_HVT/design
+        does not match expected value 'in' from saed32hvt/NMT1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NMT1_HVT/design
+        does not match expected value 'in' from saed32hvt/NMT1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NMT1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NMT2_HVT/design
+        does not match expected value 'in' from saed32hvt/NMT2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NMT2_HVT/design
+        does not match expected value 'in' from saed32hvt/NMT2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NMT2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/NMT3_HVT/design
+        does not match expected value 'in' from saed32hvt/NMT3_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/NMT3_HVT/design
+        does not match expected value 'in' from saed32hvt/NMT3_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NMT3_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR2X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR2X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR2X0_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR2X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR2X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR2X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR2X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR3X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR3X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR3X0_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR3X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR3X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR3X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR3X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR4X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR4X0_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR4X0_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR4X0_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR4X0_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/NOR4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR4X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/NOR4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/NOR4X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block NOR4X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OA21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA21X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OA21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA21X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA21X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OA21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA21X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OA21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA21X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA21X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/OA221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA221X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/OA221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA221X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA221X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/OA221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA221X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/OA221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA221X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA221X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/OA222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA222X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/OA222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA222X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA222X1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/OA222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA222X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/OA222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA222X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA222X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OA22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA22X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OA22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OA22X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA22X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OA22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA22X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OA22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OA22X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OA22X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI21X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI21X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI21X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI21X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI21X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI21X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI21X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI21X2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI221X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI221X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI221X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI221X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI221X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI221X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI221X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI221X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI222X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI222X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI222X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI222X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI222X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI222X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI222X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI222X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI22X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI22X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI22X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI22X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OAI22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI22X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OAI22X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OAI22X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OAI22X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OR2X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OR2X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR2X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OR2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OR2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR2X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/OR2X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR2X4_HVT/design
+        does not match expected value 'in' from saed32hvt/OR2X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR2X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OR3X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OR3X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR3X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OR3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OR3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR3X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/OR3X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR3X4_HVT/design
+        does not match expected value 'in' from saed32hvt/OR3X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR3X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OR4X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR4X1_HVT/design
+        does not match expected value 'in' from saed32hvt/OR4X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR4X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR4X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OR4X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR4X2_HVT/design
+        does not match expected value 'in' from saed32hvt/OR4X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR4X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/OR4X4_HVT/design
+        does not match expected value 'in' from saed32hvt/OR4X4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/OR4X4_HVT/design
+        does not match expected value 'in' from saed32hvt/OR4X4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block OR4X4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/PGX1_HVT/design
+        does not match expected value 'in' from saed32hvt/PGX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/PGX1_HVT/design
+        does not match expected value 'in' from saed32hvt/PGX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block PGX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/PGX2_HVT/design
+        does not match expected value 'in' from saed32hvt/PGX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/PGX2_HVT/design
+        does not match expected value 'in' from saed32hvt/PGX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block PGX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/PGX4_HVT/design
+        does not match expected value 'in' from saed32hvt/PGX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/PGX4_HVT/design
+        does not match expected value 'in' from saed32hvt/PGX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block PGX4_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/PMT1_HVT/design
+        does not match expected value 'in' from saed32hvt/PMT1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/PMT1_HVT/design
+        does not match expected value 'in' from saed32hvt/PMT1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block PMT1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/PMT2_HVT/design
+        does not match expected value 'in' from saed32hvt/PMT2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/PMT2_HVT/design
+        does not match expected value 'in' from saed32hvt/PMT2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block PMT2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/PMT3_HVT/design
+        does not match expected value 'in' from saed32hvt/PMT3_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/PMT3_HVT/design
+        does not match expected value 'in' from saed32hvt/PMT3_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block PMT3_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFARX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFARX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNARX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNARX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRARX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRARX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRARX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRARX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASRNX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASRNX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASRNX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASRNX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASRQX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRQX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRQX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRQX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASRQX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASRQX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRQX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRQX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRQX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASRQX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASRX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRASX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRASX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFNSRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNSRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFNX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRARX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRARX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRARX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRARX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRASRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRASRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRASRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRASRX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRASX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRASX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRASX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRASX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRSSRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRSSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRSSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRSSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRSSRX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRSSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRSSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRSSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRSSRX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RDFFSRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFSRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RDFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RDFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFARX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFARX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNARX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNARX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRARX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRARX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRARX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRARX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASRNX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASRNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASRNX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASRNX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASRNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASRNX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASRQX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRQX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRQX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASRQX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRQX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASRQX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASRQX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRQX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRQX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASRQX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRQX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASRQX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASRX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRASX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRASX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFNSRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNSRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFNX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRARX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRARX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRARX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRARX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRASRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRASRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRASRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRASRX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRASX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRASX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRASX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRASX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRSSRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRSSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRSSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRSSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRSSRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRSSRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRSSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRSSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRSSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRSSRX2_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRX1_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRX1_HVT (LM-054)
+Information: Deriving related power/ground pin for cell RSDFFSRX2_HVT. (LM-175)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFSRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFX1_HVT (LM-054)
+Error: Direction 'inout' for port VDDG on saed32hvt/RSDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/RSDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/RSDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/RSDFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block RSDFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFARX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFARX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFASRSX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRSX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFASRSX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRSX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFASRSX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFASRSX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRSX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFASRSX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRSX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFASRSX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFASRX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFASRX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFASX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFASX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNARX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNARX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNARX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNARX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNARX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNARX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNARX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNARX2_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNASRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNASRX1_HVT (LM-054)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNASRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNASRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNASX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNASX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNASX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNASX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNASX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFNX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFNX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFNX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFSSRX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFSSRX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFSSRX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFSSRX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFSSRX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFSSRX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFSSRX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFSSRX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SDFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/SDFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SDFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SHFILL128_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL128_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SHFILL128_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL128_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SHFILL128_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SHFILL1_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SHFILL1_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SHFILL1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SHFILL2_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SHFILL2_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SHFILL2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SHFILL3_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL3_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SHFILL3_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL3_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SHFILL3_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/SHFILL64_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL64_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/SHFILL64_HVT/design
+        does not match expected value 'in' from saed32hvt/SHFILL64_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block SHFILL64_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TIEH_HVT/design
+        does not match expected value 'in' from saed32hvt/TIEH_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TIEH_HVT/design
+        does not match expected value 'in' from saed32hvt/TIEH_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TIEH_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TIEL_HVT/design
+        does not match expected value 'in' from saed32hvt/TIEL_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TIEL_HVT/design
+        does not match expected value 'in' from saed32hvt/TIEL_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TIEL_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TNBUFFX16_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX16_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TNBUFFX16_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX16_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TNBUFFX16_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TNBUFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TNBUFFX1_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TNBUFFX1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TNBUFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TNBUFFX2_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TNBUFFX2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TNBUFFX32_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX32_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TNBUFFX32_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX32_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TNBUFFX32_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TNBUFFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX4_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TNBUFFX4_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX4_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TNBUFFX4_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/TNBUFFX8_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX8_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/TNBUFFX8_HVT/design
+        does not match expected value 'in' from saed32hvt/TNBUFFX8_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block TNBUFFX8_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XNOR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR2X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XNOR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR2X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XNOR2X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XNOR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XNOR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XNOR2X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XNOR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR3X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XNOR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR3X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XNOR3X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XNOR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XNOR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XNOR3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XNOR3X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XOR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR2X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XOR2X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR2X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XOR2X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XOR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR2X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XOR2X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR2X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XOR2X2_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XOR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR3X1_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XOR3X1_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR3X1_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XOR3X1_HVT (LM-054)
+Error: Direction 'inout' for port VDD on saed32hvt/XOR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR3X2_HVT/timing (NDM-032)
+Error: Direction 'inout' for port VSS on saed32hvt/XOR3X2_HVT/design
+        does not match expected value 'in' from saed32hvt/XOR3X2_HVT/timing (NDM-032)
+Information: Fixed direction mismatches for block XOR3X2_HVT (LM-054)
+Information: Combined 294 physical designs:294 with a design view (283 had ports reordered); (LM-034)
+Information: Skipped 56 physical designs (LM-052)
+... creating frames for saed32hvt
+Warning: Block AND2X2_HVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AND2X4_HVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AND3X4_HVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AND4X1_HVT.frame has a very large regular routing blockage RB_10 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO221X1_HVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO221X2_HVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO222X1_HVT.frame has a very large regular routing blockage RB_15 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO222X2_HVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO22X1_HVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AO22X2_HVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI221X1_HVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI221X2_HVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI222X1_HVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block AOI222X2_HVT.frame has a very large regular routing blockage RB_19 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block BSLEX4_HVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block BUSKP_HVT.frame has a very large regular routing blockage RB_12 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block FADDX1_HVT.frame has a very large regular routing blockage RB_22 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block FADDX2_HVT.frame has a very large regular routing blockage RB_24 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block HADDX1_HVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block HADDX2_HVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block IBUFFX16_HVT.frame has a very large regular routing blockage RB_26 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block IBUFFX32_HVT.frame has a very large regular routing blockage RB_46 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block IBUFFX8_HVT.frame has a very large regular routing blockage RB_17 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLANDAOX8_HVT.frame has a very large regular routing blockage RB_36 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLANDX4_HVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLANDX8_HVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORAOX8_HVT.frame has a very large regular routing blockage RB_42 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORX2_HVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORX4_HVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block ISOLORX8_HVT.frame has a very large regular routing blockage RB_18 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX21X1_HVT.frame has a very large regular routing blockage RB_15 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX21X2_HVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX41X1_HVT.frame has a very large regular routing blockage RB_32 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block MUX41X2_HVT.frame has a very large regular routing blockage RB_34 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX16_HVT.frame has a very large regular routing blockage RB_24 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX32_HVT.frame has a very large regular routing blockage RB_42 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX4_HVT.frame has a very large regular routing blockage RB_10 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block NBUFFX8_HVT.frame has a very large regular routing blockage RB_15 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OA221X2_HVT.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OA222X1_HVT.frame has a very large regular routing blockage RB_13 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OA222X2_HVT.frame has a very large regular routing blockage RB_14 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR2X1_HVT.frame has a very large regular routing blockage RB_8 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR2X2_HVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR2X4_HVT.frame has a very large regular routing blockage RB_11 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR3X1_HVT.frame has a very large regular routing blockage RB_9 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block OR3X2_HVT.frame has a very large regular routing blockage RB_10 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX16_HVT.frame has a very large regular routing blockage RB_50 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX2_HVT.frame has a very large regular routing blockage RB_16 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX32_HVT.frame has a very large regular routing blockage RB_103 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX4_HVT.frame has a very large regular routing blockage RB_20 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block TNBUFFX8_HVT.frame has a very large regular routing blockage RB_31 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+Warning: Block XOR3X2_HVT.frame has a very large regular routing blockage RB_31 on the M1 metal layer; this might prevent the router from connecting to nearby terminals. (FRAM-066)
+... created 294 frames
+
+Workspace check succeeded!
+
+Warning: EMS database "check_workspace.ems" already exists, over-writing it. (EMS-040)
+... wrote ./sae32hvt.ndm
+... removing library 'saed32hvt_ff1p16v125c'
+... removing library 'saed32hvt_ff1p16vn40c'
+... removing library 'saed32hvt_ss0p95v125c'
+... removing library 'saed32hvt_ss0p95vn40c'
+... removing library 'saed32nm_hvt_1p9m'
+... lib workspace removed!
+Warning: Layer 'VIA1' 'onGrid' and 'onWireTrack' coexist. (TECH-025)
+Information: Loading technology file '/home/eda/soc/lib/gpdk/32n/tech/milkyway/saed32nm_1p9m_mw.tf' (FILE-007)
+... created workspace saed32sram
+Error: File '/home/eda/soc/lib/sram/db_nldm/saed32sram_ff1p16v125c.db' cannot be found using search_path of: '. .'. (FILE-002)
+Information: script '/mnt/home/soc40/project/ndm/run_ndm.tcl'
+        stopped at line 46 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"read_db /home/eda/soc/lib/sram/db_nldm/saed32sram_ff1p16v125c.db"
+    (file "/mnt/home/soc40/project/ndm/run_ndm.tcl" line 46)
+ -- End Extended Error Info
+lm_shell> ls
+.   check_workspace.ems  lm_output.txt  sae32hvt.ndm
+..  lm_command.log       run_ndm.tcl    sae32sram.ndm
+lm_shell> quit
+Maximum memory usage for this session: 454.17 MB
+CPU usage for this session:      9 seconds (  0.00 hours)
+Elapsed time for this session:     46 seconds (  0.01 hours)
+Thank you for using Library Manager.
+

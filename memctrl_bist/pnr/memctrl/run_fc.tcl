@@ -1,7 +1,8 @@
+sh rm ./outputs/* -rf
 ################################################################
 # Common Setting
 ################################################################
-set_host_options -max_cores 4
+set_host_options -max_cores 32
 #78 server
 set EDKPATH "/home/eda/soc/lib/gpdk/32n"
 set TFFILE "${EDKPATH}/tech/milkyway/saed32nm_1p9m_mw.tf"
@@ -46,8 +47,8 @@ foreach i $RTLFILES {
 elaborate $TOPDESIGN
 set_top_module $TOPDESIGN
 check_design -checks { dp_pre_floorplan }
-source ./../../syn/memctrl/sdc/${TOPDESIGN}.sdc
-compile_fusion -to initial_map
+#source ./../../syn/memctrl/sdc/${TOPDESIGN}.sdc
+#compile_fusion -to initial_map
 
 #04_load_upf
 source ./upf/${TOPDESIGN}.upf
@@ -78,20 +79,21 @@ report_ignored_layers
 save_block -as ${TOPDESIGN}_01_READ_DESIGN
 save_lib
 
+
 ################################################################
 # Floorplan
 ################################################################
-set core_x 1700
-set core_y 1900
+set core_x 1560
+set core_y 1630
 set core_bbox "{0 0} {$core_x $core_y}"
-	
+   
 initialize_floorplan -shape R -boundary $core_bbox -core_offset {50.0 50.0}
 
 # offset은 ring을 치기 위해 0,0 2000,2000은 core(SRAM+CTRL)사이즈
 # soft_blockage
 set COREBND [get_attribute [get_core_area] bbox] ;# core의 사이즈를 가져오고 리스트형식으로 저장 {{0,0}, {2000,2000}} 
-set MACROX 600	; #FSM 공간
-set MACROY 700	;	
+set MACROX 550   ; #FSM 공간
+set MACROY 550   ;   
 set STDBND_00 [expr [lindex [lindex $COREBND 0] 0] + $MACROX] ; # {0,0}에서 0번째 원소 여기선MACROY가 커질수록 boundary가 작아짐
 set STDBND_01 [expr [lindex [lindex $COREBND 0] 1] + $MACROY] ;
 set STDBND_10 [expr [lindex [lindex $COREBND 1] 0] - $MACROX] ;
@@ -105,6 +107,7 @@ source ./create_terminals.tcl
 
 #Place Macro
 source ./place_macro.tcl
+
 set ALLMACRO [get_cells -hierarchical -filter "is_hard_macro && !is_physical_only"] ; # hard macro이면서 physical only가 아닌 친구들을 리스트를 저장
 change_selection $ALLMACRO
 set_fixed_objects [get_selection] ; # 그 선택된 macro친구들을 fixed로 설정함
@@ -204,11 +207,8 @@ compile_pg -strategies {Macro_pins_via} -tag {Macro_RING_con} ;# compile_pg to c
 #################################
 #높은메탈부터
 #set M8 MESH boundary 세로
-set core_x 1700
-set core_y 1900
-set core_bbox "{0 0} {$core_x $core_y}"
 
-set M8_MESH_bdry  "{0 -36.5640} {1700 [expr $core_y + 35.852]}" ; # 최외곽 Core Ring 상,하 좌우는??
+set M8_MESH_bdry  "{0 -36.5640} {$core_x [expr $core_y + 35.852]}" ; # 최외곽 Core Ring 상,하 좌우는??
 #{-2.3200 -36.5640} {2.3200 1935.9560}			{1729.2640 -36.5640} {1733.9040 1935.9560}
 #create_pg_reigion 
 
@@ -305,7 +305,7 @@ compile_pg -strategies {S_m2_vddvss} -tag {low_MESH_2} \
 #create_STD_RAIL
 ######################
 #set via master rule for connect M1 to M2
-set_pg_via_master_rule pgvia_1x2 -via_array_dimension {2 2} ;#set via_master_rule {2 1} = 1행 2열 가로2개 세로1개
+set_pg_via_master_rule pgvia_1x2 -via_array_dimension {2 1} ;#set via_master_rule {2 1} = 1행 2열 가로2개 세로1개
 
 #create_M1_std_cell_conn_pattern
 create_pg_std_cell_conn_pattern std_rail_pattern -layers M1 -rail_width {0.06} \
@@ -430,7 +430,7 @@ set macro_bbox [get_attr [get_cells $ALLMACRO] bbox]
 set i 0
 
 foreach x $macro_bbox {
-set llx [expr [lindex $x 0 0] - 2] 
+set llx [expr [lindex $x 0 0] - 2]
 set urx [expr [lindex $x 1 0] + 2]
 set lly [expr [lindex $x 0 1] - 2]
 set ury [expr [lindex $x 1 1] + 2]
@@ -457,6 +457,7 @@ check_pg_connectivity -nets {VDD VSS} -check_std_cell_pins none ;# check pg_net 
 
 save_block -as ${TOPDESIGN}_03_POWERPLAN
 save_lib
+
 ##################################################################
 ### PLACEMENT
 ##################################################################
@@ -465,14 +466,15 @@ save_lib
 ################
 set i 0
 foreach x $MACROBBOX {
-   set llx [ expr [ lindex $x 0 0] + 2 ]
-   set urx [ expr [ lindex $x 1 0] - 2 ]
-   set lly [ expr [ lindex $x 0 1] + 2 ]
-   set ury [ expr [ lindex $x 1 1] - 2 ]
+   set llx [ expr [ lindex $x 0 0] + 2.1 ]
+   set urx [ expr [ lindex $x 1 0] - 2.1 ]
+   set lly [ expr [ lindex $x 0 1] + 2.1 ]
+   set ury [ expr [ lindex $x 1 1] - 2.1 ]
 	set new_bboxes "{$llx $lly} {$urx $ury}"
 	create_routing_blockage -name "mc_routing_blk_${i}" -layers "M2 M3 M4 M5 M6 M7 M8 M9 MRDL" -boundary $new_bboxes
 	incr i
 }
+
 ################
 #insert_guide_buffer    input단에 바짝붙여서 load effect 줄임
 ################
@@ -799,15 +801,15 @@ remove_routing_rules $CTS_NDR_RULE_NAME > /dev/null
 
 #create_routing rules for routing layers
 create_routing_rule $CTS_NDR_RULE_NAME \
--default_reference_rule \
--widths { M1 0.1 M2 0.11 M3 0.11 M4 0.11 M5 0.11 M6 0.11 } \
--spacings { M2 0.16 M3 0.45 M4 0.45 M5 1.1 M6 1.1 } 
+	-default_reference_rule \
+	-widths { M1 0.1 M2 0.11 M3 0.11 M4 0.11 M5 0.11 M6 0.11 } \
+	-spacings { M2 0.16 M3 0.45 M4 0.45 M5 1.1 M6 1.1 } 
 
 #set min & max clock routing rules
 #This command assigns the routing rules used in clock tree synthesis. You can associate a rule with specific clocks or nets. If a net already has a nondefault routing rule, this rule is also honored
 set_clock_routing_rules -rules $CTS_NDR_RULE_NAME \
--min_routing_layer $CTS_NDR_MIN_ROUTING_LAYER \
--max_routing_layer $CTS_NDR_MAX_ROUTING_LAYER
+	-min_routing_layer $CTS_NDR_MIN_ROUTING_LAYER \
+	-max_routing_layer $CTS_NDR_MAX_ROUTING_LAYER
 }
 
 #create routing rules for leaf
@@ -815,15 +817,15 @@ if {$CTS_LEAF_NDR_RULE_NAME != ""} {
 remove_routing_rules $CTS_LEAF_NDR_RULE_NAME > /dev/null
 
 create_routing_rule $CTS_LEAF_NDR_RULE_NAME \
--default_reference_rule \
--spacings { M2 0.16 M3 0.45 M4 0.45 M5 1.1 M6 1.1}
+	-default_reference_rule \
+	-spacings { M2 0.16 M3 0.45 M4 0.45 M5 1.1 M6 1.1}
 
 #set min & max clock routing rules
 #This command assigns the routing rules used in clock tree synthesis. You can associate a rule with specific clocks or nets. If a net already has a nondefault routing rule, this rule is also honored
 
 set_clock_routing_rules -net_type sink -rules $CTS_LEAF_NDR_RULE_NAME \
--min_routing_layer $CTS_LEAF_NDR_MIN_ROUTING_LAYER \
--max_routing_layer $CTS_LEAF_NDR_MAX_ROUTING_LAYER
+	-min_routing_layer $CTS_LEAF_NDR_MIN_ROUTING_LAYER \
+	-max_routing_layer $CTS_LEAF_NDR_MAX_ROUTING_LAYER
 }
 
 ###############
@@ -834,10 +836,10 @@ current_mode func
 foreach_in_collection scen [all_scenarios] {
 current_scenario $scen
 set_clock_uncertainty 0.3 -setup [all_clocks] ;#Specifies the clock uncertainty (skew characteristics) of the specified clock networks
-set_clock_uncertainty 0.1 -hold [all_clocks]
+set_clock_uncertainty 0.2 -hold [all_clocks]
 }
 
-set_max_transition 0.5 -clock_path [get_clocks] -corners [all_corners]
+set_max_transition 0.4 -clock_path [get_clocks] -corners [all_corners]
 
 
 #report_scenarios
@@ -862,7 +864,7 @@ set_lib_cell_purpose -exclude cts [get_lib_cells] ;#Defines the valid purposes f
 set_lib_cell_purpose -include cts $CTS_CELLS ;#Defines the valid purposes for the specified library cells(include CTS)
 #set hold & optimization cells at CTS
 set_lib_cell_purpose -exclude hold [get_lib_cells]
-set_lib_cell_purpose -include hold [get_lib_cells "*/NBUFFX2_HVT saed32hvt/DELLN1X2_HVT"]
+set_lib_cell_purpose -include hold [get_lib_cells "*/NBUFFX32_HVT */DELLN1X2_HVT"]
 
 set_lib_cell_purpose -exclude optimization [get_lib_cells]
 set_lib_cell_purpose -include optimization [get_lib_cells "*/NBUFFX2_*VT */NBUFFX4_*VT */NBUFFX8_*VT */NBUFFX16_*VT"]
@@ -897,10 +899,10 @@ current_mode $MODE
 echo "current mode is $MODE"
 	switch $MODE {
 		func {
-			set_clock_tree_options -target_skew 0.3 -corners [get_corners ss*] ;# Specifies the required value for maximum skew for the specified clock trees (The default is 0)
-			set_clock_tree_options -target_skew 0.3 -corners [get_corners ff*]
-			set_clock_tree_options -target_latency 0.5 -corners [get_corners ss*] ;# Specifies the minimum early insertion delay constraint for the specified clock trees (There is no default for this option)
-			set_clock_tree_options -target_latency 0.5 -corners [get_corners ff*]
+			set_clock_tree_options -target_skew 0.1 -corners [get_corners ss*] ;# Specifies the required value for maximum skew for the specified clock trees (The default is 0)
+			set_clock_tree_options -target_skew 0.1 -corners [get_corners ff*]
+			set_clock_tree_options -target_latency 0.1 -corners [get_corners ss*] ;# Specifies the minimum early insertion delay constraint for the specified clock trees (There is no default for this option)
+			set_clock_tree_options -target_latency 0.1 -corners [get_corners ff*]
 		}
 	}
 }
@@ -995,6 +997,8 @@ foreach x $all_sce {
 	redirect -file ./rpt/timing_report_min_psyn_classicCTS_${x} \
 	{report_timing -scenarios $x -significant_digits 3 -delay_type min -transition_time -max_paths 100 -nets -input_pins -report_by group -physical -attributes -nosplit -derate -crosstalk_delta -path_type full_clock}
 }
+
+
 
 ###################################################################
 #### CTS - Configure (CCD)
@@ -1091,6 +1095,9 @@ foreach x $all_sce {
 ### Routing - setup
 ##################################################################
 ### antenna_rule
+#LJH
+insert_buffer UFSM/UBIST/GRAY_ADDR_GEN/OUT_reg[10]/D  -lib_cell */NBUFFX32_HVT
+insert_buffer UFSM/MEM_OEB_reg[20]/D  -lib_cell */NBUFFX32_HVT
 remove_antenna_rules
 define_antenna_rule -mode 4 -diode_mode 2 -metal_ratio 1000 -cut_ratio 20
 
@@ -1117,7 +1124,7 @@ define_antenna_layer_rule -mode 4 -layer "VIA8" -ratio 20 -diode_ratio {0.06 0 2
 ### optimization
 #set include hold Timing optimization cell
 set_lib_cell_purpose -exclude hold [get_lib_cells]
-set_lib_cell_purpose -include hold [get_lib_cells "*/NBUFFX2_HVT */DELLN1X2_HVT"]
+set_lib_cell_purpose -include hold [get_lib_cells "*/NBUFFX32_HVT */DELLN1X2_HVT"]
 
 #### clock setting
 ##latency
@@ -1129,6 +1136,9 @@ set_lib_cell_purpose -include hold [get_lib_cells "*/NBUFFX2_HVT */DELLN1X2_HVT"
 ##set max_transition for all Scenarios
 #set_max_transition 0.5 -clock_path [get_clocks] -corners [all_corners]
 report_clock
+
+save_block -as ${TOPDESIGN}_START_ROUTE
+save_lib
 
 ### set_app_options_before_routing
 set_app_options -name opt.tie_cell.add_to_highest_hierarchy -value false ;# During optimization, tie-cells will be inserted to drive constant pins if tie-cells were available for optimization purpose
@@ -1142,15 +1152,19 @@ set_app_options -name route.track.crosstalk_driven -value true ;# enables or dis
 set_app_options -name route.detail.timing_driven -value true ;# This app option specifies whether timing-driven routing is enabled
 set_app_options -name route.detail.force_max_number_iterations -value false ;# This app option controls whether the max number of iterations must be run when DRCs do not converge
 
-set_app_options -name route.detail.generate_extra_off_grid_pin_tracks -value true ;# This app option specifies whether to generate extra off-grid routing tracks for pin connections
-set_app_options -name route.detail.generate_off_grid_feed_through_tracks -value high ;# This app option specifies the effort level used to generate extra off-grid routing tracks for feedthrough nets between blockages
+set_app_options -name route.detail.generate_extra_off_grid_pin_tracks -value false ;# This app option specifies whether to generate extra off-grid routing tracks for pin connections
+set_app_options -name route.detail.generate_off_grid_feed_through_tracks -value off ;# This app option specifies the effort level used to generate extra off-grid routing tracks for feedthrough nets between blockages
+#set_app_options -name route.detail.diff_net_spacing -value 0.2 
+set_app_options -name route.common.concurrent_redundant_via_mode -value off
+set_app_options -name route.common.post_detail_route_redundant_via_insertion -value off
+
+set_app_options -name route.common.via_on_grid_by_layer_name -value {{V1 true}}
 
 ###FIX_XDFF_ADDER_VIA(Create_Custom_Via_For_Routing)
-create_via_def -is_default -lower_layer M1 \
-	       -upper_layer M2 -cut_size {0.020 0.020} \
- 	       -lower_enclosure {0.015 0.015} -cut_layer VIA1 \
-	       -upper_enclosure {0.015 0.015} VIA12_thin
-return
+create_via_def -is_default -lower_layer M1 -upper_layer M2 -cut_size {0.050 0.050} -lower_enclosure {0.005 0.005} -cut_layer VIA1 -upper_enclosure {0.005 0.005} VIA12_thin2
+create_via_def -is_default -lower_layer M1 -upper_layer M2 -cut_size {0.050 0.050} -lower_enclosure {0.015 0.015} -cut_layer VIA1 -upper_enclosure {0.015 0.015} VIA12_thin
+
+
 ##################################################################
 ### Routing - Detailed Route
 ##################################################################
@@ -1158,17 +1172,19 @@ route_auto ;# The route_auto command performs all routing stages in a single ste
 
 #set app option for second route_auto
 set_app_options -name place.legalize.stream_place -value true ;# Stream placement improves the largest displacements in the design (For each large-displacement cell, it attempts to move out other cells to make room, such that a single very large displacement is replaced by a stream of small displacements)
+set_app_options -list {place.legalize.stream_place {true}}
 
 #optimize_routability
 optimize_routability ;#  The  optimize_routability  command  helps  to  improve routability of a design by spacing cells further apart with the use of the keepout  margins  or by flipping cells
 
 
 route_auto ;# The route_auto command performs all routing stages in a single step (global routing, track assignment, detail routing)
+#route_eco ;
 
 set_app_options -name place.legalize.stream_place -value false
-
+set_app_options -list {place.legalize.stream_place {false}}
 ### search_and_repair
-route_detail -incremental true -initial_drc_from_input true ;# This command performs detail routing on a block
+route_detail -incremental true -initial_drc_from_input true -max_number_iterations 60 ;# This command performs detail routing on a block
 compute_clock_latency ;# This command is used primarily to correct your block's timing constraints after CTS
 update_timing
 
@@ -1194,6 +1210,13 @@ report_qor -summary -significant_digits 5
 
 save_block -as ${TOPDESIGN}_07_ROUTE
 save_lib
+
+
+#return
+
+route_opt
+route_detail -incremental true -initial_drc_from_input true -max_number_iterations 60 ;# This command performs detail routing on a block
+
 
 ##################################################################
 ### Chip Finish -filler cells
@@ -1249,30 +1272,33 @@ remove_stdcell_fillers_with_violation
 
 remove_routing_blockages *
 
-save_block -as ${TOPDESIGN}_08_FILL
+save_block -as MEMCTRL_08_FILL
 save_lib
+
+
 ######################
 #extract_spef (ICC2)
 ######################
-write_parasitics -output ./outputs/${TOPDESIGN}
+write_parasitics -output ./outputs/MEMCTRL
+write_sdc -output ./outputs/MEMCTRL_FC.sdc
 
 ######################
 #write Netlist file
 ######################
-write_verilog ./outputs/${TOPDESIGN}.v -exclude {leaf_module_declarations \
+write_verilog ./outputs/MEMCTRL.v -exclude {leaf_module_declarations \
 		  corner_cells pad_spacer_cells \
 		  filler_cells flip_chip_pad_cells \
 		  empty_modules unconnected_ports \
+		  pg_objects \
 		  spare_cells}
 
 ######################
 #write gds
 ######################
-write_gds ./outputs/${TOPDESIGN}.gds -exclude_empty_block -skip_unplaced_cells -lib_cell_view layout
+write_gds ./outputs/MEMCTRL.gds -exclude_empty_block -skip_unplaced_cells -lib_cell_view layout
 
 
 ######################
 #write def
 ######################
-write_def ./outputs/${TOPDESIGN}.def -include_tech_via_definitions -include {rows_tracks vias cells ports blockages bounds specialnets nets routing_rules}
-
+write_def ./outputs/MEMCTRL.def -include_tech_via_definitions -include {rows_tracks vias cells ports blockages bounds specialnets nets routing_rules}

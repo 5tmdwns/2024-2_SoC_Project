@@ -1,0 +1,11 @@
+/home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/BINARY_COUNTER_16B.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/COMP_8B.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/FSM.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/GRAY_COUNTER_16B.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/LFSR_16B.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/LFSR_8B.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/MEMCTRL.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/SRAM64KB.v
+/mnt/home/soc04/project_nobisr/rtl/memctrl/TOGGLE_DATA_8B.v
+/mnt/home/soc04/project_nobisr/sim/rtl/memctrl/TB_MEMCTRL.v
