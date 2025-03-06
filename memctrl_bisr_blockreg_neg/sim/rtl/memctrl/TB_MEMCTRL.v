@@ -82,7 +82,7 @@ module TB_MEMCTRL;
 
    task deadram;
       #(`tck*10);
-      force DUT.USARM.ODATA = 8'hFF;
+      force DUT.USRAM.ODATA = 8'hFF;
       #(`tck*10);
 		release DUT.USRAM.ODATA;
    endtask

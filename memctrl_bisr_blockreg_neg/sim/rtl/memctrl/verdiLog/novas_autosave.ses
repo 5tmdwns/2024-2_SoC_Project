@@ -25,9 +25,9 @@ fdb_proj =
 fdb_campaign = 
 fdb_tool = 
 [hb]
-postSimFile = /mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/result.fsdb.fsdb
-syncTime = 6398500000
-viewport = 8 31 1439 829 0 0 413 1437
+postSimFile = /mnt/home/dice13/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/result.fsdb.fsdb
+syncTime = 0
+viewport = 271 83 900 700 0 0 356 898
 activeNode = "TB_MEMCTRL"
 activeScope = "TB_MEMCTRL"
 activeFile = "./TB_MEMCTRL.v"
@@ -57,19 +57,19 @@ sdfCheckUndef = FALSE
 simFlow = FALSE
 [hb.design]
 importCmd = "-f" "list.f" 
-invokeDir = /mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl
+invokeDir = /mnt/home/dice13/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl
 [hb.sourceTab.1]
 scope = TB_MEMCTRL
-File = /mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/TB_MEMCTRL.v
+File = /mnt/home/dice13/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/TB_MEMCTRL.v
 Line = 2
 [nMemoryManager]
-WaveformFile = /mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/result.fsdb.fsdb
+WaveformFile = /mnt/home/dice13/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/result.fsdb.fsdb
 UserActionNum = 0
 nMemWindowNum = 0
 [wave.0]
-viewPort = 0 27 1439 725 296 362
+viewPort = 0 25 900 428 254 65
 primaryWindow = TRUE
-SessionFile = /mnt/home/soc17/soc/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/verdiLog/novas_autosave.ses.wave.0
+SessionFile = /mnt/home/dice13/soc_proj/memctrl_bisr_blockreg_neg/sim/rtl/memctrl/verdiLog/novas_autosave.ses.wave.0
 displayGrid = FALSE
 hierarchicalName = FALSE
 waveformToolTip = FALSE

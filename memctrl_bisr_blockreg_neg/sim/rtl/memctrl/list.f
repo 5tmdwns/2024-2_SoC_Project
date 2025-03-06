@@ -13,4 +13,4 @@
 
 ./TB_MEMCTRL.v
 
-/home/eda/soc/lib/gpdk/32n/lib/sram/verilog/saed32sram.v
+/home/eda/pdk/gpdk/32n/lib/sram/verilog/saed32sram.v
