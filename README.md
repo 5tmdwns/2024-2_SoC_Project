@@ -1,5 +1,5 @@
 # soc_proj
-##### RTL -> CHIP FINISH!@
+##### RTL -> VCS -> DC COMPILER -> NDM -> FUSION COMPILER -> CHIP FINISH!
 
 SRAM MEMCTRL Project
 
