@@ -1,2 +1,9 @@
-# 2024-2_SoC_Project
-경희대학교 2024-2학기 SRAM Memory Controller 최종 .gds제작 프로젝트
+<p align="center">
+  <h1 align="center">최상위 SRAM Memory Controller✨</h1>
+
+<p align="center">
+
+</p>
+<p align="center">
+
+</p>
