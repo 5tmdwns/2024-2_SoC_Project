@@ -13,7 +13,8 @@
    - [1-4. Top Module Name & Essential Ports](#1-4-top-module-name--essential-ports)
  - [2. System Architecture](#2-system-architecture)
  - [3. RTL](#3-rtl)
-   - [3-1. BISR](#3-1-bisr)
+   - [3-1. BIST](#3-1-bist)
+   - [3-2. BISR](#3-2-bisr)
  - [4. PnR](#4-pnr)
     - [4-1. BISR](#4-1-bisr)
  - [5. Result](#5-result)
@@ -110,3 +111,81 @@ endmodule
 ```
 - BIST_PASS : BISR을 쓸 거 아니면 실시간으로 Addr을 기록할 필요가 없음. Pass가 났는지 Fail이 났는지는 다음과 같이 표현. (P = 0, F = 1)
 - CE : Select 된 친구에 한해서, Enable이 들어오면 Clock처럼 사용이 됨.
+
+## 2. System Architecture
+<table align="center">
+  <tr>
+    <td align="center"><img width="90%" alt="BIST System Architecture" src="https://github.com/user-attachments/assets/d1871d66-649a-4d8e-8906-ee45cbfecacf" /></td>
+    <td align="center"><img width="90%" alt="BISR System Architecture" src="https://github.com/user-attachments/assets/883db5cf-25b9-45e0-b1dd-b42b0716d8ce" /></td>
+  </tr>
+  <tr>
+    <td align="center">BIST System Architecture</td>
+    <td align="center">BISR System Architecture</td>
+  </tr>
+</table>
+
+## 3. RTL
+### 3-1. BIST
+``` verilog
+//...
+    localparam IDLE = 5'b00001;
+    localparam WRITE1 = 5'b00010;
+    localparam WRITE2 = 5'b00100;
+    localparam READ1 = 5'b01000;
+    localparam READ2 = 5'b1000;
+
+    reg [4:0] state, next_state;
+
+    always @(posedge CLK or negedge RSTN) begin
+        if (!RSTN) begin
+            state <= IDLE;
+        end
+        else begin
+            state <= next_state;
+        end
+    end
+
+    always @(*) begin
+        case (state)
+            IDLE : next_state = (BIST_EN) ? WRITE1 : IDLE;
+            WRITE1 : next_state = WRITE2;
+            WRITE2 : next_state = READ1;
+            READ1 : next_state = READ2;
+            READ2 : next_state = (BIST_EN) ? WRITE1 : IDLE;
+            default : next_state = IDLE;
+        endcase
+    end
+//...
+```
+
+#### BIST Operation
+- FSM 구조의 BIST 모듈 형식.
+- Finite State Machine으로 1WR 후, 1RD하여 값을 비교하여 BIST_PASS를 띄움.
+
+<table align="center">
+  <tr>
+    <td align="center"><img width="90%" alt="BIST Mode(Normal)" src="https://github.com/user-attachments/assets/13c5d0af-3a79-4355-89a1-f434f3cb43c6" /></td>
+  </tr>
+  <tr>
+    <td align="center">BIST Mode : Normal</td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td align="center"><img width="30%" alt="BIST Mode(LFSR)" src="https://github.com/user-attachments/assets/b1a8ee5c-b2b5-45d0-9543-d2a14ffe33df" /></td>
+    <td align="center"><img width="30%" alt="BIST mode(Graycounter)" src="https://github.com/user-attachments/assets/ff169575-13cb-4432-8de8-73765bdd7fab" /></td>
+    <td align="center"><img width="30%" alt="BIST Mode(Binarycounter)" src="https://github.com/user-attachments/assets/2891d639-b920-4a5f-b4dd-d3315614e115" /></td>
+  </tr>
+  <tr>
+    <td align="center">BIST Mode : LFSR</td>
+    <td align="center">BIST Mode : Graycounter</td>
+    <td align="center">BIST Mode : Binarycounter</td>
+  </tr>
+</table>
+
+### 3-2. BISR
+#### BISR Operation Mechanism
+1. Register 최적화를 위한 Block 단위 Macro Cell Mapping (128).
+2. BIST Mode에서 일괄 검사 시, BIST_PASS == 1인 주소의 구간 Block이 FAULT_ADDR Register에 VALID == 1로 저장.
+3. 이후, Normal Operation에서 고장난 Macro Cell 주소의 Block 단위가 VALID == 1이므로, FAULT_ADDR의 이전 VALID == 1의 개수를 세어, 해당하는 개수의 여분 Macro Cell의 순서로 Mapping.
