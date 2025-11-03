@@ -30,7 +30,7 @@ ECC까지는 너무 어려우니까 간단한 BIST정도로 프로젝트 진행.
 - **Data : 8bit (1Byte)**
 - **Random Pattern Generator**
   - **Data : $x^4+x^3+1$**
-  - **Addr : $x^(16)+x^(14)+x^(13)+x^(11)+1$**
+  - **Addr : $x^16+x^14+x^13+x^11+1$**
 - **Bist Sequences**
   - March : Addr. increased based on counter, Data toggle (previous 00, prenent FF, next 00, ...)
     - 메모리는 Row가 있고 Column이 있는데, 복잡한거 다 필요 없고 Addr을 Counter로 증가시키면서 Test 하는데, Data Pattern이 처음에 00이면 두 번째는 FF, 다음은 00. (Data Toggle)
