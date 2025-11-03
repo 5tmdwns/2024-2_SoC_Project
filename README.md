@@ -173,9 +173,9 @@ endmodule
 
 <table align="center">
   <tr>
-    <td align="center"><img width="30%" alt="BIST Mode(LFSR)" src="https://github.com/user-attachments/assets/b1a8ee5c-b2b5-45d0-9543-d2a14ffe33df" /></td>
-    <td align="center"><img width="30%" alt="BIST mode(Graycounter)" src="https://github.com/user-attachments/assets/ff169575-13cb-4432-8de8-73765bdd7fab" /></td>
-    <td align="center"><img width="30%" alt="BIST Mode(Binarycounter)" src="https://github.com/user-attachments/assets/2891d639-b920-4a5f-b4dd-d3315614e115" /></td>
+    <td align="center"><img width="90%" alt="BIST Mode(LFSR)" src="https://github.com/user-attachments/assets/b1a8ee5c-b2b5-45d0-9543-d2a14ffe33df" /></td>
+    <td align="center"><img width="90%" alt="BIST mode(Graycounter)" src="https://github.com/user-attachments/assets/ff169575-13cb-4432-8de8-73765bdd7fab" /></td>
+    <td align="center"><img width="90%" alt="BIST Mode(Binarycounter)" src="https://github.com/user-attachments/assets/2891d639-b920-4a5f-b4dd-d3315614e115" /></td>
   </tr>
   <tr>
     <td align="center">BIST Mode : LFSR</td>
