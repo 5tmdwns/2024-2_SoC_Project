@@ -46,6 +46,10 @@ ECC까지는 너무 어려우니까 간단한 BIST정도로 프로젝트 진행.
   - Full Write하고 Full Read해서 Pass가 나고 Fail이 나는지 Check!
   - 약 1KB정도 되는 Data Addr에다가 Data 읽고 쓰고 Random으로 했을 때, 가장 빨리 수행되는 속도.
   - Absolute Delay : 만약에 F/F Out이라고 하면, Clock이 그 F/F에 도달하는 데 Delay를 먹음. 그 뒤에 Logic이나 Buffer가 있으면, 실제로 n번째 TCK에서 Clock Edge가 들어가도 Data는 그 Delay만큼 맞고 나옴. 이런 Delay까지 고려했을 때, 최종 Finish가 언제 끝나는지 Check!
+  - Normal Operation Interleaving 혹은 Pipeline 많이 써보라는 차원에서 Address MSB 2비트는 반드시 00 -> 01 -> 10 -> 11로 Access해서 Test!
+  - Testbench는 조별로 내부 상황이 다 다를거라, 제작한 Testbench를 받고 Coverage는 따로 확인. Fail Cell 만들려면 Forcing 사용. 잘 걸고 Release 하면서 Test 해야 함!
+  - Testbench는 Python Code인데, run 코드를 실행파일로 바꾸고 실행. (list.f에 TB_MEMCTRL.v랑 있어야 함.)
+  - postsim 돌리면, sdf_annotate TB_MEMCTRL.v에 넣어주고, Standard Cell과 Sram Macro를 list.f에 추가!
 - **(24pt) : Area**
   - Area는 Floorplan 잡은 걸로 Check! (Core, Utilization 신경 X)
 - **(12pt) : Power**
@@ -54,8 +58,12 @@ ECC까지는 너무 어려우니까 간단한 BIST정도로 프로젝트 진행.
 - **(12pt) : Bist Operation**
   - BIST Operation은 Self로 Testbench 제작해서 어떤 식으로 검증이 됐는지 Presentation에서 보여주면 됨.
   - Test Methods for BIST Operations : Coverage 어느정도 나왔다 알려주면 좋음.
+
 - **if the sign-off does not pass (DRC, LVS reports, STA reports), 50% points of each items**
   - PnR : Sign-off Pass 안나면 등수 Ranking으로 안 들어감. Pass 안나면 그냥 꼴찌😭
+  - PnR : Metal Fill은 Waive하고, Filler Cell Insertion은 꼭 해야함!
+  - SDC : input/output delay는 1ns && load는 100fF으로 Fix!
+  - SDC : clock latency 자유 && uncertainty clock은 setup 0.3ns, hold 0.1ns!
 - **Presentation**
   - time < 10 min (5pt)
   - System Architectures (10pt)
