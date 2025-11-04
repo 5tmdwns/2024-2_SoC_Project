@@ -1,0 +1,17 @@
+normal mode 가장 최신 버전인 Ver3P21 사용,
+
+
+// Timing Macros
+`define TCK 0.8       // Clock period
+`define NEG 0         // Clock negedge align :1 posedge :0
+`define T1 0          // Timing 1
+`define T2 0.6        // Timing 2
+`define T3 0.8        // Timing 3
+`define T4 0          // Timing 4
+`define T5 0.9        // Timing 5
+`define T6 0          // Timing 6
+`define T7 0          // Timing 7
+`define T8 0          // Timing 8
+
+
+define 값은 위와 같이 사용.
