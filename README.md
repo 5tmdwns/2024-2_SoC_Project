@@ -165,22 +165,19 @@ endmodule
 <table align="center">
   <tr>
     <td align="center"><img width="90%" alt="BIST Mode(Normal)" src="https://github.com/user-attachments/assets/13c5d0af-3a79-4355-89a1-f434f3cb43c6" /></td>
-  </tr>
-  <tr>
-    <td align="center">BIST Mode : Normal</td>
-  </tr>
-</table>
-
-<table align="center">
-  <tr>
     <td align="center"><img width="90%" alt="BIST Mode(LFSR)" src="https://github.com/user-attachments/assets/b1a8ee5c-b2b5-45d0-9543-d2a14ffe33df" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>BIST Mode : Normal</strong></td>
+    <td align="center"><strong>BIST Mode : LFSR</strong></td>
+  </tr>
+  <tr>
     <td align="center"><img width="90%" alt="BIST mode(Graycounter)" src="https://github.com/user-attachments/assets/ff169575-13cb-4432-8de8-73765bdd7fab" /></td>
     <td align="center"><img width="90%" alt="BIST Mode(Binarycounter)" src="https://github.com/user-attachments/assets/2891d639-b920-4a5f-b4dd-d3315614e115" /></td>
   </tr>
   <tr>
-    <td align="center">BIST Mode : LFSR</td>
-    <td align="center">BIST Mode : Graycounter</td>
-    <td align="center">BIST Mode : Binarycounter</td>
+    <td align="center"><strong>BIST Mode : Graycounter</strong></td>
+    <td align="center"><strong>BIST Mode : Binarycounter</strong></td>
   </tr>
 </table>
 
