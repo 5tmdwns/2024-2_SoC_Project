@@ -113,8 +113,8 @@ endmodule
 ## 2. System Architecture
 <table align="center">
   <tr>
-    <td align="center"><img width="80%" alt="BIST System Architecture" src="https://github.com/user-attachments/assets/d1871d66-649a-4d8e-8906-ee45cbfecacf" /></td>
-    <td align="center"><img width="100%" alt="BISR System Architecture" src="https://github.com/user-attachments/assets/883db5cf-25b9-45e0-b1dd-b42b0716d8ce" /></td>
+    <td align="center" width="50%"><img width="100%" alt="BIST System Architecture" src="https://github.com/user-attachments/assets/d1871d66-649a-4d8e-8906-ee45cbfecacf" /></td>
+    <td align="center" width="50%"><img width="100%" alt="BISR System Architecture" src="https://github.com/user-attachments/assets/883db5cf-25b9-45e0-b1dd-b42b0716d8ce" /></td>
   </tr>
   <tr>
     <td align="center">BIST System Architecture</td>
