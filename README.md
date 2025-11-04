@@ -1,8 +1,5 @@
 <p align="center">
   <h1 align="center">64KB SRAM Memory Controller With MBIST✨</h1>
-    <p align="center">
-      
-    </p>
 </p>
 
 ## Index ⭐
@@ -16,7 +13,8 @@
    - [3-1. BIST](#3-1-bist)
    - [3-2. BISR](#3-2-bisr)
  - [4. PnR](#4-pnr)
-    - [4-1. BISR](#4-1-bisr)
+    - [4-1. BIST](#4-1-bist)
+    - [4-2. BISR](#4-2-bisr)
  - [5. Result](#5-result)
 
 ## 1. Spec
@@ -162,18 +160,19 @@ endmodule
 - FSM 구조의 BIST 모듈 형식.
 - Finite State Machine으로 1WR 후, 1RD하여 값을 비교하여 BIST_PASS를 띄움.
 
+#### BIST Operation gate.v
 <table align="center">
   <tr>
-    <td align="center"><img width="90%" alt="BIST Mode(Normal)" src="https://github.com/user-attachments/assets/13c5d0af-3a79-4355-89a1-f434f3cb43c6" /></td>
-    <td align="center"><img width="90%" alt="BIST Mode(LFSR)" src="https://github.com/user-attachments/assets/b1a8ee5c-b2b5-45d0-9543-d2a14ffe33df" /></td>
+    <td align="center"><img width="100%" alt="BIST Mode(Normal)" src="https://github.com/user-attachments/assets/13c5d0af-3a79-4355-89a1-f434f3cb43c6" /></td>
+    <td align="center"><img width="100%" alt="BIST Mode(LFSR)" src="https://github.com/user-attachments/assets/b1a8ee5c-b2b5-45d0-9543-d2a14ffe33df" /></td>
   </tr>
   <tr>
     <td align="center"><strong>BIST Mode : Normal</strong></td>
     <td align="center"><strong>BIST Mode : LFSR</strong></td>
   </tr>
   <tr>
-    <td align="center"><img width="90%" alt="BIST mode(Graycounter)" src="https://github.com/user-attachments/assets/ff169575-13cb-4432-8de8-73765bdd7fab" /></td>
-    <td align="center"><img width="90%" alt="BIST Mode(Binarycounter)" src="https://github.com/user-attachments/assets/2891d639-b920-4a5f-b4dd-d3315614e115" /></td>
+    <td align="center"><img width="100%" alt="BIST mode(Graycounter)" src="https://github.com/user-attachments/assets/ff169575-13cb-4432-8de8-73765bdd7fab" /></td>
+    <td align="center"><img width="100%" alt="BIST Mode(Binarycounter)" src="https://github.com/user-attachments/assets/2891d639-b920-4a5f-b4dd-d3315614e115" /></td>
   </tr>
   <tr>
     <td align="center"><strong>BIST Mode : Graycounter</strong></td>
@@ -186,3 +185,161 @@ endmodule
 1. Register 최적화를 위한 Block 단위 Macro Cell Mapping (128).
 2. BIST Mode에서 일괄 검사 시, BIST_PASS == 1인 주소의 구간 Block이 FAULT_ADDR Register에 VALID == 1로 저장.
 3. 이후, Normal Operation에서 고장난 Macro Cell 주소의 Block 단위가 VALID == 1이므로, FAULT_ADDR의 이전 VALID == 1의 개수를 세어, 해당하는 개수의 여분 Macro Cell의 순서로 Mapping.
+
+#### BISR Operation gate.v
+<table align="center">
+  <tr>
+    <td align="center"><img width="100%" alt="BISR gate.v 1" src="https://github.com/user-attachments/assets/471be02d-3d5c-4e1c-a196-733ee9b62b32" /></td>
+    <td align="center"><img width="100%" alt="BISR gate.v 2" src="https://github.com/user-attachments/assets/8fc582c3-6009-453a-b135-ecb9ff9cc4a3" /></td>
+  </tr>
+  <tr>
+    <td align="center"><img width="100%" alt="BISR gate.v 3" src="https://github.com/user-attachments/assets/a9d1b2fb-7183-46e2-a64a-e3b19b7399ed" /></td>
+    <td align="center"><img width="100%" alt="BISR gate.v 4" src="https://github.com/user-attachments/assets/39fe773d-48e7-462b-843c-b0d2dbd19354" /></td>
+  </tr>
+</table>
+
+## 4. PnR
+### 4-1. BIST
+#### Floorplan
+<table>
+  <tr>
+    <td align="center" width="60%">
+      <img width="70%" alt="Macro Layout" src="https://github.com/user-attachments/assets/a57a7c67-cc94-4ec5-9301-65d456124836" />
+    </td>
+    <td align="center" width="40%">
+      <strong>Place Macro / Soft Blockage / Create Terminals</strong><br/><br/>
+      <strong>Core 면적 : 1560 x 1630 </strong><br/>
+      <strong>SRAM 16개씩 4등분</strong><br/><br/>
+      <ul>
+        <li>균일한 SRAM Acess를 위해 MEMCTRL Cell을 중앙으로 배치.</li>
+        <li>각 4분면에 존재하는 SRAM의 Port가 중앙을 바라보도록 Rotation.</li>
+        <li>Terminal을 Controller와 인접한 위치로 배치.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img width="49%" alt="Macro 1/4 Layout" src="https://github.com/user-attachments/assets/483edbbc-91a1-4a8d-b251-6dad85d5f019" />
+  <img width="49%" alt="Macro Cell Layout Code" src="https://github.com/user-attachments/assets/675629dc-2d61-43a6-9773-bb3641071914" />
+</p>
+
+#### Placement & Remove Congestion
+
+<table align="center">
+  <tr>
+    <td align="center"><img width="100%" alt="Congetsion Map Before" src="https://github.com/user-attachments/assets/6b962672-a91e-406f-bbf0-7a63aab87134" /></td>
+    <td align="center"><img width="100%" alt="report_congestion Before" src="https://github.com/user-attachments/assets/930cc5ce-725d-48a0-b870-c0d59e3bbe0d" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Congestion Map before</strong></td>
+    <td align="center"><strong>report_congestion Before</strong></td>
+  </tr>
+</table>
+
+``` tcl
+create_placement_blockage -partial
+```
+
+<table align="center">
+  <tr>
+    <td align="center"><img width="100%" alt="Congestion Map After" src="https://github.com/user-attachments/assets/7f22706f-313f-44e1-a67e-734d3857e612" /></td>
+    <td align="center"><img width="100%" alt="report_congestion After" src="https://github.com/user-attachments/assets/92c5d3b4-5170-4791-892d-7d3200df74c3" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Congestion Map After</strong></td>
+    <td align="center"><strong>report_congestion After</strong></td>
+  </tr>
+</table>
+
+**Congestion map의 사진 & Overflow 갯수 전후 비교!!**
+
+### 4-2. BISR
+#### BISR Remove Congestion
+- Partial Blockage의 퍼센트를 조정해가면서 Route.
+<table>
+  <tr>
+    <td align="center" width="40%">
+      <img width="100%" alt="BISR Macro Layout" src="https://github.com/user-attachments/assets/4977ef5c-2257-467e-b510-e5e8713a332f" />
+    </td>
+    <td align="center" width="60%">
+      <strong>BISR Redundant SRAM 128 x 8 : 25개</strong>
+        <pre><code class="language-tcl">
+create_placement_blockage -type partial - blocked_percentage 20 -boundary $STDBND
+        </code></pre>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" width="33%"><img width="100%" alt="BISR Congestion Map Before 20%" src="https://github.com/user-attachments/assets/52d4d942-45c8-442c-bf9a-ac011c82ca30" /></td>
+    <td align="center" width="33%"><img width="100%" alt="BISR Congestion Map After 20%" src="https://github.com/user-attachments/assets/7159da3a-1b47-4cee-b607-8d97477768af" /></td>
+    <td align="center" width="33%"><img width="100%" alt="Map Data of Global Route Congestion Option" src="https://github.com/user-attachments/assets/d03f4daf-d882-42df-84c2-fb41e08cf5fe" /></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <pre><code class="language-tcl">
+create_placement_blockage -type partial - blocked_percentage 20 -boundary $STDBND
+      </code></pre>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center" width="49%"><img width="100%" alt="BISR Congestion Map Before 60%" src="https://github.com/user-attachments/assets/64018df6-2922-4084-af36-eab3917e6a9f" /></td>
+    <td align="center" width="49%"><img width="100%" alt="BISR Congestion Map After 60%" src="https://github.com/user-attachments/assets/caa9277d-b790-402b-9012-2a41e29f8703" />
+</td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <pre><code class="language-tcl">
+create_placement_blockage -type partial - blocked_percentage 60 -boundary $STDBND
+      </code></pre>
+    </td>
+  </tr>
+</table>
+
+## 5. Result
+### Design Verification - DRC
+<p align="center">
+  <img width="100%" alt="DRC Sign-off Pass" src="https://github.com/user-attachments/assets/14444f0f-e320-4d5c-98d5-480eb1e73401" />
+</p>
+
+### Design Verification - Timing
+<p align="center">
+  <img width="100%" alt="Primetime Sign-off Pass" src="https://github.com/user-attachments/assets/e90ee423-8ac1-4c40-adc8-959bed77bcc5" />
+</p>
+
+### Post Simulation
+<table>
+  <tr>
+    <td align="center" width="55%">
+      <img width="100%" alt="Testbench Setting Value" src="https://github.com/user-attachments/assets/4f30689d-7b42-43f8-ba9e-69183540cb8f" />
+    </td>
+    <td align="center" rowspan="2">
+      <img width="100%" alt="Post Simulation Log Result" src="https://github.com/user-attachments/assets/cbaec296-b749-4473-b15c-1c198772cead" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Post Simulation Normal Operation</strong><br/><br/>
+      <ul>
+        <li>위와 같은 설정을 통해 TCK=4ns에서 Normal Operation ALL PASS!!</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<p align="center">
+  <img width="100%" alt="Post Simulation Waveform Result" src="https://github.com/user-attachments/assets/1d45e7e9-f3c9-4fa3-8b82-58e8ee810779" />
+</p>
+
+### Area
+<table>
+  <tr>
+    <td align="center" width="40%"><img width="100%" alt="Area Layout" src="https://github.com/user-attachments/assets/188c8516-ed22-4474-a5a3-66f5845ec733" /></td>
+    <td align="center" width="60%"><img width="100%" alt="Area Report" src="https://github.com/user-attachments/assets/b8787908-fe67-4b72-93d2-7d280c35ab16" /></td>
+  </tr>
+</table>
