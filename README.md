@@ -263,11 +263,13 @@ create_placement_blockage -partial
       <img width="100%" alt="BISR Macro Layout" src="https://github.com/user-attachments/assets/4977ef5c-2257-467e-b510-e5e8713a332f" />
     </td>
     <td align="center" width="60%">
-      <strong>BISR Redundant SRAM 128 x 8 : 25개</strong>
-        <pre><code class="language-tcl">
+      <strong>BISR Redundant SRAM 128 x 8 : 25개</strong><br/><br/>
+      
+``` tcl
 create_placement_blockage -type partial - blocked_percentage 20 -boundary $STDBND
-        </code></pre>
-    </td>
+```
+        
+  </td>
   </tr>
 </table>
 
@@ -279,10 +281,12 @@ create_placement_blockage -type partial - blocked_percentage 20 -boundary $STDBN
   </tr>
   <tr>
     <td align="center" colspan="3">
-      <pre><code class="language-tcl">
+      
+``` tcl
 create_placement_blockage -type partial - blocked_percentage 20 -boundary $STDBND
-      </code></pre>
-    </td>
+```
+      
+  </td>
   </tr>
 </table>
 
@@ -294,10 +298,12 @@ create_placement_blockage -type partial - blocked_percentage 20 -boundary $STDBN
   </tr>
   <tr>
     <td align="center" colspan="3">
-      <pre><code class="language-tcl">
+
+``` tcl
 create_placement_blockage -type partial - blocked_percentage 60 -boundary $STDBND
-      </code></pre>
-    </td>
+```
+    
+  </td>
   </tr>
 </table>
 
