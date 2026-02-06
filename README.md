@@ -76,7 +76,7 @@ ECC까지는 너무 어려우니까 간단한 BIST정도로 프로젝트 진행.
 - **32nm : 1.16V/FF/-40℃ && 1.16V/FF/125℃ && 0.95V/SS/-40℃ && 0.95V/SS/125℃ (ndm supported)**
 - **14nm : 0.88V/FF/-40℃ && 0.88V/FF/125℃ && 0.72V/SS/-40℃ && 0.72V/SS/125℃ (no ndm)**
 
-&nbsp;14nm : FinFET.db (ndm부터 막힘) <br/>
+&nbsp;14nm : `FinFET.db` (ndm부터 막힘) <br/>
 14nm는 시간많은 사람들이 도전해보는 정도? <br/>
 14nm로 가면 Cell Size가 1/2로 줄음 -> Road Cap이 꽤 많이 줄음 -> Power가 더 적게 먹음 -> 면적이 1/4토막 날 것 같지만, 그렇게까지 작아지지 않음. <br/>
 그 이유는, Corner에서 면적 Condition을 잡고 있는지, Routing에서 면적 Condition을 잡고 있는지를 빨리 파악해야지 뭐를 줄일지 알 수 있음. <br/>
@@ -183,8 +183,8 @@ endmodule
 ### 3-2. BISR
 #### BISR Operation Mechanism
 1. Register 최적화를 위한 Block 단위 Macro Cell Mapping (128).
-2. BIST Mode에서 일괄 검사 시, BIST_PASS == 1인 주소의 구간 Block이 FAULT_ADDR Register에 VALID == 1로 저장.
-3. 이후, Normal Operation에서 고장난 Macro Cell 주소의 Block 단위가 VALID == 1이므로, FAULT_ADDR의 이전 VALID == 1의 개수를 세어, 해당하는 개수의 여분 Macro Cell의 순서로 Mapping.
+2. BIST Mode에서 일괄 검사 시, `BIST_PASS == 1`인 주소의 구간 Block이 `FAULT_ADDR` Register에 `VALID == 1`로 저장.
+3. 이후, Normal Operation에서 고장난 Macro Cell 주소의 Block 단위가 `VALID == 1`이므로, `FAULT_ADDR`의 이전 `VALID == 1`의 개수를 세어, 해당하는 개수의 여분 Macro Cell의 순서로 Mapping.
 
 #### BISR Operation gate.v
 <table align="center">
